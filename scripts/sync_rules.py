@@ -21,6 +21,21 @@ NAMES = [
     "Global",
 ]
 DEDUPE = {"Privacy": "AdvertisingLite"}
+ORDER = [
+    "Lan",
+    "ModuleReject",
+    "Hijacking",
+    "AdvertisingLite",
+    "Privacy",
+    "iCloud",
+    "YouTubeMusic",
+    "YouTube",
+    "Telegram",
+    "Apple",
+    "China",
+    "Global",
+    "ChinaIPs",
+]
 REJECT = ["Hijacking", "AdvertisingLite", "Privacy"]
 KEEP = {
     "wxs.qq.com",
@@ -121,6 +136,18 @@ def module_reject():
     return "\n".join(lines) + "\n"
 
 
+def prune(body):
+    lines = body.splitlines()
+    out = []
+    for i, line in enumerate(lines):
+        if re.match(r"^[a-z0-9_]+_set:\s*$", line):
+            nxt = lines[i + 1] if i + 1 < len(lines) else ""
+            if not re.match(r"^\s+- ", nxt):
+                continue
+        out.append(line)
+    return "\n".join(out) + "\n"
+
+
 def main():
     index = json.loads(get(INDEX))
     rules = {r["name"]: r for r in index["rules"]}
@@ -153,9 +180,26 @@ def main():
             bodies[name],
             lambda s, v: s in ("domain_set", "domain_suffix_set") and value(v) in KEEP,
         )
+    exact = set()
+    suffixes = set()
+
+    def covered(s, v):
+        if (s, v) in exact:
+            return True
+        if s not in ("domain_set", "domain_suffix_set"):
+            return False
+        parts = value(v).split(".")
+        return any(".".join(parts[i:]) in suffixes for i in range(len(parts)))
+
+    for name in ORDER:
+        bodies[name] = rewrite(bodies[name], covered)
+        for s, v in entries(bodies[name]):
+            exact.add((s, v))
+            if s == "domain_suffix_set":
+                suffixes.add(value(v))
     for name, body in bodies.items():
         with open(os.path.join(OUT, name + ".yaml"), "w", encoding="utf-8") as f:
-            f.write(body)
+            f.write(prune(body))
         print(name, sum(1 for _ in entries(body)))
 
 

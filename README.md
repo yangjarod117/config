@@ -37,12 +37,12 @@ https://raw.githubusercontent.com/yangjarod117/config/main/egern.yaml
 
 ## DNS
 
-- 已知境外域名：Cloudflare、Google DoH 同时查询，取最快的结果
+- YouTube、Telegram、已知境外域名：Cloudflare、Google DoH 同时查询，取最快的结果
 - 其余域名：系统 DNS、阿里 DoH、腾讯 DoH 同时查询，取最快的结果
 
 ## 规则处理
 
-同步时去掉隐私规则里与去广告规则重复的条目，从拒绝规则中放行微信小程序、视频相关域名，并把 fmz200 两个模块里的拒绝规则提取成 `ModuleReject.yaml` 放在最前面。
+同步时去掉隐私规则里与去广告规则重复的条目，从拒绝规则中放行微信小程序、视频相关域名，把 fmz200 两个模块里的拒绝规则提取成 `ModuleReject.yaml` 放在最前面，最后按分流顺序删掉被前面规则集覆盖、永远匹配不到的条目。
 
 ## 去广告模块
 

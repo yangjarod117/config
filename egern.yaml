@@ -28,6 +28,15 @@ dns:
       - https://8.8.8.8/dns-query
   forward:
     - proxy_rule_set:
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/YouTubeMusic.yaml
+        value: 国外
+    - proxy_rule_set:
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/YouTube.yaml
+        value: 国外
+    - proxy_rule_set:
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Telegram.yaml
+        value: 国外
+    - proxy_rule_set:
         match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Global.yaml
         value: 国外
     - domain_wildcard:
