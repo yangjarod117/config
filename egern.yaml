@@ -1,5 +1,6 @@
 ipv6: false
 vif_only: true
+block_quic: true
 hijack_dns:
   - '*:53'
 geoip_db_url: https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb
@@ -90,6 +91,7 @@ policy_groups:
         - 美国
         - 日本
         - 我的订阅
+      block_quic: false
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
   - select:
       name: Telegram
