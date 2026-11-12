@@ -1,0 +1,98 @@
+name: 分流规则
+description: 分流规则与 DNS 分流，每天自动更新
+author: yangjarod117
+homepage: https://github.com/yangjarod117/config
+
+real_ip_domains:
+  - '*.push.apple.com'
+
+dns:
+  bootstrap:
+    - system
+    - 223.5.5.5
+    - 119.29.29.29
+  upstreams:
+    阿里:
+      - 223.5.5.5
+      - https://dns.alidns.com/dns-query
+    腾讯:
+      - 119.29.29.29
+      - https://doh.pub/dns-query
+    字节:
+      - 180.184.1.1
+      - 180.184.2.2
+    国内:
+      - system
+      - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+    国外:
+      - https://1.1.1.1/dns-query
+      - https://8.8.8.8/dns-query
+  forward:
+    - proxy_rule_set:
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Alibaba.yaml
+        value: 阿里
+    - proxy_rule_set:
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Tencent.yaml
+        value: 腾讯
+    - proxy_rule_set:
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/ByteDance.yaml
+        value: 字节
+    - proxy_rule_set:
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/China.yaml
+        value: 国内
+    - proxy_rule_set:
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Global.yaml
+        value: 国外
+    - domain_wildcard:
+        match: '*'
+        value: 国内
+  proxy_nameservers:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+
+rules:
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Lan.yaml
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/ModuleReject.yaml
+      policy: REJECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Hijacking.yaml
+      policy: REJECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/AdvertisingLite.yaml
+      policy: REJECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Privacy.yaml
+      policy: REJECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/iCloud.yaml
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/YouTubeMusic.yaml
+      policy: YouTube
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/YouTube.yaml
+      policy: YouTube
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Telegram.yaml
+      policy: Telegram
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Apple.yaml
+      policy: Apple
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/China.yaml
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Global.yaml
+      policy: Global
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/ChinaIPs.yaml
+      policy: DIRECT
+  - geoip:
+      match: CN
+      policy: DIRECT
+  - default:
+      policy: Global
