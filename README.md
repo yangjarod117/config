@@ -2,17 +2,22 @@
 
 自用 Egern 配置，不含节点。
 
-## 导入
+## 使用
 
-Egern → 配置 → 从 URL 导入：
+1. 下载 `egern.yaml` 导入 Egern，作为本地配置使用，不开自动更新。
+2. 在 Egern 里添加订阅，订阅会进入「我的订阅」。
+3. 日常在 Egern 里「更新资源」，一键更新模块、订阅和规则集。
+4. 主配置有改动时，再按需重新下载导入。
+
+下载地址：
 
 ```
 https://raw.githubusercontent.com/yangjarod117/config/main/egern.yaml
 ```
 
-## 节点
+`rules/` 里的规则集由 GitHub Actions 每天北京时间 4:30 从 [MagicRule](https://magicrule.pages.dev) 同步。
 
-在 Egern 里添加的订阅和节点会进入「我的订阅」，「美国」「日本」按节点名自动筛选：
+## 节点筛选
 
 - 美国：`(?i)(美国|🇺🇸|(^|[^a-z])us)`
 - 日本：`(?i)(日本|🇯🇵|(^|[^a-z])jp)`
@@ -37,9 +42,9 @@ https://raw.githubusercontent.com/yangjarod117/config/main/egern.yaml
 - 已知境外域名走 Cloudflare、Google DoH
 - 其余走国内 DNS
 
-## 规则来源
+## 规则处理
 
-`rules/` 里是 [MagicRule](https://magicrule.pages.dev) 生成的 Egern 原生规则，GitHub Actions 每天北京时间 4:30 同步一次。同步时去掉隐私规则里与去广告规则重复的条目，并从拒绝规则中放行微信头像、视频、小程序相关域名。
+同步时去掉隐私规则里与去广告规则重复的条目，从拒绝规则中放行微信小程序、视频相关域名，并把 fmz200 两个模块里的拒绝规则提取成 `ModuleReject.yaml` 放在最前面。
 
 ## 去广告模块
 
