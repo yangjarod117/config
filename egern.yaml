@@ -5,8 +5,12 @@ ipv6: false
 hijack_dns:
   - '*:53'
 geoip_db_url: https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb
+asn_db_url: https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-ASN.mmdb
 proxy_latency_test_url: http://www.gstatic.com/generate_204
 direct_latency_test_url: http://wifi.vivo.com.cn/generate_204
+close_connections_on_policy_change: true
+real_ip_domains:
+  - '*.push.apple.com'
 default_subscription_group: 我的订阅
 default_proxy_group: 我的订阅
 
@@ -16,11 +20,38 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   upstreams:
+    阿里:
+      - 223.5.5.5
+      - https://dns.alidns.com/dns-query
+    腾讯:
+      - 119.29.29.29
+      - https://doh.pub/dns-query
+    字节:
+      - 180.184.1.1
+      - 180.184.2.2
     国内:
       - system
       - https://dns.alidns.com/dns-query
       - https://doh.pub/dns-query
+    国外:
+      - https://1.1.1.1/dns-query
+      - https://8.8.8.8/dns-query
   forward:
+    - proxy_rule_set:
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Alibaba.yaml
+        value: 阿里
+    - proxy_rule_set:
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Tencent.yaml
+        value: 腾讯
+    - proxy_rule_set:
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/ByteDance.yaml
+        value: 字节
+    - proxy_rule_set:
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/China.yaml
+        value: 国内
+    - proxy_rule_set:
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Global.yaml
+        value: 国外
     - domain_wildcard:
         match: '*'
         value: 国内
@@ -80,31 +111,40 @@ policy_groups:
 
 rules:
   - rule_set:
-      match: https://adrules.top/adrules.list
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Hijacking.yaml
       policy: REJECT
   - rule_set:
-      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Lan/Lan.list
-      policy: DIRECT
-  - domain_suffix:
-      match: icloud.com.cn
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/AdvertisingLite.yaml
+      policy: REJECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Privacy.yaml
+      policy: REJECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Lan.yaml
       policy: DIRECT
   - rule_set:
-      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/iCloud/iCloud.list
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/iCloud.yaml
       policy: DIRECT
   - rule_set:
-      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTubeMusic/YouTubeMusic.list
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/YouTubeMusic.yaml
       policy: YouTube
   - rule_set:
-      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/YouTube.yaml
       policy: YouTube
   - rule_set:
-      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Telegram.yaml
       policy: Telegram
   - rule_set:
-      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple_All_No_Resolve.list
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Apple.yaml
       policy: Apple
   - rule_set:
-      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China_All_No_Resolve.list
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/China.yaml
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Global.yaml
+      policy: Global
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/ChinaIPs.yaml
       policy: DIRECT
   - geoip:
       match: CN
