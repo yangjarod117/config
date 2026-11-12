@@ -78,7 +78,7 @@ policy_groups:
         - 我的订阅
       flatten: true
       filter: '(?i)(日本|🇯🇵|(^|[^a-z])jp)'
-      icon: flag
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   - select:
       name: Global
       policies:
