@@ -1,0 +1,119 @@
+auto_update:
+  url: https://raw.githubusercontent.com/yangjarod117/config/main/egern.yaml
+  interval: 86400
+ipv6: false
+hijack_dns:
+  - '*:53'
+geoip_db_url: https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb
+proxy_latency_test_url: http://www.gstatic.com/generate_204
+direct_latency_test_url: http://wifi.vivo.com.cn/generate_204
+default_subscription_group: 我的订阅
+default_proxy_group: 我的订阅
+
+dns:
+  bootstrap:
+    - system
+    - 223.5.5.5
+    - 119.29.29.29
+  upstreams:
+    国内:
+      - system
+      - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+  forward:
+    - domain_wildcard:
+        match: '*'
+        value: 国内
+  proxy_nameservers:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+
+policy_groups:
+  - select:
+      name: 我的订阅
+      policies:
+        - DIRECT
+      icon: tray.full
+  - select:
+      name: 美国
+      policies:
+        - 我的订阅
+      flatten: true
+      filter: '(?i)(美国|🇺🇸|(^|[^a-z])us)'
+      icon: flag
+  - select:
+      name: 日本
+      policies:
+        - 我的订阅
+      flatten: true
+      filter: '(?i)(日本|🇯🇵|(^|[^a-z])jp)'
+      icon: flag
+  - select:
+      name: Global
+      policies:
+        - 美国
+        - 日本
+        - 我的订阅
+      icon: globe
+  - select:
+      name: YouTube
+      policies:
+        - 美国
+        - 日本
+        - 我的订阅
+      icon: play.rectangle
+  - select:
+      name: Telegram
+      policies:
+        - 美国
+        - 日本
+        - 我的订阅
+      icon: paperplane
+  - select:
+      name: Apple
+      policies:
+        - DIRECT
+        - 美国
+        - 日本
+        - 我的订阅
+      icon: apple.logo
+
+rules:
+  - rule_set:
+      match: https://adrules.top/adrules.list
+      policy: REJECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Lan/Lan.list
+      policy: DIRECT
+  - domain_suffix:
+      match: icloud.com.cn
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/iCloud/iCloud.list
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTubeMusic/YouTubeMusic.list
+      policy: YouTube
+  - rule_set:
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list
+      policy: YouTube
+  - rule_set:
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list
+      policy: Telegram
+  - rule_set:
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple_All_No_Resolve.list
+      policy: Apple
+  - rule_set:
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China_All_No_Resolve.list
+      policy: DIRECT
+  - geoip:
+      match: CN
+      policy: DIRECT
+  - default:
+      policy: Global
+
+modules:
+  - name: 广告拦截&净化合集
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module
+  - name: HTTPDNS拦截器
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockHTTPDNS.module
