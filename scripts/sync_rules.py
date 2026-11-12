@@ -21,6 +21,14 @@ NAMES = [
     "Global",
 ]
 DEDUPE = {"Privacy": "AdvertisingLite"}
+FOREIGN_DNS = ["YouTubeMusic", "YouTube", "Telegram", "Global"]
+DOMAIN_TYPES = (
+    "domain_set",
+    "domain_suffix_set",
+    "domain_keyword_set",
+    "domain_wildcard_set",
+    "domain_regex_set",
+)
 ORDER = [
     "Lan",
     "ModuleReject",
@@ -197,6 +205,19 @@ def main():
             exact.add((s, v))
             if s == "domain_suffix_set":
                 suffixes.add(value(v))
+    merged = {t: [] for t in DOMAIN_TYPES}
+    seen = set()
+    for name in FOREIGN_DNS:
+        for s, v in entries(bodies[name]):
+            if s in merged and (s, v) not in seen:
+                seen.add((s, v))
+                merged[s].append(v)
+    lines = []
+    for t, items in merged.items():
+        if items:
+            lines.append(t + ":")
+            lines.extend("  - " + v for v in items)
+    bodies["ForeignDNS"] = "\n".join(lines) + "\n"
     for name, body in bodies.items():
         with open(os.path.join(OUT, name + ".yaml"), "w", encoding="utf-8") as f:
             f.write(prune(body))

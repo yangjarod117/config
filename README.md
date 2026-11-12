@@ -37,7 +37,7 @@ https://raw.githubusercontent.com/yangjarod117/config/main/egern.yaml
 
 ## DNS
 
-- YouTube、Telegram、已知境外域名：Cloudflare、Google DoH 同时查询，取最快的结果
+- `ForeignDNS.yaml` 里的域名：Cloudflare、Google DoH 同时查询，取最快的结果。该规则集由 YouTube、YouTube Music、Telegram、Global 每天自动合并生成，只保留域名类条目
 - 其余域名：系统 DNS、阿里 DoH、腾讯 DoH 同时查询，取最快的结果
 
 ## 规则处理
