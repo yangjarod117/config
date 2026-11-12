@@ -152,6 +152,10 @@ rules:
   - default:
       policy: Global
 
+mitm:
+  ca_p12: egern.p12
+  ca_passphrase: egern
+
 modules:
   - name: 广告拦截&净化合集
     url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module
