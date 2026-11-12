@@ -37,10 +37,8 @@ https://raw.githubusercontent.com/yangjarod117/config/main/egern.yaml
 
 ## DNS
 
-- 阿里、腾讯、字节的域名分别交给各自的 DNS
-- 其他中国域名走国内 DoH 和运营商 DNS
-- 已知境外域名走 Cloudflare、Google DoH
-- 其余走国内 DNS
+- 已知境外域名：Cloudflare、Google DoH 同时查询，取最快的结果
+- 其余域名：系统 DNS、阿里 DoH、腾讯 DoH 同时查询，取最快的结果
 
 ## 规则处理
 
