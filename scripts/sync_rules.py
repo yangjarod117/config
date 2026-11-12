@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import sys
 import time
 import urllib.request
@@ -22,6 +23,16 @@ NAMES = [
     "ChinaIPs",
     "Global",
 ]
+DEDUPE = {"Privacy": "AdvertisingLite"}
+REJECT = ["Hijacking", "AdvertisingLite", "Privacy"]
+KEEP = {
+    "wxs.qq.com",
+    "wxa.wxs.qq.com",
+    "gvideo.qpic.cn",
+    "gu.qlogo.cn",
+    "py.qlogo.cn",
+    "py2.qlogo.cn",
+}
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "rules")
 HEADERS = {"User-Agent": "Mozilla/5.0", "Referer": "https://magicrule.pages.dev/"}
 
@@ -39,10 +50,43 @@ def get(url):
     raise last
 
 
+def entries(body):
+    section = None
+    for line in body.splitlines():
+        m = re.match(r"^([a-z0-9_]+):", line)
+        if m:
+            section = m.group(1)
+            continue
+        m = re.match(r"^\s+- (.+)$", line)
+        if m and section:
+            yield section, m.group(1).strip()
+
+
+def value(item):
+    return item.strip('"').strip("'")
+
+
+def rewrite(body, drop):
+    out = []
+    section = None
+    for line in body.splitlines():
+        m = re.match(r"^([a-z0-9_]+):", line)
+        if m:
+            section = m.group(1)
+            out.append(line)
+            continue
+        m = re.match(r"^\s+- (.+)$", line)
+        if m and section and drop(section, m.group(1).strip()):
+            continue
+        out.append(line)
+    return "\n".join(out) + "\n"
+
+
 def main():
     index = json.loads(get(INDEX))
     rules = {r["name"]: r for r in index["rules"]}
     os.makedirs(OUT, exist_ok=True)
+    bodies = {}
     failed = []
     for name in NAMES:
         try:
@@ -51,14 +95,24 @@ def main():
             body = get(artifact["url"]).decode("utf-8")
             if "_set:" not in body:
                 raise ValueError("empty rule file")
-            with open(os.path.join(OUT, name + ".yaml"), "w", encoding="utf-8") as f:
-                f.write(body)
-            print(name, len(body.splitlines()))
+            bodies[name] = body
         except Exception as e:
             failed.append(name)
             print(name, "failed:", e, file=sys.stderr)
     if failed:
         sys.exit(1)
+    for name, base in DEDUPE.items():
+        seen = set(entries(bodies[base]))
+        bodies[name] = rewrite(bodies[name], lambda s, v: (s, v) in seen)
+    for name in REJECT:
+        bodies[name] = rewrite(
+            bodies[name],
+            lambda s, v: s in ("domain_set", "domain_suffix_set") and value(v) in KEEP,
+        )
+    for name, body in bodies.items():
+        with open(os.path.join(OUT, name + ".yaml"), "w", encoding="utf-8") as f:
+            f.write(body)
+        print(name, sum(1 for _ in entries(body)))
 
 
 if __name__ == "__main__":

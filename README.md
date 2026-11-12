@@ -38,7 +38,7 @@ https://raw.githubusercontent.com/yangjarod117/config/main/egern.yaml
 
 ## 规则来源
 
-`rules/` 里是 [MagicRule](https://magicrule.pages.dev) 生成的 Egern 原生规则，GitHub Actions 每天北京时间 4:30 同步一次。
+`rules/` 里是 [MagicRule](https://magicrule.pages.dev) 生成的 Egern 原生规则，GitHub Actions 每天北京时间 4:30 同步一次。同步时去掉隐私规则里与去广告规则重复的条目，并从拒绝规则中放行微信头像、视频、小程序相关域名。
 
 ## 去广告模块
 
