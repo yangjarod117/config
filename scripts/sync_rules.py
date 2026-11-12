@@ -29,9 +29,19 @@ KEEP = {
     "wxs.qq.com",
     "wxa.wxs.qq.com",
     "gvideo.qpic.cn",
-    "gu.qlogo.cn",
-    "py.qlogo.cn",
-    "py2.qlogo.cn",
+}
+MODULES = [
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module",
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockHTTPDNS.module",
+]
+MODULE_TYPES = {
+    "DOMAIN": "domain_set",
+    "DOMAIN-SUFFIX": "domain_suffix_set",
+    "DOMAIN-KEYWORD": "domain_keyword_set",
+    "IP-CIDR": "ip_cidr_set",
+    "IP-CIDR6": "ip_cidr6_set",
+    "URL-REGEX": "url_regex_set",
+    "USER-AGENT": "user_agent_set",
 }
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "rules")
 HEADERS = {"User-Agent": "Mozilla/5.0", "Referer": "https://magicrule.pages.dev/"}
@@ -82,6 +92,38 @@ def rewrite(body, drop):
     return "\n".join(out) + "\n"
 
 
+def module_reject():
+    sets = {v: [] for v in MODULE_TYPES.values()}
+    for url in MODULES:
+        section = None
+        for line in get(url).decode("utf-8").splitlines():
+            line = line.strip()
+            if line.startswith("["):
+                section = line
+                continue
+            if section != "[Rule]" or not line or line.startswith("#"):
+                continue
+            parts = [p.strip() for p in line.split(",")]
+            kind = MODULE_TYPES.get(parts[0])
+            while len(parts) > 2 and parts[-1] in ("no-resolve", "extended-matching"):
+                parts.pop()
+            if not kind or len(parts) < 3 or not parts[-1].startswith("REJECT"):
+                continue
+            item = ",".join(parts[1:-1])
+            if len(item) > 1 and item[0] == item[-1] == '"':
+                item = item[1:-1]
+            if item not in sets[kind]:
+                sets[kind].append(item)
+    if not sets["domain_suffix_set"]:
+        raise ValueError("module rules not found")
+    lines = ["no_resolve: true"]
+    for kind, items in sets.items():
+        if items:
+            lines.append(kind + ":")
+            lines.extend("  - " + json.dumps(i, ensure_ascii=False) for i in items)
+    return "\n".join(lines) + "\n"
+
+
 def main():
     index = json.loads(get(INDEX))
     rules = {r["name"]: r for r in index["rules"]}
@@ -99,6 +141,11 @@ def main():
         except Exception as e:
             failed.append(name)
             print(name, "failed:", e, file=sys.stderr)
+    try:
+        bodies["ModuleReject"] = module_reject()
+    except Exception as e:
+        failed.append("ModuleReject")
+        print("ModuleReject failed:", e, file=sys.stderr)
     if failed:
         sys.exit(1)
     for name, base in DEDUPE.items():

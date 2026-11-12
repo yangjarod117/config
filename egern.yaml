@@ -111,6 +111,12 @@ policy_groups:
 
 rules:
   - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Lan.yaml
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/ModuleReject.yaml
+      policy: REJECT
+  - rule_set:
       match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Hijacking.yaml
       policy: REJECT
   - rule_set:
@@ -119,9 +125,6 @@ rules:
   - rule_set:
       match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Privacy.yaml
       policy: REJECT
-  - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Lan.yaml
-      policy: DIRECT
   - rule_set:
       match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/iCloud.yaml
       policy: DIRECT

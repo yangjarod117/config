@@ -19,15 +19,16 @@ https://raw.githubusercontent.com/yangjarod117/config/main/egern.yaml
 
 ## 分流顺序
 
-1. 反劫持、去广告、隐私追踪 → REJECT
-2. 局域网、iCloud → DIRECT
-3. YouTube、YouTube Music → YouTube
-4. Telegram → Telegram
-5. Apple → Apple（默认 DIRECT，可切代理）
-6. 中国域名 → DIRECT
-7. 已知境外域名 → Global
-8. 中国 IP → DIRECT
-9. 其余 → Global
+1. 局域网 → DIRECT
+2. 去广告模块的拒绝规则、反劫持、去广告、隐私追踪 → REJECT
+3. iCloud → DIRECT
+4. YouTube、YouTube Music → YouTube
+5. Telegram → Telegram
+6. Apple → Apple（默认 DIRECT，可切代理）
+7. 中国域名 → DIRECT
+8. 已知境外域名 → Global
+9. 中国 IP → DIRECT
+10. 其余 → Global
 
 ## DNS
 
