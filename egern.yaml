@@ -64,14 +64,14 @@ policy_groups:
       name: 我的订阅
       policies:
         - DIRECT
-      icon: tray.full
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
   - select:
       name: 美国
       policies:
         - 我的订阅
       flatten: true
       filter: '(?i)(美国|🇺🇸|(^|[^a-z])us)'
-      icon: flag
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
   - select:
       name: 日本
       policies:
@@ -85,21 +85,21 @@ policy_groups:
         - 美国
         - 日本
         - 我的订阅
-      icon: globe
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
   - select:
       name: YouTube
       policies:
         - 美国
         - 日本
         - 我的订阅
-      icon: play.rectangle
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
   - select:
       name: Telegram
       policies:
         - 美国
         - 日本
         - 我的订阅
-      icon: paperplane
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
   - select:
       name: Apple
       policies:
@@ -107,7 +107,7 @@ policy_groups:
         - 美国
         - 日本
         - 我的订阅
-      icon: apple.logo
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
 
 rules:
   - rule_set:
