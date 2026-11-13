@@ -10,7 +10,8 @@ iOS 5.22+、Mac 6.9+ 通用。
 https://raw.githubusercontent.com/yangjarod117/config/main/surge/surge.conf
 ```
 
-2. 新建一个本地配置并启用，内容如下，把 `Sub-Store 订阅地址` 换成 Sub-Store 的 Surge 格式链接：
+2. 新建一个本地配置，先在里面生成并信任 MITM 证书。生成证书时 Surge 会重写整个文件，所以要先做这一步。
+3. 用文本模式打开这个本地配置，保留 `[MITM]` 里 Surge 写入的 `ca-passphrase` 和 `ca-p12` 两行，其余内容换成下面的，把 `Sub-Store 订阅地址` 换成 Sub-Store 的 Surge 格式链接，然后启用：
 
 ```
 [General]
@@ -26,9 +27,10 @@ https://raw.githubusercontent.com/yangjarod117/config/main/surge/surge.conf
 [MITM]
 h2 = true
 hostname = -*.googlevideo.com
+ca-passphrase = 保留原值
+ca-p12 = 保留原值
 ```
 
-3. 在本地配置里生成并信任 MITM 证书。
 4. 安装模块：
 
 ```
@@ -37,7 +39,7 @@ https://raw.githubusercontent.com/ifflagged/Romeo/main/Modules/Surge/ddgksf2013/
 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module
 ```
 
-托管配置每天自动更新，本地配置和证书不用再动。
+托管配置每天自动更新，本地配置和证书不用再动。本地配置以后只用文本模式改，不要在界面里改设置，界面保存同样会重写文件。
 
 ## 分流顺序
 
