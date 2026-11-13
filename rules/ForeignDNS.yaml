@@ -1,8 +1,8 @@
 domain_set:
-  - music.youtube.com
   - youtubei.googleapis.com
   - yt3.ggpht.com
   - yt3.googleusercontent.com
+  - "music.youtube.com"
   - "openai.qualtrics.com"
   - "openaiapi-site.azureedge.net"
   - "openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net"
@@ -41,7 +41,6 @@ domain_set:
   - "copilot-proxy.githubusercontent.com"
   - "copilot-telemetry-service.githubusercontent.com"
   - "copilot-workspace.githubnext.com"
-  - admob-cn.com
   - alt1-mtalk.google.com
   - alt2-mtalk.google.com
   - alt3-mtalk.google.com
@@ -234,7 +233,6 @@ domain_set:
   - ah-cdn.merge.dev
   - ahrefscomscreenshot-3b70.kxcdn.com
   - ajax.cat.net
-  - ajax.microsoft.com
   - ak.sail-horizon.com
   - analytics.welcomesoftware.com
   - api-esp-ap.piano.io
@@ -413,8 +411,6 @@ domain_set:
   - avatars.dicebear.com
   - avatars.hubspot.net
   - axiecdn.axieinfinity.com
-  - azure.microsoft.com
-  - azuremarketplace.microsoft.com
   - b-tiles.locationiq.com
   - b.manufact.com
   - b.peatio.com
@@ -474,7 +470,6 @@ domain_set:
   - cdn-bundler.nice-team.net
   - cdn-c.leavemealone.com
   - cdn-city.livere.com
-  - cdn-dynmedia-1.microsoft.com
   - cdn-edge.karte.io
   - cdn-eu.dynamicyield.com
   - cdn-eu.readspeaker.com
@@ -559,7 +554,6 @@ domain_set:
   - cdn.corso.com
   - cdn.cr-proxy.com
   - cdn.craft.cloud
-  - cdn.create.microsoft.com
   - cdn.credible.com
   - cdn.css.net
   - cdn.cxense.com
@@ -755,7 +749,6 @@ domain_set:
   - cdn.syftdata.com
   - cdn.system1.com
   - cdn.tatlerasia.com
-  - cdn.techcommunity.microsoft.com
   - cdn.thewirecutter.com
   - cdn.tiny.cloud
   - cdn.tinypass.com
@@ -878,7 +871,6 @@ domain_set:
   - cms.socialinsider.io
   - cms.therecord.media
   - cms.worldpokerdeals.com
-  - cmtycdn.powerpages.microsoft.com
   - code.benco.io
   - code.highcharts.com
   - code.iconify.design
@@ -911,7 +903,6 @@ domain_set:
   - creativajs.altervista.org
   - crl.versign.net
   - crossborder-integration.global-e.com
-  - csp.microsoft.com
   - css-1-cdn.airdroid.com
   - css.comicbz.com
   - css.createsend1.com
@@ -939,7 +930,6 @@ domain_set:
   - designsystem.brevo.com
   - detectportal.brave-http-only.com
   - dev.visualwebsiteoptimizer.com
-  - developer.microsoft.com
   - devicons.railway.com
   - digitalhub.fifa.com
   - disco-static.productessentials.app
@@ -1039,7 +1029,6 @@ domain_set:
   - geoserveis.icgc.cat
   - gfx-data.news-engineering.aws.wapo.pub
   - gis.pinkbike.org
-  - gitlab-assets.oss-cn-hongkong.aliyuncs.com
   - global-assets.fitch.group
   - global.divhunt.com
   - go.imperva.com
@@ -1109,7 +1098,6 @@ domain_set:
   - image.ap-mail.org
   - image.comicbz.com
   - image.dooo.ng
-  - image.email.microsoftemail.com
   - image.goat.com
   - image.jnislniv.xyz
   - image.mux.com
@@ -1136,7 +1124,6 @@ domain_set:
   - images.design-editor.com
   - images.dmca.com
   - images.drata.com
-  - images.ecomm.microsoft.com
   - images.emojiterra.com
   - images.everyplate.com
   - images.filepuma.com
@@ -1309,7 +1296,6 @@ domain_set:
   - jsonplaceholder.typicode.com
   - jssdk.opin.media
   - kdata1.com
-  - learn-attachment.microsoft.com
   - lecontent.sololearn.com
   - legacy-us-images.foundryco.app
   - libraries.hund.io
@@ -1323,8 +1309,6 @@ domain_set:
   - liveimg.sooplive.com
   - lm.visualon.info
   - load.csell.co
-  - location.microsoft.com
-  - login.microsoftonline.com
   - logos.composio.dev
   - logs.blip.net
   - lucide.dev
@@ -1406,7 +1390,6 @@ domain_set:
   - moderate.cleantalk.org
   - modules.kernelsu.org
   - momentjs.com
-  - mscrl.microsoft.com
   - mta.newfold.com
   - mui.com
   - mweb-cdn.karousell.com
@@ -1436,8 +1419,6 @@ domain_set:
   - o.n1mp.org
   - oaos-resources.allstate.com
   - objects.hit.moe
-  - ocsp.microsoft.com
-  - oneocsp.microsoft.com
   - ood.opsource.net
   - open-vsx.org
   - openreplay-new.deel.tools
@@ -1452,7 +1433,6 @@ domain_set:
   - p.inari.site
   - p.sda1.dev
   - pa1.aninoapps.com
-  - packages.microsoft.com
   - patterns.hiive.cloud
   - pbs-prod.linustechtips.com
   - pbs.floatplane.com
@@ -1505,6 +1485,7 @@ domain_set:
   - public.hare200.com
   - public.komiic.com
   - public.mocortech.com
+  - public.popclip.app
   - public.zoorix.com
   - q676790b.pmhcjk.com
   - quriobot.com
@@ -1839,7 +1820,6 @@ domain_set:
   - storage.withfabric.xyz
   - storageapi.fleek.co
   - storageapi2.fleek.co
-  - store-images.microsoft.com
   - stories.freepiklabs.com
   - stories.usestoryteller.com
   - storybooks.fluentui.dev
@@ -1906,7 +1886,6 @@ domain_set:
   - twemoji.maxcdn.com
   - twenty-icons.com
   - typescript-eslint.io
-  - uhf.microsoft.com
   - ui.contentstack.com
   - ui.powerreviews.com
   - ui.trailhead.com
@@ -1948,7 +1927,6 @@ domain_set:
   - wa1.aninoapps.com
   - waitlisted.co
   - wandi-6402.kxcdn.com
-  - wcpstatic.microsoft.com
   - wctour-images.worldchess.com
   - web-assets.esetstatic.com
   - web-assets.otogi-frontier.com
@@ -1988,7 +1966,6 @@ domain_set:
   - www-res.cablelabs.com
   - www.envoyproxy.io
   - www.fumadocs.dev
-  - www.microsoft.com
   - www.pngmart.com
   - www.tbstat.com
   - www.typescriptlang.org
@@ -2352,13 +2329,9 @@ domain_suffix_set:
   - actifio.com
   - adgoogle.net
   - admeld.com
-  - admob-cn.com
   - adsense.com
   - adsenseformobileapps.com
   - adtrafficquality.google
-  - adwords-community.com
-  - adwords.com
-  - adwordsexpress.com
   - amp.dev
   - ampproject.com
   - ampproject.net
@@ -2544,7 +2517,6 @@ domain_suffix_set:
   - dl.google.com
   - dl.l.google.com
   - docs.new
-  - doubleclick.cn
   - download.mlcc.google.com
   - download.tensorflow.google.com
   - episodic.com
@@ -2938,7 +2910,6 @@ domain_suffix_set:
   - pagead-googlehosted.l.google.com
   - pagespeedmobilizer.com
   - pageview.mobi
-  - partnerad.l.google.com
   - partylikeits1986.org
   - paxlicense.org
   - performanceparameters.googleapis.com
@@ -3319,7 +3290,6 @@ domain_suffix_set:
   - 2-hand.info
   - 2000fun.com
   - 2008xianzhang.info
-  - 2019baidu.xyz
   - 2021hkcharter.com
   - 2025copy.com
   - 2047.name
@@ -4087,7 +4057,6 @@ domain_suffix_set:
   - airiti.com
   - airitilibrary.com
   - airmax360.com
-  - airport-gov-cn.com
   - airsextube.com
   - airtable.com
   - airtableusercontent.com
@@ -4581,7 +4550,6 @@ domain_suffix_set:
   - appmifile.com
   - approvedusedbmw.com
   - approveit.today
-  - appsflyersdk.com
   - appshopper.com
   - appsocks.net
   - appsonebay.net
@@ -4819,12 +4787,10 @@ domain_suffix_set:
   - autocad3d.com
   - autocadarchitecturecc.com
   - autocadexpert.com
-  - autocadformac.com
   - autocadfreestyle.com
   - autocadlt.com
   - autocadltbg.com
   - autocadmac.com
-  - autocadmobile.com
   - autocadsucks.com
   - autocadsucks.net
   - autocadws.com
@@ -6592,7 +6558,6 @@ domain_suffix_set:
   - canny.io
   - canon-cee.com
   - canon-cmos-sensors.com
-  - canon-cna.com
   - canon-emea.com
   - canon-emirates.ae
   - canon-europa.com
@@ -7269,7 +7234,6 @@ domain_suffix_set:
   - cnd.org
   - cnet.com
   - cnineu.com
-  - cnix-gov-cn.com
   - cnn.com
   - cnn.io
   - cnnamador.com
@@ -7822,7 +7786,6 @@ domain_suffix_set:
   - de1lib.org
   - deadhouse.org
   - deadline.com
-  - deadspacegame.com
   - deaftone.com
   - dealbay.com
   - dealerspeed.net
@@ -8081,7 +8044,6 @@ domain_suffix_set:
   - didilist.com
   - dierectv.com
   - difangwenge.org
-  - digicert-cn.com
   - digicert-validation.com
   - digikeyassets.com
   - digital-anime.com
@@ -14847,85 +14809,6 @@ domain_suffix_set:
   - micoach.com
   - micro.blog
   - microbit.org
-  - microsoft-falcon.io
-  - microsoft-give.com
-  - microsoft-int.com
-  - microsoft-ppe.com
-  - microsoft-sap-events.com
-  - microsoft-sbs-domains.com
-  - microsoft.az
-  - microsoft.by
-  - microsoft.cat
-  - microsoft.cl
-  - microsoft.fi
-  - microsoft.ge
-  - microsoft.hu
-  - microsoft.io
-  - microsoft.lt
-  - microsoft.lu
-  - microsoft.lv
-  - microsoft.net
-  - microsoft.pt
-  - microsoft.red
-  - microsoft.tv
-  - microsoft.ua
-  - microsoft.uz
-  - microsoft365.com
-  - microsoftaccountguard.com
-  - microsoftadc.com
-  - microsoftadvertising.com
-  - microsoftadvertisingregionalawards.com
-  - microsoftaffiliates.com
-  - microsoftapp.net
-  - microsoftazuread-sso.com
-  - microsoftazuresponsorships.com
-  - microsoftcloud.com
-  - microsoftcloudsummit.com
-  - microsoftcloudworkshop.com
-  - microsoftcommunitytraining.com
-  - microsoftdiplomados.com
-  - microsofteca.com
-  - microsoftedge.com
-  - microsoftedgeinsider.com
-  - microsoftgamestack.com
-  - microsofthouse.com
-  - microsofthouse.net
-  - microsoftinternetsafety.net
-  - microsoftiotcentral.com
-  - microsoftiotinsiderlabs.com
-  - microsoftlatamaitour.com
-  - microsoftlatamholiday.com
-  - microsoftlinc.com
-  - microsoftmxfilantropia.com
-  - microsoftnews.cc
-  - microsoftnews.com
-  - microsoftnews.net
-  - microsoftnews.org
-  - microsoftnewsforkids.com
-  - microsoftnewsforkids.net
-  - microsoftnewsforkids.org
-  - microsoftnewskids.com
-  - microsoftnewskids.net
-  - microsoftnewskids.org
-  - microsoftonline-p.com
-  - microsoftpartnercommunity.com
-  - microsoftpartnersolutions.com
-  - microsoftpersonalcontent.com
-  - microsoftreactor.info
-  - microsoftreactor.net
-  - microsoftreactor.org
-  - microsoftready.com
-  - microsoftsilverlight.com
-  - microsoftsilverlight.net
-  - microsoftsilverlight.org
-  - microsoftsiteselection.com
-  - microsoftsqlserver.com
-  - microsoftstart.com
-  - microsoftstore.com
-  - microsoftstream.com
-  - microsoftteams.com
-  - microsofttradein.com
-  - microsoftuwp.com
   - microvpn.com
   - midatlanticbmwmotorcycles.com
   - middle-way.net
@@ -15707,7 +15590,6 @@ domain_suffix_set:
   - mymapportal.com
   - mymasturbators.com
   - mymediarom.com
-  - mymicrosoft.com
   - myminisexdoll.com
   - myminiso.com
   - mymmode.com
@@ -15785,7 +15667,6 @@ domain_suffix_set:
   - n3ro.wtf
   - na-att-idns.net
   - naacoalition.org
-  - naiadsystems.com
   - naihenda.shop
   - naijauncut.com
   - nailedhard.com
@@ -16702,7 +16583,6 @@ domain_suffix_set:
   - omnitalk.com
   - omnitalk.org
   - omnitek.tv
-  - omniture.com
   - omobi.cc
   - omoplanet.com
   - omorashi.org
@@ -18523,7 +18403,6 @@ domain_suffix_set:
   - s-cute.com
   - s-dc-msedge.net
   - s-dragon.org
-  - s-microsoft.com
   - s-msedge.net
   - s-msft.com
   - s-msn.com
@@ -19391,7 +19270,6 @@ domain_suffix_set:
   - smartone.com
   - smartoneholdings.com
   - smartonerobotics.com
-  - smartscreen.microsoft.com
   - smartthings.com
   - smashing.media
   - smashingmagazine.com
@@ -19833,7 +19711,6 @@ domain_suffix_set:
   - static.chaosgroup.com
   - static.domains
   - static.fun
-  - static.microsoft
   - static.pub
   - static.skymavis.com
   - static2cdn.hubspot.com
@@ -20224,7 +20101,6 @@ domain_suffix_set:
   - tanflix.com
   - tangben.com
   - tantaly.com
-  - taoil-cn.sbs
   - taoism.net
   - taolun.info
   - tap.io
@@ -22911,7 +22787,6 @@ domain_suffix_set:
   - xiaoou.tv
   - xiaoshuobb.life
   - xiaoyaoge.xyz
-  - xiaxiaoqiang.net
   - xicons.org
   - xie56.xyz
   - xiezhua.com

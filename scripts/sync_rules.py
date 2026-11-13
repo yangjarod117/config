@@ -1,3 +1,4 @@
+import fnmatch
 import json
 import os
 import re
@@ -22,7 +23,7 @@ NAMES = [
     "Global",
 ]
 DEDUPE = {"Privacy": "AdvertisingLite"}
-FOREIGN_DNS = ["YouTubeMusic", "YouTube", "Telegram", "AI", "Google", "Global"]
+FOREIGN_DNS = ["YouTube", "Telegram", "AI", "Google", "Global"]
 DOMAIN_TYPES = (
     "domain_set",
     "domain_suffix_set",
@@ -36,7 +37,6 @@ ORDER = [
     "AdvertisingLite",
     "Privacy",
     "iCloud",
-    "YouTubeMusic",
     "YouTube",
     "Telegram",
     "AI",
@@ -47,11 +47,20 @@ ORDER = [
     "ChinaIPs",
 ]
 REJECT = ["Hijacking", "AdvertisingLite", "Privacy"]
+# 走代理的规则集。其余规则集是直连或拒绝，Apple 默认直连。
+PROXY_SETS = {"YouTube", "Telegram", "AI", "Google", "Global"}
+# 直连规则集里被 ForeignDNS 覆盖的域名，收进 DirectDNS，改用国内 DNS。
+DIRECT_DNS = ["Lan", "iCloud", "Apple", "China"]
 KEEP = {
     "wxs.qq.com",
     "wxa.wxs.qq.com",
     "gvideo.qpic.cn",
+    # 墨鱼模块单独放行它，拦了 12306 会出问题。
+    "ad.12306.cn",
 }
+# openx 关键词会拦掉 openxlab.org.cn、openxla.org。换成 OpenX 自己的域名。
+DROP_KEYWORD = {"openx"}
+EXTRA_REJECT_SUFFIX = ["openx.com"]
 # MagicRule 把同一批广告域名灌进了 Lan、Telegram、Apple。Lan 排最前且是直连，
 # 这些域名会绕过去广告。只从 Lan 删掉同时出现在下面规则集里的域名。
 LAN_SHARED_WITH = ("AdvertisingLite", "Telegram", "Apple")
@@ -325,6 +334,54 @@ def covered_by(item, exact, suffixes):
     return any(".".join(parts[i:]) in suffixes for i in range(len(parts)))
 
 
+class Matcher:
+    """按 Egern 的方式匹配域名，用来判断一个域名最终落到哪个规则集。"""
+
+    def __init__(self, body):
+        self.exact = set()
+        self.suffixes = set()
+        self.keywords = []
+        self.patterns = []
+        for sec, v in entries(body):
+            item = value(v).lower()
+            if sec == "domain_set":
+                self.exact.add(item)
+            elif sec == "domain_suffix_set":
+                self.suffixes.add(item)
+            elif sec == "domain_keyword_set":
+                self.keywords.append(item)
+            elif sec == "domain_wildcard_set":
+                self.patterns.append(re.compile(fnmatch.translate(item)).match)
+            elif sec == "domain_regex_set":
+                try:
+                    self.patterns.append(re.compile(value(v), re.I).search)
+                except re.error:
+                    pass
+
+    def covers_all(self, host):
+        """host 和它的所有子域名都会命中。"""
+        parts = host.split(".")
+        if any(".".join(parts[i:]) in self.suffixes for i in range(len(parts))):
+            return True
+        return any(k in host for k in self.keywords)
+
+    def match(self, host):
+        if host in self.exact or self.covers_all(host):
+            return True
+        return any(p(host) for p in self.patterns)
+
+
+def first_set(host, sec, names, matchers):
+    """host 在 names 里第一个命中的规则集。后缀条目只认能覆盖全部子域名的命中。"""
+    host = host.lower()
+    for name in names:
+        m = matchers[name]
+        hit = m.covers_all(host) if sec == "domain_suffix_set" else m.match(host)
+        if hit:
+            return name
+    return None
+
+
 def filter_google(body):
     def drop(sec, v):
         item = value(v)
@@ -427,6 +484,8 @@ def prune(body):
 
 
 def build(bodies, module_body):
+    # YouTube Music 和 YouTube 走同一个策略组，并进 YouTube，少一个规则集文件。
+    bodies["YouTube"] = merge_rules(bodies["YouTube"], bodies.pop("YouTubeMusic"))
     before = sum(1 for _ in entries(bodies["AdvertisingLite"]))
     bodies["AdvertisingLite"] = merge_rules(bodies["AdvertisingLite"], module_body)
     print(
@@ -448,6 +507,13 @@ def build(bodies, module_body):
             bodies[name],
             lambda s, v: s == "domain_suffix_set" and value(v) in DROP_SUFFIX,
         )
+        bodies[name] = rewrite(
+            bodies[name],
+            lambda s, v: s == "domain_keyword_set" and value(v) in DROP_KEYWORD,
+        )
+    extra = ["domain_suffix_set:"]
+    extra.extend("  - " + json.dumps(i) for i in EXTRA_REJECT_SUFFIX)
+    bodies["AdvertisingLite"] = merge_rules(bodies["AdvertisingLite"], "\n".join(extra) + "\n")
     bodies["Google"] = filter_google(bodies["Google"])
     bodies["AI"] = make_ai(bodies)
     for name in AI_SOURCES:
@@ -470,19 +536,58 @@ def build(bodies, module_body):
             exact.add((s, value(v)))
             if s == "domain_suffix_set":
                 suffixes.add(value(v))
+    matchers = {name: Matcher(bodies[name]) for name in ORDER}
+
+    # ForeignDNS：只收最终走代理的域名。被前面直连、拒绝规则集抢走的不收，
+    # 例如 China 的 microsoft 关键词让一批 Global 里的微软域名走直连。
     merged = {t: [] for t in DOMAIN_TYPES}
     seen = set()
+    dropped = 0
     for name in FOREIGN_DNS:
+        before = ORDER[: ORDER.index(name)]
         for s, v in entries(bodies[name]):
-            if s in merged and (s, v) not in seen:
-                seen.add((s, v))
-                merged[s].append(v)
+            if s not in merged or (s, v) in seen:
+                continue
+            if s in ("domain_set", "domain_suffix_set"):
+                hit = first_set(value(v), s, before, matchers)
+                if hit and hit not in PROXY_SETS:
+                    dropped += 1
+                    continue
+            seen.add((s, v))
+            merged[s].append(v)
+    print("ForeignDNS dropped (not proxied)", dropped)
     lines = []
     for t, items in merged.items():
         if items:
             lines.append(t + ":")
             lines.extend("  - " + v for v in items)
     bodies["ForeignDNS"] = "\n".join(lines) + "\n"
+
+    # DirectDNS：直连规则集里会被 ForeignDNS 的父域名、整段后缀或关键词兜住的域名，
+    # 例如 cn.download.nvidia.com、apple.de。DNS 转发里排在 ForeignDNS 前面，走国内 DNS。
+    foreign = Matcher(bodies["ForeignDNS"])
+    direct = {"domain_set": [], "domain_suffix_set": []}
+    seen = set()
+    for name in DIRECT_DNS:
+        before = ORDER[: ORDER.index(name)]
+        for s, v in entries(bodies[name]):
+            if s not in direct or (s, value(v)) in seen:
+                continue
+            item = value(v)
+            if not foreign.match(item.lower()):
+                continue
+            hit = first_set(item, s, before, matchers)
+            if hit in PROXY_SETS or hit in REJECT:
+                continue
+            seen.add((s, item))
+            direct[s].append(item)
+    print("DirectDNS", sum(len(i) for i in direct.values()))
+    lines = []
+    for t, items in direct.items():
+        if items:
+            lines.append(t + ":")
+            lines.extend("  - " + json.dumps(i, ensure_ascii=False) for i in items)
+    bodies["DirectDNS"] = "\n".join(lines) + "\n"
     return bodies
 
 
@@ -511,7 +616,7 @@ def main():
     if failed:
         sys.exit(1)
     bodies = build(bodies, module_body)
-    for stale_name in ("ModuleReject.yaml", "Gemini.yaml"):
+    for stale_name in ("ModuleReject.yaml", "Gemini.yaml", "YouTubeMusic.yaml"):
         stale = os.path.join(OUT, stale_name)
         if os.path.exists(stale):
             os.remove(stale)

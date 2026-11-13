@@ -28,6 +28,9 @@ dns:
       - https://8.8.8.8/dns-query
   forward:
     - proxy_rule_set:
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/DirectDNS.yaml
+        value: 国内
+    - proxy_rule_set:
         match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/ForeignDNS.yaml
         value: 国外
     - domain_wildcard:
@@ -92,7 +95,7 @@ policy_groups:
         - 美国
         - 日本
         - 我的订阅
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
   - select:
       name: Apple
       policies:
@@ -118,9 +121,6 @@ rules:
   - rule_set:
       match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/iCloud.yaml
       policy: DIRECT
-  - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/YouTubeMusic.yaml
-      policy: YouTube
   - rule_set:
       match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/YouTube.yaml
       policy: YouTube
