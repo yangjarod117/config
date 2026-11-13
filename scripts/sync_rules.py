@@ -226,7 +226,7 @@ MODULE_TYPES = {
     "URL-REGEX": "url_regex_set",
     "USER-AGENT": "user_agent_set",
 }
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "rules")
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "egern", "rules")
 HEADERS = {"User-Agent": "Mozilla/5.0", "Referer": "https://magicrule.pages.dev/"}
 
 

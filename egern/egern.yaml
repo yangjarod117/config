@@ -28,10 +28,10 @@ dns:
       - https://8.8.8.8/dns-query
   forward:
     - proxy_rule_set:
-        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/DirectDNS.yaml
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/DirectDNS.yaml
         value: 国内
     - proxy_rule_set:
-        match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/ForeignDNS.yaml
+        match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/ForeignDNS.yaml
         value: 国外
     - domain_wildcard:
         match: '*'
@@ -107,43 +107,43 @@ policy_groups:
 
 rules:
   - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Lan.yaml
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/Lan.yaml
       policy: DIRECT
   - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Hijacking.yaml
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/Hijacking.yaml
       policy: REJECT
   - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/AdvertisingLite.yaml
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/AdvertisingLite.yaml
       policy: REJECT
   - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Privacy.yaml
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/Privacy.yaml
       policy: REJECT
   - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/iCloud.yaml
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/iCloud.yaml
       policy: DIRECT
   - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/YouTube.yaml
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/YouTube.yaml
       policy: YouTube
   - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Telegram.yaml
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/Telegram.yaml
       policy: Telegram
   - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/AI.yaml
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/AI.yaml
       policy: AI
   - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Google.yaml
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/Google.yaml
       policy: Google
   - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Apple.yaml
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/Apple.yaml
       policy: Apple
   - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/China.yaml
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/China.yaml
       policy: DIRECT
   - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Global.yaml
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/Global.yaml
       policy: Global
   - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/ChinaIPs.yaml
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/ChinaIPs.yaml
       policy: DIRECT
   - geoip:
       match: CN
