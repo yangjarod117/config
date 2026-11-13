@@ -5,7 +5,7 @@
 | 目录 | 软件 |
 |---|---|
 | [egern](egern) | Egern |
-| surge | Surge（待添加） |
+| [surge](surge) | Surge |
 | loon | Loon（待添加） |
 | qx | Quantumult X（待添加） |
 

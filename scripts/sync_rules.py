@@ -227,6 +227,7 @@ MODULE_TYPES = {
     "USER-AGENT": "user_agent_set",
 }
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "egern", "rules")
+SURGE_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "surge", "rules")
 HEADERS = {"User-Agent": "Mozilla/5.0", "Referer": "https://magicrule.pages.dev/"}
 
 
@@ -276,10 +277,11 @@ def rewrite(body, drop):
 
 
 def merge_rules(base, extra):
-    have = {(sec, value(v)) for sec, v in entries(base)}
+    # 用 plain 还原转义后再比较、再 json.dumps，否则 URL-REGEX 里的反斜杠会被转义两次。
+    have = {(sec, plain(v)) for sec, v in entries(base)}
     add = {}
     for sec, v in entries(extra):
-        item = value(v)
+        item = plain(v)
         if (sec, item) in have:
             continue
         have.add((sec, item))
@@ -624,6 +626,57 @@ def main():
         with open(os.path.join(OUT, name + ".yaml"), "w", encoding="utf-8", newline="\n") as f:
             f.write(prune(body))
         print(name, sum(1 for _ in entries(body)))
+    write_surge(bodies)
+
+
+# Egern 字段 → Surge 规则类型。Surge 没有 DOMAIN-REGEX，domain_regex_set 不输出。
+SURGE_TYPES = {
+    "domain_set": "DOMAIN",
+    "domain_suffix_set": "DOMAIN-SUFFIX",
+    "domain_keyword_set": "DOMAIN-KEYWORD",
+    "domain_wildcard_set": "DOMAIN-WILDCARD",
+    "ip_cidr_set": "IP-CIDR",
+    "ip_cidr6_set": "IP-CIDR6",
+    "asn_set": "IP-ASN",
+    "url_regex_set": "URL-REGEX",
+    "user_agent_set": "USER-AGENT",
+}
+# Surge 走代理的请求由节点远端解析，不需要按规则集分流 DNS。
+SURGE_SKIP = {"ForeignDNS", "DirectDNS"}
+
+
+def plain(v):
+    """YAML 里的值还原成原文。双引号值要反转义，例如 URL-REGEX 里的 \\\\d → \\d。"""
+    v = v.strip()
+    if len(v) > 1 and v[0] == v[-1] == '"':
+        return json.loads(v)
+    if len(v) > 1 and v[0] == v[-1] == "'":
+        return v[1:-1].replace("''", "'")
+    return v
+
+
+def write_surge(bodies):
+    """把处理好的规则集转成 Surge 的 .list，和 Egern 用同一份数据。"""
+    os.makedirs(SURGE_OUT, exist_ok=True)
+    wanted = set()
+    for name, body in bodies.items():
+        if name in SURGE_SKIP:
+            continue
+        lines = []
+        skipped = 0
+        for sec, v in entries(body):
+            kind = SURGE_TYPES.get(sec)
+            if not kind:
+                skipped += 1
+                continue
+            lines.append(kind + "," + plain(v))
+        wanted.add(name + ".list")
+        with open(os.path.join(SURGE_OUT, name + ".list"), "w", encoding="utf-8", newline="\n") as f:
+            f.write("\n".join(lines) + "\n")
+        print("surge", name, len(lines), "skipped" if skipped else "", skipped or "")
+    for stale in os.listdir(SURGE_OUT):
+        if stale.endswith(".list") and stale not in wanted:
+            os.remove(os.path.join(SURGE_OUT, stale))
 
 
 if __name__ == "__main__":
