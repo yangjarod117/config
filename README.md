@@ -52,8 +52,10 @@ https://raw.githubusercontent.com/yangjarod117/config/main/egern.yaml
 
 ## 去广告模块
 
-- [fmz200/wool_scripts](https://github.com/fmz200/wool_scripts) 广告拦截&净化合集
-- [fmz200/wool_scripts](https://github.com/fmz200/wool_scripts) HTTPDNS 拦截器
-- [ddgksf2013](https://ddgksf2013.top/rewrite/StartUpAds.conf) 墨鱼去开屏 2.0。官方文件是 Quantumult X 格式，配置里用的是 [Romeo](https://github.com/ifflagged/Romeo) 转好的 Surge 模块
+配置里按这个顺序合并，写在上面的先生效：
+
+1. [fmz200/wool_scripts](https://github.com/fmz200/wool_scripts) HTTPDNS 拦截器
+2. [ddgksf2013](https://ddgksf2013.top/rewrite/StartUpAds.conf) 墨鱼去开屏 2.0。官方文件是 Quantumult X 格式，配置里用的是 [Romeo](https://github.com/ifflagged/Romeo) 转好的 Surge 模块
+3. [fmz200/wool_scripts](https://github.com/fmz200/wool_scripts) 广告拦截&净化合集
 
 需要开启 MITM 并信任证书。墨鱼模块和广告合集有一部分相同的解密域名，觉得 App 变慢可以单独关掉墨鱼模块。

@@ -158,9 +158,9 @@ mitm:
       - '*.googlevideo.com'
 
 modules:
-  - name: 广告拦截&净化合集
-    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module
   - name: HTTPDNS拦截器
     url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockHTTPDNS.module
   - name: 墨鱼去开屏2.0
     url: https://raw.githubusercontent.com/ifflagged/Romeo/main/Modules/Surge/ddgksf2013/StartUpAds.sgmodule
+  - name: 广告拦截&净化合集
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module
