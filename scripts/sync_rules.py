@@ -15,14 +15,14 @@ NAMES = [
     "YouTube",
     "YouTubeMusic",
     "Telegram",
-    "Gemini",
+    "Google",
     "Apple",
     "China",
     "ChinaIPs",
     "Global",
 ]
 DEDUPE = {"Privacy": "AdvertisingLite"}
-FOREIGN_DNS = ["YouTubeMusic", "YouTube", "Telegram", "Gemini", "Global"]
+FOREIGN_DNS = ["YouTubeMusic", "YouTube", "Telegram", "AI", "Google", "Global"]
 DOMAIN_TYPES = (
     "domain_set",
     "domain_suffix_set",
@@ -39,7 +39,8 @@ ORDER = [
     "YouTubeMusic",
     "YouTube",
     "Telegram",
-    "Gemini",
+    "AI",
+    "Google",
     "Apple",
     "China",
     "Global",
@@ -66,9 +67,143 @@ LAN_PROTECTED = {
     "internal",
     "home.arpa",
 }
-# 整段顶级域，拒绝后正常网站打不开。apis.google.com 会被登录、地图等非 AI 流量用到。
+# 整段顶级域。去广告规则里的 data 会拦掉所有 .data 网站。
 DROP_SUFFIX = {"data"}
+# Google 规则集用整段国家后缀来覆盖 google.com.au 这类域名，但 google.com.au 已经单独列出。
+# 裸的 co、au 会把无关网站送进 Google。只保留 Google 自己的品牌后缀。
+GOOGLE_BRAND_TLD = {
+    "android",
+    "chrome",
+    "dclk",
+    "gbiz",
+    "gle",
+    "gmail",
+    "goog",
+    "google",
+    "guge",
+    "hangout",
+    "nexus",
+    "xn--flw351e",
+    "xn--qcka1pmc",
+}
+# 这些域名会落到 Google 策略，不能放进 AI。
 GEMINI_SKIP = {"apis.google.com"}
+AI_SOURCES = [
+    "OpenAI",
+    "Anthropic",
+    "Gemini",
+    "GoogleDeepMind",
+    "Grok",
+    "Groq",
+    "Perplexity",
+    "Poe",
+    "HuggingFace",
+    "Cursor",
+    "JetBrainsAI",
+    "Windsurf",
+    "ByteDanceAI",
+]
+AI_SKIP_KEYWORD = {"datadog", "sentry", "sift", "codex"}
+# 厂商规则集里夹带的公共依赖。留在 AI 里会把支付、统计整站带跑。
+AI_INFRA = {
+    "stripe.com",
+    "sentry.io",
+    "segment.io",
+    "intercom.io",
+    "intercomcdn.com",
+    "auth0.com",
+    "launchdarkly.com",
+    "algolia.net",
+    "statsigapi.net",
+    "statsig.com",
+    "featuregates.org",
+    "identrust.com",
+    "arkoselabs.com",
+    "livekit.cloud",
+    "datadoghq.com",
+}
+# 国内厂商，含海外域名。留给中国规则或直连，不进 AI。
+DOMESTIC_AI = {
+    "deepseek.com",
+    "deepseeksvc.com",
+    "doubao.com",
+    "doudou.com",
+    "kimi.com",
+    "kimi.ai",
+    "moonshot.cn",
+    "qwen.ai",
+    "qwenlm.ai",
+    "qianwen.com",
+    "tongyi.com",
+    "bigmodel.cn",
+    "chatglm.cn",
+    "zhipucn.com",
+    "z.ai",
+    "hailuoai.com",
+    "minimaxi.com",
+    "minimax.io",
+    "xingyeai.com",
+    "hunyuan.tencent.com",
+    "yuanbao.tencent.com",
+    "yuanqi.tencent.com",
+    "coze.cn",
+    "cozebaas.cn",
+    "cozefn.cn",
+    "cozeide.cn",
+    "trae.cn",
+    "trae.com.cn",
+    "marscode.cn",
+    "marscode.com.cn",
+    "xiaoaiassist.com",
+    "xiaomimimo.com",
+    "miaibox.com",
+    "iflytek.com",
+}
+AI_EXTRA_SUFFIX = [
+    "bfl.ai",
+    "cerebras.ai",
+    "character.ai",
+    "cohere.ai",
+    "cohere.com",
+    "copilot.com",
+    "copilot.cloud.microsoft",
+    "copilot.microsoft.com",
+    "githubcopilot.com",
+    "elevenlabs.com",
+    "elevenlabs.io",
+    "fireworks.ai",
+    "heygen.com",
+    "ideogram.ai",
+    "inflection.ai",
+    "leonardo.ai",
+    "llama.com",
+    "llamameta.net",
+    "lumalabs.ai",
+    "midjourney.com",
+    "mistral.ai",
+    "ollama.com",
+    "openrouter.ai",
+    "pi.ai",
+    "pika.art",
+    "replicate.com",
+    "replicate.delivery",
+    "runway.com",
+    "runwayml.com",
+    "stability.ai",
+    "suno.ai",
+    "suno.com",
+    "together.ai",
+    "together.xyz",
+]
+AI_EXTRA_DOMAIN = [
+    "ai.meta.com",
+    "ai.developer.meta.com",
+    "aidemos.meta.com",
+    "llama.developer.meta.com",
+    "copilot-proxy.githubusercontent.com",
+    "copilot-telemetry-service.githubusercontent.com",
+    "copilot-workspace.githubnext.com",
+]
 MODULES = [
     "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module",
     "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockHTTPDNS.module",
@@ -167,6 +302,65 @@ def merge_rules(base, extra):
     return "\n".join(lines) + "\n"
 
 
+def under(item, suffixes):
+    return any(item == d or item.endswith("." + d) for d in suffixes)
+
+
+def china_domains(body):
+    exact = set()
+    suffixes = set()
+    for sec, v in entries(body):
+        item = value(v)
+        if sec == "domain_set":
+            exact.add(item)
+        elif sec == "domain_suffix_set":
+            suffixes.add(item)
+    return exact, suffixes
+
+
+def covered_by(item, exact, suffixes):
+    if item in exact or item in suffixes:
+        return True
+    parts = item.split(".")
+    return any(".".join(parts[i:]) in suffixes for i in range(len(parts)))
+
+
+def filter_google(body):
+    def drop(sec, v):
+        item = value(v)
+        return sec == "domain_suffix_set" and "." not in item and item not in GOOGLE_BRAND_TLD
+
+    return rewrite(body, drop)
+
+
+def make_ai(bodies):
+    body = "no_resolve: true\n"
+    for name in AI_SOURCES:
+        body = merge_rules(body, bodies[name])
+    extra = ["no_resolve: true", "domain_suffix_set:"]
+    extra.extend("  - " + json.dumps(i, ensure_ascii=False) for i in AI_EXTRA_SUFFIX)
+    extra.append("domain_set:")
+    extra.extend("  - " + json.dumps(i, ensure_ascii=False) for i in AI_EXTRA_DOMAIN)
+    body = merge_rules(body, "\n".join(extra) + "\n")
+    exact, suffixes = china_domains(bodies["China"])
+
+    def drop(sec, v):
+        item = value(v)
+        if sec == "domain_keyword_set" and item in AI_SKIP_KEYWORD:
+            return True
+        if item.endswith(".cn") or item.endswith(".com.cn"):
+            return True
+        if under(item, DOMESTIC_AI) or under(item, AI_INFRA) or item in GEMINI_SKIP:
+            return True
+        if sec in ("domain_set", "domain_suffix_set") and covered_by(item, exact, suffixes):
+            return True
+        return False
+
+    body = rewrite(body, drop)
+    print("AI", sum(1 for _ in entries(body)))
+    return body
+
+
 def module_reject():
     sets = {v: [] for v in MODULE_TYPES.values()}
     for url in MODULES:
@@ -254,9 +448,10 @@ def build(bodies, module_body):
             bodies[name],
             lambda s, v: s == "domain_suffix_set" and value(v) in DROP_SUFFIX,
         )
-    bodies["Gemini"] = rewrite(
-        bodies["Gemini"], lambda s, v: value(v) in GEMINI_SKIP
-    )
+    bodies["Google"] = filter_google(bodies["Google"])
+    bodies["AI"] = make_ai(bodies)
+    for name in AI_SOURCES:
+        bodies.pop(name, None)
     exact = set()
     suffixes = set()
 
@@ -297,7 +492,7 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     bodies = {}
     failed = []
-    for name in NAMES:
+    for name in NAMES + [n for n in AI_SOURCES if n not in NAMES]:
         try:
             manifest = json.loads(get(rules[name]["manifest"]))
             artifact = next(a for a in manifest["artifacts"] if a["key"] == "rules")
@@ -316,9 +511,10 @@ def main():
     if failed:
         sys.exit(1)
     bodies = build(bodies, module_body)
-    stale = os.path.join(OUT, "ModuleReject.yaml")
-    if os.path.exists(stale):
-        os.remove(stale)
+    for stale_name in ("ModuleReject.yaml", "Gemini.yaml"):
+        stale = os.path.join(OUT, stale_name)
+        if os.path.exists(stale):
+            os.remove(stale)
     for name, body in bodies.items():
         with open(os.path.join(OUT, name + ".yaml"), "w", encoding="utf-8", newline="\n") as f:
             f.write(prune(body))

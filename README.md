@@ -29,25 +29,26 @@ https://raw.githubusercontent.com/yangjarod117/config/main/egern.yaml
 3. iCloud → DIRECT
 4. YouTube、YouTube Music → YouTube
 5. Telegram → Telegram
-6. Gemini、AI Studio、NotebookLM 等 Google AI 域名 → Google AI
-7. Apple → Apple（默认 DIRECT，可切代理）
-8. 中国域名 → DIRECT
-9. 已知境外域名 → Global
-10. 中国 IP → DIRECT
-11. 其余 → Global
+6. 国外 AI → AI
+7. Google → Google
+8. Apple → Apple（默认 DIRECT，可切代理）
+9. 中国域名 → DIRECT
+10. 已知境外域名 → Global
+11. 中国 IP → DIRECT
+12. 其余 → Global
 
 去广告模块里的规则由 Egern 排在主配置规则前面，所以模块仍会先于上面的规则集生效。
 
 ## DNS
 
-- `ForeignDNS.yaml` 里的域名：Cloudflare、Google DoH 同时查询，取最快的结果。该规则集由 YouTube、YouTube Music、Telegram、Gemini、Global 每天自动合并生成，只保留域名类条目
+- `ForeignDNS.yaml` 里的域名：Cloudflare、Google DoH 同时查询，取最快的结果。该规则集由 YouTube、YouTube Music、Telegram、AI、Google、Global 每天自动合并生成，只保留域名类条目
 - 其余域名：系统 DNS、阿里 DoH、腾讯 DoH 同时查询，取最快的结果
 
 ## 规则处理
 
 同步时把 fmz200 两个模块里的拒绝规则并入 `AdvertisingLite.yaml`，去掉隐私规则里与去广告规则重复的条目，从拒绝规则中放行微信小程序、视频相关域名。MagicRule 的局域网规则集里混有一批广告域名，同步时从局域网里删掉。最后按分流顺序删掉被前面规则集覆盖、永远匹配不到的条目。
 
-不使用 MagicRule 的整份 Google 规则集：里面有 `co`、`au` 这种整段后缀，放在中国规则前面会把正常网站送去代理。Google AI 只用 Gemini 规则集，并去掉 `apis.google.com`，避免登录和地图跟着 AI 策略走。
+不使用 MagicRule 的整份 Google 规则集里的国家后缀：`co`、`au` 这种整段后缀会把正常网站送去代理。Google 策略只去掉这类裸后缀，`google.com.au` 这类完整域名仍走 Google。AI 策略放在 Google 前面，避免 Gemini 被 `google` 关键字抢走。AI 合并 OpenAI、Anthropic、Gemini、Grok、Mistral、Copilot、Meta、Midjourney 等国外厂商，去掉支付和统计用的公共域名。DeepSeek、豆包、Kimi、通义、智谱、混元这些国内服务不进 AI，继续直连。字节的海外产品 Cici、Coze 国际站和 trae.ai 算国外，走 AI。
 
 ## 去广告模块
 

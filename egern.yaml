@@ -79,12 +79,19 @@ policy_groups:
         - 我的订阅
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
   - select:
-      name: Google AI
+      name: AI
       policies:
         - 美国
         - 日本
         - 我的订阅
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AI.png
+  - select:
+      name: Google
+      policies:
+        - 美国
+        - 日本
+        - 我的订阅
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png
   - select:
       name: Apple
       policies:
@@ -120,8 +127,11 @@ rules:
       match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Telegram.yaml
       policy: Telegram
   - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Gemini.yaml
-      policy: Google AI
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/AI.yaml
+      policy: AI
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Google.yaml
+      policy: Google
   - rule_set:
       match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Apple.yaml
       policy: Apple

@@ -3,23 +3,225 @@ domain_set:
   - youtubei.googleapis.com
   - yt3.ggpht.com
   - yt3.googleusercontent.com
-  - ai.google.dev
-  - alkalicore-pa.clients6.google.com
-  - alkalimakersuite-pa.clients6.google.com
-  - antigravity-pa.googleapis.com
-  - antigravity.googleapis.com
-  - appsgenaiserver-pa.clients.google.com
-  - appsgenaiserver-pa.clients6.google.com
-  - appsgenaiserver-pa.googleapis.com
-  - cloudaicompanion.googleapis.com
-  - cloudcode-pa.googleapis.com
-  - daily-cloudcode-pa.googleapis.com
-  - geminiweb-pa.clients.google.com
-  - geminiweb-pa.clients6.google.com
-  - makersuite.google.com
-  - notebooklm-pa.googleapis.com
-  - notebooklm.googleapis.com
-  - webchannel-alkalimakersuite-pa.clients6.google.com
+  - "openai.qualtrics.com"
+  - "openaiapi-site.azureedge.net"
+  - "openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net"
+  - "openaicom.imgix.net"
+  - "production-openaicom-storage.azureedge.net"
+  - "anthropic-com.ghost.io"
+  - "anthropic.com.cdn.cloudflare.net"
+  - "browser-intake-us5-datadoghq.com"
+  - "cdn.growthbook.io"
+  - "cdn.usefathom.com"
+  - "servd-anthropic-website.b-cdn.net"
+  - "storage.googleapis.com"
+  - "ai.google.dev"
+  - "alkalicore-pa.clients6.google.com"
+  - "alkalimakersuite-pa.clients6.google.com"
+  - "antigravity-pa.googleapis.com"
+  - "antigravity.googleapis.com"
+  - "appsgenaiserver-pa.clients.google.com"
+  - "appsgenaiserver-pa.clients6.google.com"
+  - "appsgenaiserver-pa.googleapis.com"
+  - "cloudaicompanion.googleapis.com"
+  - "cloudcode-pa.googleapis.com"
+  - "daily-cloudcode-pa.googleapis.com"
+  - "geminiweb-pa.clients.google.com"
+  - "geminiweb-pa.clients6.google.com"
+  - "makersuite.google.com"
+  - "notebooklm-pa.googleapis.com"
+  - "notebooklm.googleapis.com"
+  - "webchannel-alkalimakersuite-pa.clients6.google.com"
+  - "ppl-ai-file-upload.s3.amazonaws.com"
+  - "pplx-res.cloudinary.com"
+  - "ai.meta.com"
+  - "ai.developer.meta.com"
+  - "aidemos.meta.com"
+  - "llama.developer.meta.com"
+  - "copilot-proxy.githubusercontent.com"
+  - "copilot-telemetry-service.githubusercontent.com"
+  - "copilot-workspace.githubnext.com"
+  - admob-cn.com
+  - alt1-mtalk.google.com
+  - alt2-mtalk.google.com
+  - alt3-mtalk.google.com
+  - alt4-mtalk.google.com
+  - alt5-mtalk.google.com
+  - alt6-mtalk.google.com
+  - alt7-mtalk.google.com
+  - alt8-mtalk.google.com
+  - analytics.google.com
+  - android.googlesource.com
+  - app-analytics-services.com
+  - app-measurement-cn.com
+  - avail.googleflights.net
+  - c.android.clients.google.com
+  - c.pki.goog
+  - cache-management-prod.google.com
+  - cache.pack.google.com
+  - checkin.gstatic.com
+  - clickserve.dartsearch.net
+  - clients1.google.com
+  - clientservices.googleapis.com
+  - cn.widevine.com
+  - connectivitycheck.gstatic.com
+  - crashlyticsreports-pa.googleapis.com
+  - crl.pki.goog
+  - crls.pki.goog
+  - dartsearch-cn.net
+  - dl.google.com
+  - dl.l.google.com
+  - download.mlcc.google.com
+  - download.tensorflow.google.com
+  - firebase.googleapis.com
+  - firebaseappcheck.googleapis.com
+  - firebaseappdistribution.googleapis.com
+  - firebaseapptesters.googleapis.com
+  - firebasedynamiclinks-ipv4.googleapis.com
+  - firebasedynamiclinks-ipv6.googleapis.com
+  - firebasedynamiclinks.googleapis.com
+  - firebaseinappmessaging.googleapis.com
+  - firebaseinstallations.googleapis.com
+  - firebaseperusertopics-pa.googleapis.com
+  - firebaseremoteconfig.googleapis.com
+  - fontfiles.googleapis.com
+  - fonts.googleapis.com
+  - fonts.gstatic.com
+  - g0.gstatic.com
+  - g1.gstatic.com
+  - g2.gstatic.com
+  - g3.gstatic.com
+  - gonglchuangl.net
+  - gongyichuangyi.net
+  - google-ohttp-relay-safebrowsing.fastly-edge.com
+  - googleapis-cn.com
+  - googleapps-cn.com
+  - googleflights-cn.net
+  - googletagservices-cn.com
+  - googletraveladservices-cn.com
+  - gstatic-cn.com
+  - gstaticadssl.l.google.com
+  - i.pki.goog
+  - lens.l.google.com
+  - mtalk-dev.google.com
+  - mtalk-staging.google.com
+  - mtalk.google.com
+  - mtalk4.google.com
+  - o.pki.goog
+  - ocsp.pki.goog
+  - pagead-googlehosted.l.google.com
+  - performanceparameters.googleapis.com
+  - pki-goog.l.google.com
+  - pki.google.com
+  - preprod-publicca.googleapis.com
+  - prod-controlbe.floonet.goog
+  - prod-databe.floonet.goog
+  - prod.databe.floonet.goog
+  - publicca.googleapis.com
+  - qiao-cn.com
+  - qpx.googleflights.net
+  - recaptcha-cn.net
+  - recaptcha.net
+  - redirector.bdn.dev
+  - redirector.c.bigcache.googleapis.com
+  - redirector.c.chat.google.com
+  - redirector.c.mail.google.com
+  - redirector.c.pack.google.com
+  - redirector.c.play.google.com
+  - redirector.xn--ngstr-lra8j.com
+  - safebrowsing-cache.google.com
+  - scholar.google.ae
+  - scholar.google.at
+  - scholar.google.be
+  - scholar.google.bg
+  - scholar.google.ca
+  - scholar.google.cat
+  - scholar.google.ch
+  - scholar.google.cl
+  - scholar.google.cn
+  - scholar.google.co.cr
+  - scholar.google.co.id
+  - scholar.google.co.il
+  - scholar.google.co.in
+  - scholar.google.co.jp
+  - scholar.google.co.kr
+  - scholar.google.co.nz
+  - scholar.google.co.th
+  - scholar.google.co.uk
+  - scholar.google.co.ve
+  - scholar.google.co.za
+  - scholar.google.com
+  - scholar.google.com.ar
+  - scholar.google.com.au
+  - scholar.google.com.bo
+  - scholar.google.com.br
+  - scholar.google.com.co
+  - scholar.google.com.cu
+  - scholar.google.com.do
+  - scholar.google.com.ec
+  - scholar.google.com.eg
+  - scholar.google.com.gt
+  - scholar.google.com.hk
+  - scholar.google.com.ly
+  - scholar.google.com.mx
+  - scholar.google.com.my
+  - scholar.google.com.ni
+  - scholar.google.com.pa
+  - scholar.google.com.pe
+  - scholar.google.com.ph
+  - scholar.google.com.pk
+  - scholar.google.com.pr
+  - scholar.google.com.py
+  - scholar.google.com.sg
+  - scholar.google.com.sv
+  - scholar.google.com.tr
+  - scholar.google.com.tw
+  - scholar.google.com.ua
+  - scholar.google.com.uy
+  - scholar.google.com.vn
+  - scholar.google.cz
+  - scholar.google.de
+  - scholar.google.dk
+  - scholar.google.es
+  - scholar.google.fi
+  - scholar.google.fr
+  - scholar.google.gr
+  - scholar.google.hn
+  - scholar.google.hr
+  - scholar.google.hu
+  - scholar.google.is
+  - scholar.google.it
+  - scholar.google.li
+  - scholar.google.lt
+  - scholar.google.lu
+  - scholar.google.lv
+  - scholar.google.nl
+  - scholar.google.no
+  - scholar.google.pl
+  - scholar.google.pt
+  - scholar.google.ro
+  - scholar.google.ru
+  - scholar.google.se
+  - scholar.google.si
+  - scholar.google.sk
+  - scholar.googleusercontent.com
+  - scholar.l.google.com
+  - ssl.gstatic.com
+  - staging-controlbe.floonet.goog
+  - staging-databe.floonet.goog
+  - staging.databe.floonet.goog
+  - tac.googleapis.com
+  - tools.google.com
+  - translate.googleapis.com
+  - update.googleapis.com
+  - voice.telephony.goog
+  - wear.googleapis.com
+  - www-googletagmanager.l.google.com
+  - www.destinationurl.com
+  - www.gstatic.com
+  - www.pxcc.com
+  - www.recaptcha-cn.net
+  - www.recaptcha.net
   - 3dna.nationbuilder.com
   - a-tiles.locationiq.com
   - a.gawby.com
@@ -407,7 +609,6 @@ domain_set:
   - cdn.gethypervisual.com
   - cdn.giftcardpro.app
   - cdn.gigya.com
-  - cdn.growthbook.io
   - cdn.hackaday.io
   - cdn.hackernoon.com
   - cdn.hashnode.com
@@ -1999,46 +2200,971 @@ domain_suffix_set:
   - toncenter.com
   - tx.me
   - usercontent.dev
-  - ai.studio
-  - aicode.googleapis.com
-  - aida.googleapis.com
-  - aisandbox-pa.googleapis.com
-  - aistudio.google.com
-  - antigravity-unleash.goog
-  - antigravity.google
-  - bard.google.com
-  - deepmind.com
-  - deepmind.google
-  - flow.google
-  - flow.google.com
-  - geller-pa.googleapis.com
-  - gemini.google
-  - gemini.google.com
-  - gemini.gstatic.com
-  - generativeai.google
-  - generativelanguage.googleapis.com
-  - jules.google
-  - jules.google.com
-  - labs.google
-  - labs.google.com
-  - labstailwind.pa.googleapis.com
-  - makersuite.google.com
-  - notebook.google
-  - notebook.google.com
-  - notebooklm.google
-  - notebooklm.google.com
-  - opal.google
-  - opal.google.com
-  - proactivebackend-pa.googleapis.com
-  - robinfrontend-pa.googleapis.com
-  - stitch.withgoogle.com
+  - "ai.com"
+  - "chat.com"
+  - "chatgpt.com"
+  - "chatgpt.site"
+  - "crixet.com"
+  - "oaistatic.com"
+  - "oaistatsig.com"
+  - "oaiusercontent.com"
+  - "observeit.net"
+  - "openai.com"
+  - "openai.com.cdn.cloudflare.net"
+  - "openai.org"
+  - "openaiapi-site.azureedge.net"
+  - "openaicom.imgix.net"
+  - "sora.com"
+  - "ant.dev"
+  - "anthropic.com"
+  - "anthropic.team"
+  - "antspace.dev"
+  - "chatbotclaude.com"
+  - "clau.de"
+  - "claude.ai"
+  - "claude.app"
+  - "claude.com"
+  - "claude.dev"
+  - "claude.new"
+  - "claude.site"
+  - "claudeacademy.com"
+  - "claudemcpclient.com"
+  - "claudemcpcontent.com"
+  - "claudepages.dev"
+  - "claudestudio.com"
+  - "claudeusercontent.com"
+  - "interface.feedback"
+  - "lcicat.org"
+  - "lcicollections.org"
+  - "mcpservertest.online"
+  - "modelcontextprotocol.com"
+  - "modelcontextprotocol.io"
+  - "modelcontextprotocol.net"
+  - "modelcontextprotocol.org"
+  - "muthos.com"
+  - "sillylittleguy.org"
+  - "ai.studio"
+  - "aicode.googleapis.com"
+  - "aida.googleapis.com"
+  - "aisandbox-pa.googleapis.com"
+  - "aistudio.google.com"
+  - "antigravity-unleash.goog"
+  - "antigravity.google"
+  - "bard.google.com"
+  - "deepmind.com"
+  - "deepmind.google"
+  - "flow.google"
+  - "flow.google.com"
+  - "geller-pa.googleapis.com"
+  - "gemini.google"
+  - "gemini.google.com"
+  - "gemini.gstatic.com"
+  - "generativeai.google"
+  - "generativelanguage.googleapis.com"
+  - "jules.google"
+  - "jules.google.com"
+  - "labs.google"
+  - "labs.google.com"
+  - "labstailwind.pa.googleapis.com"
+  - "makersuite.google.com"
+  - "notebook.google"
+  - "notebook.google.com"
+  - "notebooklm.google"
+  - "notebooklm.google.com"
+  - "opal.google"
+  - "opal.google.com"
+  - "proactivebackend-pa.googleapis.com"
+  - "robinfrontend-pa.googleapis.com"
+  - "stitch.withgoogle.com"
+  - "grok.com"
+  - "grok.x.com"
+  - "grokipedia.com"
+  - "x.ai"
+  - "groq.com"
+  - "perplexity.ai"
+  - "perplexity.com"
+  - "pplx.ai"
+  - "poe.com"
+  - "poecdn.net"
+  - "hf.co"
+  - "hf.space"
+  - "huggingface.co"
+  - "cursor-cdn.com"
+  - "cursor.com"
+  - "cursor.sh"
+  - "cursorapi.com"
+  - "cursorvm.com"
+  - "grazie.ai"
+  - "grazie.aws.intellij.net"
+  - "jetbrains.ai"
+  - "codeium.com"
+  - "codeiumdata.com"
+  - "windsurf.build"
+  - "windsurf.com"
+  - "cici.com"
+  - "ciciai.com"
+  - "ciciaicdn.com"
+  - "coze.com"
+  - "dola.com"
+  - "marscode.com"
+  - "trae.ai"
+  - "bfl.ai"
+  - "cerebras.ai"
+  - "character.ai"
+  - "cohere.ai"
+  - "cohere.com"
+  - "copilot.com"
+  - "copilot.cloud.microsoft"
+  - "copilot.microsoft.com"
+  - "githubcopilot.com"
+  - "elevenlabs.com"
+  - "elevenlabs.io"
+  - "fireworks.ai"
+  - "heygen.com"
+  - "ideogram.ai"
+  - "inflection.ai"
+  - "leonardo.ai"
+  - "llama.com"
+  - "llamameta.net"
+  - "lumalabs.ai"
+  - "midjourney.com"
+  - "mistral.ai"
+  - "ollama.com"
+  - "openrouter.ai"
+  - "pi.ai"
+  - "pika.art"
+  - "replicate.com"
+  - "replicate.delivery"
+  - "runway.com"
+  - "runwayml.com"
+  - "stability.ai"
+  - "suno.ai"
+  - "suno.com"
+  - "together.ai"
+  - "together.xyz"
+  - 0emm.com
+  - 1e100.net
+  - 1ucrs.com
+  - 265.com
+  - 2mdn.net
+  - 466453.com
+  - abc.xyz
+  - actifio.com
+  - adgoogle.net
+  - admeld.com
+  - admob-cn.com
+  - adsense.com
+  - adsenseformobileapps.com
+  - adtrafficquality.google
+  - adwords-community.com
+  - adwords.com
+  - adwordsexpress.com
+  - amp.dev
+  - ampproject.com
+  - ampproject.net
+  - ampproject.org
+  - analytics-alv.google.com
+  - android
+  - android.com
+  - androidify.com
+  - androidtv.com
+  - angulardart.org
+  - api.ai
+  - apigee.com
+  - app-analytics-services-att.com
+  - app-analytics-services.com
+  - app-measurement-cn.com
+  - app-measurement.net
+  - appbridge.ca
+  - appbridge.io
+  - appbridge.it
+  - appspot.com
+  - apture.com
+  - area120.com
+  - asp-cc.com
+  - autodraw.com
+  - avail.googleflights.net
+  - bandpage.com
+  - baselinestudy.com
+  - baselinestudy.org
+  - bazel.build
+  - bdn.dev
+  - beatthatquote.com
+  - blink.org
+  - blog.google
+  - blogblog.com
+  - blogger.com
+  - blogger.googleusercontent.com
+  - blogspot.ae
+  - blogspot.al
+  - blogspot.am
+  - blogspot.ba
+  - blogspot.be
+  - blogspot.bg
+  - blogspot.bj
+  - blogspot.ca
+  - blogspot.cf
+  - blogspot.ch
+  - blogspot.cl
+  - blogspot.co.at
+  - blogspot.co.id
+  - blogspot.co.il
+  - blogspot.co.ke
+  - blogspot.co.nz
+  - blogspot.co.uk
+  - blogspot.co.za
+  - blogspot.com
+  - blogspot.com.ar
+  - blogspot.com.au
+  - blogspot.com.br
+  - blogspot.com.by
+  - blogspot.com.co
+  - blogspot.com.cy
+  - blogspot.com.ee
+  - blogspot.com.eg
+  - blogspot.com.es
+  - blogspot.com.mt
+  - blogspot.com.ng
+  - blogspot.com.tr
+  - blogspot.com.uy
+  - blogspot.cv
+  - blogspot.cz
+  - blogspot.de
+  - blogspot.dk
+  - blogspot.fi
+  - blogspot.fr
+  - blogspot.gr
+  - blogspot.hk
+  - blogspot.hr
+  - blogspot.hu
+  - blogspot.ie
+  - blogspot.in
+  - blogspot.is
+  - blogspot.it
+  - blogspot.jp
+  - blogspot.kr
+  - blogspot.li
+  - blogspot.lt
+  - blogspot.lu
+  - blogspot.md
+  - blogspot.mk
+  - blogspot.mx
+  - blogspot.my
+  - blogspot.nl
+  - blogspot.no
+  - blogspot.pe
+  - blogspot.pt
+  - blogspot.qa
+  - blogspot.re
+  - blogspot.ro
+  - blogspot.rs
+  - blogspot.ru
+  - blogspot.se
+  - blogspot.sg
+  - blogspot.si
+  - blogspot.sk
+  - blogspot.sn
+  - blogspot.td
+  - blogspot.tw
+  - blogspot.ug
+  - blogspot.vn
+  - brocaproject.com
+  - brotli.org
+  - bumpshare.com
+  - bumptop.ca
+  - bumptop.com
+  - bumptop.net
+  - bumptop.org
+  - bumptunes.com
+  - c.android.clients.google.com
+  - c.gle
+  - c.pki.goog
+  - cache-management-prod.google.com
+  - cache.pack.google.com
+  - campuslondon.com
+  - capitalg.com
+  - certificate-transparency.dev
+  - certificate-transparency.org
+  - charlestonroadregistry.com
+  - chat.gle
+  - checkin.gstatic.com
+  - chrome
+  - chrome.com
+  - chromebook.com
+  - chromecast.com
+  - chromeexperiments.com
+  - chromeos.dev
+  - chromercise.com
+  - chromestatus.com
+  - chromium.org
+  - chronicle.security
+  - chroniclesec.com
+  - clickserve.dartsearch.net
+  - clientservices.googleapis.com
+  - cloudburstresearch.com
+  - cloudfunctions.net
+  - cloudproxy.app
+  - cloudrobotics.com
+  - cn.widevine.com
+  - cobrasearch.com
+  - codespot.com
+  - connectivitycheck.gstatic.com
+  - conscrypt.com
+  - conscrypt.org
+  - cookiechoices.org
+  - coova.com
+  - coova.net
+  - coova.org
+  - crashlyticsreports-pa.googleapis.com
+  - crbug.com
+  - creativelab5.com
+  - crl.pki.goog
+  - crossmediapanel.com
+  - crr.com
+  - crrev.com
+  - cs4hs.com
+  - dart.dev
+  - dartlang.org
+  - dartpad.dev
+  - dartsearch-cn.net
+  - dartsearch.net
+  - data-vocabulary.org
+  - dataliberation.org
+  - dclk
+  - debug.com
+  - debugproject.com
+  - deja.com
+  - deps.dev
+  - deps.info
+  - devsitetest.how
+  - dialogflow.com
+  - digisfera.com
+  - digitalassetlinks.org
+  - digitalattackmap.com
+  - dl.google.com
+  - dl.l.google.com
+  - docs.new
+  - doubleclick.cn
+  - download.mlcc.google.com
+  - download.tensorflow.google.com
+  - episodic.com
+  - fastlane.ci
+  - fastlane.tools
+  - feedburner.com
+  - fflick.com
+  - financeleadsonline.com
+  - firebase.com
+  - firebase.dev
+  - firebase.google.com
+  - firebase.io
+  - firebaseapp.com
+  - firebaseio.com
+  - fitbit.com
+  - flutter.dev
+  - flutterapp.com
+  - fontfiles.googleapis.com
+  - fonts.googleapis.com
+  - fonts.gstatic.com
+  - foofle.com
+  - froogle.com
+  - fuchsia.dev
+  - g-tun.com
+  - g.cn
+  - g.co
+  - g.dev
+  - g.page
+  - g0.gstatic.com
+  - g1.gstatic.com
+  - g2.gstatic.com
+  - g3.gstatic.com
+  - gateway.dev
+  - gbiz
+  - gcr.io
+  - gerritcodereview.com
+  - get.app
+  - get.dev
+  - get.how
+  - get.new
+  - get.page
+  - get.rsvp
+  - getbumptop.com
+  - getmdl.io
+  - getoutline.org
+  - ggoogle.com
+  - gipscorp.com
+  - gkecnapps.cn
+  - gle
+  - globaledu.org
+  - gmail
+  - gmail.com
+  - gmodules.com
+  - go-lang.com
+  - go-lang.net
+  - go-lang.org
+  - go.dev
+  - godoc.org
+  - gogle.com
+  - gogole.com
+  - golang.com
+  - golang.net
+  - golang.org
+  - gonglchuangl.net
+  - gongyichuangyi.net
+  - goo.gl
+  - goog
+  - googel.com
+  - googil.com
+  - googl.com
+  - google
+  - google-access.net
+  - google-syndication.com
+  - google.ad
+  - google.ae
+  - google.al
+  - google.am
+  - google.as
+  - google.at
+  - google.az
+  - google.ba
+  - google.be
+  - google.berlin
+  - google.bf
+  - google.bg
+  - google.bi
+  - google.bj
+  - google.bs
+  - google.bt
+  - google.by
+  - google.ca
+  - google.cat
+  - google.cd
+  - google.cf
+  - google.cg
+  - google.ch
+  - google.ci
+  - google.cl
+  - google.cm
+  - google.cn
+  - google.co
+  - google.co.ao
+  - google.co.bw
+  - google.co.ck
+  - google.co.cr
+  - google.co.id
+  - google.co.il
+  - google.co.in
+  - google.co.jp
+  - google.co.ke
+  - google.co.kr
+  - google.co.ls
+  - google.co.ma
+  - google.co.mz
+  - google.co.nz
+  - google.co.th
+  - google.co.tz
+  - google.co.ug
+  - google.co.uk
+  - google.co.uz
+  - google.co.ve
+  - google.co.vi
+  - google.co.za
+  - google.co.zm
+  - google.co.zw
+  - google.com
+  - google.com.af
+  - google.com.ag
+  - google.com.ai
+  - google.com.ar
+  - google.com.au
+  - google.com.bd
+  - google.com.bh
+  - google.com.bn
+  - google.com.bo
+  - google.com.br
+  - google.com.bz
+  - google.com.co
+  - google.com.cu
+  - google.com.cy
+  - google.com.do
+  - google.com.ec
+  - google.com.eg
+  - google.com.et
+  - google.com.fj
+  - google.com.gh
+  - google.com.gi
+  - google.com.gt
+  - google.com.hk
+  - google.com.jm
+  - google.com.kh
+  - google.com.kw
+  - google.com.lb
+  - google.com.ly
+  - google.com.mm
+  - google.com.mt
+  - google.com.mx
+  - google.com.my
+  - google.com.na
+  - google.com.ng
+  - google.com.ni
+  - google.com.np
+  - google.com.om
+  - google.com.pa
+  - google.com.pe
+  - google.com.pg
+  - google.com.ph
+  - google.com.pk
+  - google.com.pr
+  - google.com.py
+  - google.com.qa
+  - google.com.sa
+  - google.com.sb
+  - google.com.sg
+  - google.com.sl
+  - google.com.sv
+  - google.com.tj
+  - google.com.tr
+  - google.com.tw
+  - google.com.ua
+  - google.com.uy
+  - google.com.vc
+  - google.com.vn
+  - google.cv
+  - google.cz
+  - google.de
+  - google.dev
+  - google.dj
+  - google.dk
+  - google.dm
+  - google.dz
+  - google.ee
+  - google.es
+  - google.fi
+  - google.fm
+  - google.fr
+  - google.ga
+  - google.ge
+  - google.gg
+  - google.gl
+  - google.gm
+  - google.gr
+  - google.gy
+  - google.hn
+  - google.hr
+  - google.ht
+  - google.hu
+  - google.ie
+  - google.im
+  - google.iq
+  - google.is
+  - google.it
+  - google.je
+  - google.jo
+  - google.kg
+  - google.ki
+  - google.kz
+  - google.la
+  - google.li
+  - google.lk
+  - google.lt
+  - google.lu
+  - google.lv
+  - google.md
+  - google.me
+  - google.mg
+  - google.mk
+  - google.ml
+  - google.mn
+  - google.ms
+  - google.mu
+  - google.mv
+  - google.mw
+  - google.ne
+  - google.net
+  - google.nl
+  - google.no
+  - google.nr
+  - google.nu
+  - google.org
+  - google.pl
+  - google.pn
+  - google.ps
+  - google.pt
+  - google.ro
+  - google.rs
+  - google.ru
+  - google.rw
+  - google.sc
+  - google.se
+  - google.sh
+  - google.si
+  - google.sk
+  - google.sm
+  - google.sn
+  - google.so
+  - google.sr
+  - google.st
+  - google.td
+  - google.tg
+  - google.tl
+  - google.tm
+  - google.tn
+  - google.to
+  - google.tt
+  - google.ventures
+  - google.vg
+  - google.vu
+  - google.ws
+  - googleacquisitionmigration.com
+  - googleadapis.l.google.com
+  - googleapis-cn.com
+  - googleapis.cn
+  - googleapis.com
+  - googleapps-cn.com
+  - googleapps.com
+  - googlearth.com
+  - googleblog.com
+  - googlebot.com
+  - googlecapital.com
+  - googlecert.net
+  - googlecnapps.cn
+  - googlecode.com
+  - googlecompare.co.uk
+  - googledanmark.com
+  - googledomains.com
+  - googledrive.com
+  - googlee.com
+  - googleearth.com
+  - googlefiber.com
+  - googlefiber.net
+  - googlefinland.com
+  - googleflights-cn.net
+  - googlemail.com
+  - googlemaps.com
+  - googlemashups.com
+  - googlepagecreator.com
+  - googlephotos.com
+  - googleplay.com
+  - googleplus.com
+  - googlescholar.com
+  - googlesource.com
+  - googlestore.com
+  - googlesverige.com
+  - googletagservices-cn.com
+  - googletraveladservices-cn.com
+  - googleusercontent.com
+  - googleventures.com
+  - googlezip.net
+  - googlr.com
+  - goolge.com
+  - gooogle.com
+  - gridaware.app
+  - gsrc.io
+  - gstatic-cn.com
+  - gstatic.cn
+  - gstatic.com
+  - gstaticadssl.l.google.com
+  - gstaticcnapps.cn
+  - gsuite.com
+  - gtm.oasisfeng.com
+  - guge
+  - gv.com
+  - gvt0.com
+  - gvt1-cn.com
+  - gvt2-cn.com
+  - gvt3.com
+  - gvt5.com
+  - gvt6.com
+  - gvt7.com
+  - gvt9.com
+  - gwtproject.org
+  - hangout
+  - haplorrhini.com
+  - hdrplusdata.org
+  - hey.boo
+  - hey.gle
+  - hindiweb.com
+  - howtogetmo.co.uk
+  - html5rocks.com
+  - hwgo.com
+  - iam.soy
+  - iamremarkable.org
+  - idx.dev
+  - igoogle.com
+  - imasdk.googleapis.com
+  - impermium.com
+  - itasoftware.com
+  - j2objc.org
+  - jibemobile.com
+  - kaggle.com
+  - kaggle.io
+  - kaggle.net
+  - kaggleusercontent.com
+  - keyhole.com
+  - keytransparency.com
+  - keytransparency.foo
+  - keytransparency.org
+  - lanternal.com
+  - like.com
+  - madewithcode.com
+  - marketingplatform.google.com
+  - material.io
+  - mdialog.com
+  - meet.new
+  - mfg-inspector.com
+  - mobileview.page
+  - moodstocks.com
+  - near.by
+  - nest.com
+  - neverware.com
+  - new.day
+  - nexus
+  - nomulus.foo
+  - oasisfeng.com
+  - oauthz.com
+  - ocsp.pki.goog
+  - ok.gle
+  - on.here
+  - on2.com
+  - onefifteen.net
+  - onefifteen.org
+  - oneworldmanystories.com
+  - opensourceinsight.dev
+  - opensourceinsights.dev
+  - openthread.io
+  - openweave.io
+  - openxla.org
+  - orbitera.com
+  - page.link
+  - pagead-googlehosted.l.google.com
+  - pagespeedmobilizer.com
+  - pageview.mobi
+  - partnerad.l.google.com
+  - partylikeits1986.org
+  - paxlicense.org
+  - performanceparameters.googleapis.com
+  - picasa.com
+  - picasaweb.com
+  - picasaweb.net
+  - picasaweb.org
+  - picnik.com
+  - pittpatt.com
+  - pixate.com
+  - pkg.go.dev
+  - pki-goog.l.google.com
+  - pki.goog
+  - play-fe.googleapis.com
+  - play-games.googleusercontent.com
+  - play-lh.googleusercontent.com
+  - play.google.com
+  - play.googleapis.com
+  - plus.codes
+  - polymer-project.org
+  - polymerproject.org
+  - postini.com
+  - privacysandbox.com
+  - prod-controlbe.floonet.goog
+  - prod-databe.floonet.goog
+  - prod.databe.floonet.goog
+  - projectara.com
+  - projectbaseline.com
+  - pub.dev
+  - publishproxy.com
+  - qiao-cn.com
+  - qpx.googleflights.net
+  - questvisual.com
+  - quickoffice.com
+  - quiksee.com
+  - recaptcha-cn.net
+  - recaptcha.net
+  - redhotlabs.com
+  - redirector.bdn.dev
+  - redirector.c.chat.google.com
+  - redirector.c.mail.google.com
+  - redirector.c.pack.google.com
+  - redirector.c.play.google.com
+  - redirector.xn--ngstr-lra8j.com
+  - registry.google
+  - revolv.com
+  - ridepenguin.com
+  - run.app
+  - safebrowsing-cache.google.com
+  - safebrowsing.googleapis.com
+  - savethedate.foo
+  - saynow.com
+  - schema.org
+  - schemer.com
+  - scholar.google.ae
+  - scholar.google.at
+  - scholar.google.be
+  - scholar.google.bg
+  - scholar.google.ca
+  - scholar.google.cat
+  - scholar.google.ch
+  - scholar.google.cl
+  - scholar.google.cn
+  - scholar.google.co.cr
+  - scholar.google.co.id
+  - scholar.google.co.il
+  - scholar.google.co.in
+  - scholar.google.co.jp
+  - scholar.google.co.kr
+  - scholar.google.co.nz
+  - scholar.google.co.th
+  - scholar.google.co.uk
+  - scholar.google.co.ve
+  - scholar.google.co.za
+  - scholar.google.com
+  - scholar.google.com.ar
+  - scholar.google.com.au
+  - scholar.google.com.bo
+  - scholar.google.com.br
+  - scholar.google.com.co
+  - scholar.google.com.cu
+  - scholar.google.com.do
+  - scholar.google.com.ec
+  - scholar.google.com.eg
+  - scholar.google.com.gt
+  - scholar.google.com.hk
+  - scholar.google.com.ly
+  - scholar.google.com.mx
+  - scholar.google.com.my
+  - scholar.google.com.ni
+  - scholar.google.com.pa
+  - scholar.google.com.pe
+  - scholar.google.com.ph
+  - scholar.google.com.pk
+  - scholar.google.com.pr
+  - scholar.google.com.py
+  - scholar.google.com.sg
+  - scholar.google.com.sv
+  - scholar.google.com.tr
+  - scholar.google.com.tw
+  - scholar.google.com.ua
+  - scholar.google.com.uy
+  - scholar.google.com.vn
+  - scholar.google.cz
+  - scholar.google.de
+  - scholar.google.dk
+  - scholar.google.es
+  - scholar.google.fi
+  - scholar.google.fr
+  - scholar.google.gr
+  - scholar.google.hn
+  - scholar.google.hr
+  - scholar.google.hu
+  - scholar.google.is
+  - scholar.google.it
+  - scholar.google.li
+  - scholar.google.lt
+  - scholar.google.lu
+  - scholar.google.lv
+  - scholar.google.nl
+  - scholar.google.no
+  - scholar.google.pl
+  - scholar.google.pt
+  - scholar.google.ro
+  - scholar.google.ru
+  - scholar.google.se
+  - scholar.google.si
+  - scholar.google.sk
+  - scholar.l.google.com
+  - screenwisetrends.com
+  - screenwisetrendspanel.com
+  - services.googleapis.cn
+  - shattered.io
+  - sheets.new
+  - slides.new
+  - snapseed.com
+  - solveforx.com
+  - ssl.gstatic.com
+  - stadia.dev
+  - staging-controlbe.floonet.goog
+  - staging-databe.floonet.goog
+  - staging.databe.floonet.goog
+  - stcroixmosquito.com
+  - stcroixmosquitoproject.com
+  - studywatchbyverily.com
+  - studywatchbyverily.org
+  - stxmosquito.com
+  - stxmosquitoproject.com
+  - stxmosquitoproject.net
+  - stxmosquitoproject.org
+  - synergyse.com
+  - tac.googleapis.com
+  - teachparentstech.org
+  - tenor.com
+  - tensorflow.org
+  - tfhub.dev
+  - thecleversense.com
+  - thegooglestore.com
+  - thinkquarterly.co.uk
+  - thinkquarterly.com
+  - thinkwithgoogle.com
+  - tiltbrush.com
+  - tools.google.com
+  - tools.l.google.com
+  - txcloud.net
+  - txvia.com
+  - unfiltered.news
+  - update.googleapis.com
+  - urchin.com
+  - useplannr.com
+  - usvimosquito.com
+  - usvimosquitoproject.com
+  - v8.dev
+  - v8project.org
+  - velostrata.com
+  - verily.com
+  - verilylifesciences.com
+  - verilystudyhub.com
+  - verilystudywatch.com
+  - verilystudywatch.org
+  - wallet.com
+  - waveprotocol.org
+  - waymo.com
+  - waze.com
+  - wear.googleapis.com
+  - web.app
+  - web.dev
+  - webappfieldguide.com
+  - webmproject.org
+  - webpkgcache.com
+  - webrtc.org
+  - weltweitwachsen.de
+  - whatbrowser.org
+  - whats.new
+  - widevine.com
+  - withgoogle.com
+  - womenwill.com
+  - womenwill.com.br
+  - womenwill.id
+  - womenwill.in
+  - womenwill.mx
+  - www-googletagmanager.l.google.com
+  - www.destinationurl.com
+  - www.gstatic.com
+  - www.pxcc.com
+  - x.company
+  - x.team
+  - xn--9kr7l.com
+  - xn--9trs65b.com
+  - xn--flw351e
+  - xn--flw351e.com
+  - xn--ggle-55da.com
+  - xn--gogl-0nd52e.com
+  - xn--gogl-1nd42e.com
+  - xn--ngstr-lra8j.com
+  - xn--p8j9a0d9c9a.xn--q9jyb4c
+  - xn--qcka1pmc
+  - xplr.co
+  - zukunftswerkstatt.de
+  - zynamics.com
   - 000webhost.com
   - 01.org
   - 02weqj32.com
   - 030buy.com
   - 04647.club
   - 0cgdklr5sfwj.com
-  - 0emm.com
   - 0plkijj.vip
   - 1-account.com
   - 1000giri.net
@@ -2187,7 +3313,6 @@ domain_suffix_set:
   - 1point3acres.com
   - 1pondo.tv
   - 1thek.com
-  - 1ucrs.com
   - 1watchmygf.com
   - 1xbet.cm
   - 1xbet.co.ke
@@ -2221,7 +3346,6 @@ domain_suffix_set:
   - 24hjav.com
   - 24smile.org
   - 25u.com
-  - 265.com
   - 265sdwe3.com
   - 2789av.com
   - 27mmwmmw.top
@@ -2256,7 +3380,6 @@ domain_suffix_set:
   - 2kweb.online
   - 2lib.org
   - 2lipstube.com
-  - 2mdn.net
   - 2shared.com
   - 2waky.com
   - 3-a.net
@@ -2326,7 +3449,6 @@ domain_suffix_set:
   - 445nan.com
   - 44yu.cc
   - 4550.fun
-  - 466453.com
   - 4bluestones.biz
   - 4cdn.org
   - 4chan.com
@@ -2597,7 +3719,6 @@ domain_suffix_set:
   - abbywintersfree.com
   - abc-studios.com
   - abc.com
-  - abc.xyz
   - abchinese.com
   - abclider.com
   - abcnews.com
@@ -2666,7 +3787,6 @@ domain_suffix_set:
   - acs.org
   - actalis.com
   - actfortibet.org
-  - actifio.com
   - activated.win
   - activematter.game
   - activeteachonline.com
@@ -2733,8 +3853,6 @@ domain_suffix_set:
   - adidastabletennis.com
   - adidasusnews.com
   - adinst.com
-  - admeld.com
-  - admob-cn.com
   - adobe-aemassets-value.com
   - adobe-audience-finder.com
   - adobe-video-partner-finder.com
@@ -2776,7 +3894,6 @@ domain_suffix_set:
   - adobetechcommdemo.com
   - adobexdplatform.com
   - adorevids.com
-  - adsense.com
   - adskcloud.com
   - adskcloud.net
   - adskeng.net
@@ -3264,14 +4381,10 @@ domain_suffix_set:
   - amodoll.com
   - amoiist.com
   - amourangels.com
-  - amp.dev
   - amplience.com
   - amplifi.com
   - amplifyapp.com
   - amplifyframework.com
-  - ampproject.com
-  - ampproject.net
-  - ampproject.org
   - ams.org
   - ams02.space
   - amsterdamhotescort.com
@@ -3313,14 +4426,11 @@ domain_suffix_set:
   - ancsconf.org
   - andfaraway.net
   - android-x86.org
-  - android.com
   - androidapksfree.com
   - androidauthority.com
   - androidfilehost.com
-  - androidify.com
   - androidplus.co
   - androidpolice.com
-  - androidtv.com
   - andygod.com
   - andysparis.com
   - anexia-engine.com
@@ -3332,7 +4442,6 @@ domain_suffix_set:
   - angola.org
   - angular.dev
   - angular.io
-  - angulardart.org
   - angularjs.org
   - anibooru.com
   - anidom.com
@@ -3379,20 +4488,16 @@ domain_suffix_set:
   - ansin.erodayo.com
   - answering-islam.org
   - ant.design
-  - ant.dev
   - antarvasnaclips.com
   - antarvasnax.com
   - antd.org
   - anthemgame.com
   - anthemthegame.com
   - anthonycalzadilla.com
-  - anthropic.com
-  - anthropic.team
   - anti1984.com
   - antichristendom.com
   - antiwave.net
   - antpool.com
-  - antspace.dev
   - anudetube.com
   - anuneko.com
   - anxiangxing.com
@@ -3437,7 +4542,6 @@ domain_suffix_set:
   - api.shuaiapi.com
   - apiary.io
   - apibay.org
-  - apigee.com
   - apina.biz
   - apisof.net
   - apk-dl.com
@@ -3452,15 +4556,11 @@ domain_suffix_set:
   - apkpures.xyz
   - aplusvpn.com
   - apnews.com
-  - app-analytics-services.com
   - app-dynamics.com
-  - app-measurement-cn.com
-  - app-measurement.net
   - app.khoros.com
   - app756.com
   - appadvice.com
   - appbrain.com
-  - appbridge.io
   - appcenter.ms
   - appcloud.com
   - appconsent.io
@@ -3486,12 +4586,10 @@ domain_suffix_set:
   - appsocks.net
   - appsonebay.net
   - appspot-preview.com
-  - appspot.com
   - appyq.com
   - apress.com
   - aps.org
   - aptoide.com
-  - apture.com
   - aqdlt.net
   - arabianchicks.com
   - arabidopsis.org
@@ -3518,7 +4616,6 @@ domain_suffix_set:
   - archlinuxcn.org
   - arcraiders.com
   - arctosia.com
-  - area120.com
   - areca-backup.org
   - arewereadyyet.com
   - areyoucreditwise.com
@@ -3603,7 +4700,6 @@ domain_suffix_set:
   - asmr.gay
   - asmrbuluo.com
   - asn-online.org
-  - asp-cc.com
   - asp.net
   - aspbjournals.org
   - aspenpublishing.com
@@ -3848,7 +4944,6 @@ domain_suffix_set:
   - autodeskviewer.com
   - autodeskworkshop.com
   - autodeskworkshop.net
-  - autodraw.com
   - autoesporte.com
   - autoesporte.com.br
   - automaton-media.com
@@ -4137,7 +5232,6 @@ domain_suffix_set:
   - bandag.com
   - bandcamp.com
   - bandisoft.com
-  - bandpage.com
   - bandwagonhost.com
   - bang-dream.com
   - bang-movies.com
@@ -4177,8 +5271,6 @@ domain_suffix_set:
   - barss1207.pro
   - bartvpn.com
   - base.org
-  - baselinestudy.com
-  - baselinestudy.org
   - basilisk-browser.org
   - bastillepost.com
   - bastropfirestone.com
@@ -4202,7 +5294,6 @@ domain_suffix_set:
   - bayareabmw.com
   - bayvoice.net
   - baywords.com
-  - bazel.build
   - bb-chat.tv
   - bb33.net
   - bbbaihu.vip
@@ -4251,7 +5342,6 @@ domain_suffix_set:
   - bcvcdn.com
   - bcvp0rtal.com
   - bcy01.com
-  - bdn.dev
   - bdsm-mov.net
   - bdsm.com
   - bdsm123.xyz
@@ -4276,7 +5366,6 @@ domain_suffix_set:
   - beastiegals.com
   - beastysexlinks.com
   - beastythumbs.com
-  - beatthatquote.com
   - beautifulandbusty.com
   - beautyescortsamsterdam.com
   - bebepremium3.com.bo
@@ -4653,7 +5742,6 @@ domain_suffix_set:
   - blewpass.com
   - blingblingsquad.net
   - blink-script.com
-  - blink.org
   - blinkload.zone
   - blinkx.com
   - blinw.com
@@ -4671,13 +5759,11 @@ domain_suffix_set:
   - blog.com
   - blog.descargasgay.com
   - blog.kangye.org
-  - blogblog.com
   - blogcatalog.com
   - blogcdn.com
   - blogcity.me
   - blogdns.org
   - blogebay.com
-  - blogger.com
   - bloggrowup.com
   - blogjav.net
   - bloglines.com
@@ -5228,13 +6314,11 @@ domain_suffix_set:
   - broadbook.com
   - broadcom.com
   - broadpressinc.com
-  - brocaproject.com
   - brockbbs.com
   - brokenteens.com
   - bromite.org
   - bromo.com
   - bronto.com
-  - brotli.org
   - brourou.com
   - browser.run
   - brucewang.net
@@ -5298,11 +6382,6 @@ domain_suffix_set:
   - bullogger.com
   - bululusexdoll.com
   - bumingbai.net
-  - bumpshare.com
-  - bumptop.com
-  - bumptop.net
-  - bumptop.org
-  - bumptunes.com
   - bunbunhk.com
   - bundle.run
   - bundle.thimatic-apps.com
@@ -5485,7 +6564,6 @@ domain_suffix_set:
   - campaign-archive.com
   - campaignforuyghurs.org
   - campushp.com
-  - campuslondon.com
   - camrabbit.com
   - cams.com
   - camsoda.com
@@ -5555,7 +6633,6 @@ domain_suffix_set:
   - caobian.info
   - caochangqing.com
   - capcutstatic.com
-  - capitalg.com
   - capitalgames.com
   - capitaliq.com
   - capturingreality.com
@@ -5779,7 +6856,6 @@ domain_suffix_set:
   - cerdas.com
   - cert-gib.com
   - certificat2.com
-  - certificate-transparency.org
   - certinomis.com
   - cex.io
   - cf-ipfs.com
@@ -5816,16 +6892,11 @@ domain_suffix_set:
   - chargebeestaticv2.com
   - chargenow.com
   - chargenowusa.com
-  - charlestonroadregistry.com
   - charmescorts.com
   - charticulator.com
   - chasecdn.com
-  - chat.com
   - chatango.com
-  - chatbotclaude.com
-  - chatgpt.com
   - chatgpt.livekit.cloud
-  - chatgpt.site
   - chatgptvideo.xyz
   - chatgptvideob.buzz
   - chatnook.com
@@ -5963,17 +7034,6 @@ domain_suffix_set:
   - christianstudy.com
   - christusrex.org
   - christymarks.com
-  - chrome
-  - chrome.com
-  - chromebook.com
-  - chromecast.com
-  - chromeexperiments.com
-  - chromeos.dev
-  - chromercise.com
-  - chromestatus.com
-  - chromium.org
-  - chronicle.security
-  - chroniclesec.com
   - chuang-yen.org
   - chuangb15.xyz
   - chubold.com
@@ -5989,9 +7049,6 @@ domain_suffix_set:
   - chyoa.com
   - ci-en.net
   - cian.site
-  - cici.com
-  - ciciai.com
-  - ciciaicdn.com
   - ciciq.net
   - cienen.com
   - cilk.com
@@ -6084,16 +7141,6 @@ domain_suffix_set:
   - classicalguitarblog.net
   - classicnike.com
   - classymomsex.com
-  - claude.app
-  - claude.com
-  - claude.dev
-  - claude.site
-  - claudeacademy.com
-  - claudemcpclient.com
-  - claudemcpcontent.com
-  - claudepages.dev
-  - claudestudio.com
-  - claudeusercontent.com
   - clco.cc
   - cldup.com
   - cleansite.biz
@@ -6129,7 +7176,6 @@ domain_suffix_set:
   - cloudapp.net
   - cloudappsecurity.com
   - cloudatacdn.com
-  - cloudburstresearch.com
   - cloudchoose.com
   - cloudcone.com
   - cloudcone.net
@@ -6176,7 +7222,6 @@ domain_suffix_set:
   - cloudforfun.vip
   - cloudfront.com
   - cloudfront.net
-  - cloudfunctions.net
   - cloudhealthtech.com
   - cloudimage.io
   - cloudimg.io
@@ -6191,8 +7236,6 @@ domain_suffix_set:
   - cloudmagic.com
   - cloudn.me
   - cloudns.net
-  - cloudproxy.app
-  - cloudrobotics.com
   - cloudvolumes.com
   - cloudwp.dev
   - cloudyzgirl.com
@@ -6243,7 +7286,6 @@ domain_suffix_set:
   - cnzjp.xyz
   - cobatt.com
   - cobinhood.com
-  - cobrasearch.com
   - cochina.co
   - cochina.org
   - cochranelibrary.com
@@ -6265,19 +7307,15 @@ domain_suffix_set:
   - codeforces.org
   - codeish.co
   - codeish.io
-  - codeium.com
-  - codeiumdata.com
   - codepen.io
   - codepenassets.com
   - codesandbox.io
   - codeseason.by
   - codeshare.io
   - codeskulptor.org
-  - codespot.com
   - codethemicrobit.com
   - codivorexxx.com
   - coedcherry.com
-  - cohere.com
   - coinalyze.net
   - coinbase.com
   - coinbene.com
@@ -6368,8 +7406,6 @@ domain_suffix_set:
   - connectionseducation.com
   - connectionslearning.com
   - conquerwithcharacter.com
-  - conscrypt.com
-  - conscrypt.org
   - consentmanager.net
   - consentpro.com
   - constitutionalism.solutions
@@ -6387,7 +7423,6 @@ domain_suffix_set:
   - convrgencegame.com
   - coobay.com
   - cookiebot.com
-  - cookiechoices.org
   - cookielaw.org
   - cookiepro.com
   - cookieyes.com
@@ -6400,12 +7435,7 @@ domain_suffix_set:
   - coolncute.com
   - coolsexnew.com
   - coolstuffinc.com
-  - coova.com
-  - coova.net
-  - coova.org
   - copilot-stg.com
-  - copilot.com
-  - copilot.microsoft.com
   - copro.pw
   - copy-manga.com
   - copy20.com
@@ -6455,7 +7485,6 @@ domain_suffix_set:
   - covid19-rx.org
   - covid19rx.org
   - cowboom.com
-  - coze.com
   - cp44.net
   - cpan.org
   - cpedge.com
@@ -6482,7 +7511,6 @@ domain_suffix_set:
   - crazyxxx3dworld.net
   - crazyxxx3dworld.org
   - crazyxxxworld.com
-  - crbug.com
   - crchina.org
   - crd-net.org
   - creader.com
@@ -6496,7 +7524,6 @@ domain_suffix_set:
   - creativecloud.com
   - creativecommons.engineering
   - creativecommons.org
-  - creativelab5.com
   - creativepass.com
   - creativesdk.com
   - creatwhatsnext.com
@@ -6509,7 +7536,6 @@ domain_suffix_set:
   - cristyli.com
   - crit-staging.com
   - critiquebrainz.org
-  - crixet.com
   - crmdynint-gcc.com
   - crmdynint.com
   - crocoblock.com
@@ -6518,7 +7544,6 @@ domain_suffix_set:
   - crossbell.io
   - crossborderexpansion.com
   - crossfitfirestone.com
-  - crossmediapanel.com
   - crossout.net
   - crossthewall.net
   - crossvpn.net
@@ -6527,8 +7552,6 @@ domain_suffix_set:
   - crosswall.org
   - crowdtangle.com
   - croxyproxy.com
-  - crr.com
-  - crrev.com
   - crsed.net
   - crtsgfb1.top
   - crucial.com
@@ -6545,7 +7568,6 @@ domain_suffix_set:
   - crystalgunnsworld.com
   - crystalmiss.com
   - cs.co
-  - cs4hs.com
   - csb.app
   - csdparty.com
   - cshive.com
@@ -6601,10 +7623,6 @@ domain_suffix_set:
   - currenttime.tv
   - cursecdn.com
   - curseforge.com
-  - cursor-cdn.com
-  - cursor.com
-  - cursorapi.com
-  - cursorvm.com
   - curve.fi
   - curvefish.com
   - curvybbwwives.com
@@ -6726,11 +7744,6 @@ domain_suffix_set:
   - darktoy.net
   - darmau.co
   - darrenliuwei.com
-  - dart.dev
-  - dartlang.org
-  - dartpad.dev
-  - dartsearch-cn.net
-  - dartsearch.net
   - darwindimensions.com
   - dasaob.online
   - dashlane.com
@@ -6742,14 +7755,12 @@ domain_suffix_set:
   - dastanhisexy.cc
   - dastrassi.org
   - dat.foundation
-  - data-vocabulary.org
   - data.com
   - data.debugbear.com
   - data18.com
   - datacloudmy.com
   - dataframeworks.com
   - datalabour.com
-  - dataliberation.org
   - datalore.io
   - dataplane.rudderstack.com
   - datasheets360.com
@@ -6820,9 +7831,7 @@ domain_suffix_set:
   - deasians.com
   - debank.com
   - debian.org
-  - debug.com
   - debuggex.com
-  - debugproject.com
   - decentr.net
   - dechamora.com
   - decodet.co
@@ -6844,7 +7853,6 @@ domain_suffix_set:
   - definebabe.com
   - definefetish.com
   - degruyter.com
-  - deja.com
   - del.com
   - del.com.br
   - delcam-ams.com
@@ -6975,8 +7983,6 @@ domain_suffix_set:
   - dentalhypotheses.com
   - dependabot.com
   - depositphotos.com
-  - deps.dev
-  - deps.info
   - derekhsu.homeip.net
   - deribit.com
   - derpibooru.org
@@ -7036,7 +8042,6 @@ domain_suffix_set:
   - devopsms.com
   - devpn.com
   - devrum.uptime.com
-  - devsitetest.how
   - dewitwithdurex.com
   - dexterhorn.com
   - dezyred.com
@@ -7058,7 +8063,6 @@ domain_suffix_set:
   - diabrowser.engineering
   - diagrams.net
   - dialga.com
-  - dialogflow.com
   - diamantewebcam.com
   - diamondgirlstudio.com
   - dianapost.com
@@ -7080,10 +8084,8 @@ domain_suffix_set:
   - digicert-cn.com
   - digicert-validation.com
   - digikeyassets.com
-  - digisfera.com
   - digital-anime.com
   - digital-rb.com
-  - digitalassetlinks.org
   - digitalcertvalidation.com
   - digitaldesire.com
   - digitalnomadsproject.org
@@ -7343,7 +8345,6 @@ domain_suffix_set:
   - dojinmanga.net
   - dojinwatch.com
   - dok-forum.net
-  - dola.com
   - dollarfotoclub.com
   - dollarphotoclub.com
   - dollarphotosclub.com
@@ -7892,8 +8893,6 @@ domain_suffix_set:
   - elephantsdream.org
   - elephanttube.com
   - elephanttubenew.com
-  - elevenlabs.com
-  - elevenlabs.io
   - elgaronline.com
   - elgoog.im
   - elifesciences.org
@@ -8015,7 +9014,6 @@ domain_suffix_set:
   - epimg.net
   - epinions.com
   - episcopalchurch.org
-  - episodic.com
   - epoca.com.br
   - epocanegocios.com.br
   - epoch.cloud
@@ -8555,8 +9553,6 @@ domain_suffix_set:
   - fast-sfc.com
   - fast.com
   - fastestvpn.com
-  - fastlane.ci
-  - fastlane.tools
   - fastly-analytics.com
   - fastly-edge.com
   - fastly-terrarium.com
@@ -8651,7 +9647,6 @@ domain_suffix_set:
   - fedoramagazine.org
   - fedorapeople.org
   - fedoraproject.org
-  - feedburner.com
   - feeder.co
   - feedercdn.com
   - feedherfuckher.com
@@ -8696,7 +9691,6 @@ domain_suffix_set:
   - ffddff.com
   - fffdm.com
   - fffucked.com
-  - fflick.com
   - fflnk.net
   - fflogs.com
   - ffmpeg.org
@@ -8743,7 +9737,6 @@ domain_suffix_set:
   - filthdump.com
   - fimfiction-static.net
   - fimfiction.net
-  - financeleadsonline.com
   - financialadvisoriq.com
   - financialexpress.com
   - finchvpn.com
@@ -8779,11 +9772,6 @@ domain_suffix_set:
   - fiotolia.com
   - fire-emblem-heroes.com
   - firearmsworld.net
-  - firebase.com
-  - firebase.dev
-  - firebase.io
-  - firebaseapp.com
-  - firebaseio.com
   - fireemblemawakening.com
   - firefox-portal-detection.com
   - firefox.com
@@ -8819,7 +9807,6 @@ domain_suffix_set:
   - firstrade.com
   - fish.audio
   - fishmpegs.com
-  - fitbit.com
   - fitgirl-repacks.site
   - fitnakedgirls.com
   - five-d.com
@@ -8887,8 +9874,6 @@ domain_suffix_set:
   - fluffychat.im
   - fluidfxapp.com
   - fluidpreview.com
-  - flutter.dev
-  - flutterapp.com
   - fluxer.app
   - fluxer.com
   - fluxer.dev
@@ -8941,7 +9926,6 @@ domain_suffix_set:
   - fontshop.com
   - fontsinuse.com
   - fontsource.org
-  - foofle.com
   - foolsmountain.com
   - fooooo.com
   - footseen.com
@@ -9323,7 +10307,6 @@ domain_suffix_set:
   - frontiersin.org
   - frontlinedefenders.org
   - frontrow.com
-  - froogle.com
   - frootvpn.com
   - frostbite.com
   - froth.zone
@@ -9354,7 +10337,6 @@ domain_suffix_set:
   - fu62.vip
   - fubo.tv
   - fucd.com
-  - fuchsia.dev
   - fuck-xxx-movies.com
   - fuck.com
   - fuck.sc
@@ -9491,13 +10473,9 @@ domain_suffix_set:
   - g-ib.ae
   - g-queen.com
   - g-technology.com
-  - g-tun.com
   - g-tvapp.com
   - g-xxxhub.com
-  - g.co
-  - g.dev
   - g.kfd.me
-  - g.page
   - g1.com.br
   - g2.com
   - g6hentai.com
@@ -9586,7 +10564,6 @@ domain_suffix_set:
   - gateimg.com
   - gateio.live
   - gateio.services
-  - gateway.dev
   - gateway.originprotocol.com
   - gateway.pinata.cloud
   - gather.com
@@ -9641,7 +10618,6 @@ domain_suffix_set:
   - gcore.com
   - gcore.pro
   - gcpnews.com
-  - gcr.io
   - gcrtires.com
   - gd
   - gdaily.org
@@ -9709,14 +10685,8 @@ domain_suffix_set:
   - geph.io
   - geraldoatlarge.com
   - gerefoundation.org
-  - gerritcodereview.com
   - gesoten.com
-  - get.app
   - get.dappcdn.com
-  - get.dev
-  - get.how
-  - get.page
-  - get.rsvp
   - get.shop
   - getadblock.com
   - getaroom-cdn.com
@@ -9724,7 +10694,6 @@ domain_suffix_set:
   - getbootstrap.com
   - getboxer.com
   - getbraintree.com
-  - getbumptop.com
   - getbuzzsaw.com
   - getchu.com
   - getcloak.com
@@ -9744,9 +10713,7 @@ domain_suffix_set:
   - getjetso.com
   - getlantern.org
   - getmalus.com
-  - getmdl.io
   - getmonero.org
-  - getoutline.org
   - getpaint.net
   - getpersonas.com
   - getpocket.com
@@ -9829,7 +10796,6 @@ domain_suffix_set:
   - gimy.co
   - gimy.tv
   - ginmoe.com
-  - gipscorp.com
   - giratina.com
   - girl-secret.com
   - girl7942.com
@@ -9890,7 +10856,6 @@ domain_suffix_set:
   - glarity.app
   - glasamerike.net
   - glbimg.com
-  - gle
   - gleline.com
   - glitch.com
   - glitchprod.com
@@ -9898,7 +10863,6 @@ domain_suffix_set:
   - glitchwave.com
   - global-cdn.me
   - global-sci.org
-  - globaledu.org
   - globaljihad.net
   - globalmediaoutreach.com
   - globalmuseumoncommunism.org
@@ -9950,7 +10914,6 @@ domain_suffix_set:
   - gmo-vp.com
   - gmo.media
   - gmocloud.com
-  - gmodules.com
   - gmoney.org
   - gmosign.com
   - gmp4.com
@@ -9966,12 +10929,8 @@ domain_suffix_set:
   - gnzi1.top
   - go-disneyworldgo.com
   - go-gaytube.com
-  - go-lang.com
-  - go-lang.net
-  - go-lang.org
   - go-pki.com
   - go.com
-  - go.dev
   - go.nesnode.com
   - go141.com
   - go2av.com
@@ -9989,7 +10948,6 @@ domain_suffix_set:
   - godbolt.org
   - godfootsteps.org
   - godns.work
-  - godoc.org
   - godsdirectcontact.org
   - godsimmediatecontact.com
   - goduckgo.com
@@ -10002,21 +10960,16 @@ domain_suffix_set:
   - gog.com
   - gogalaxy.com
   - gogettaxi.org
-  - gogle.com
   - gogo-load.com
   - gogoanime.vc
   - gogoanime.wiki
   - gogoanime3.co
   - gogocdn.net
-  - gogole.com
   - gogotaku.info
   - gogotunnel.com
   - gohentai.net
   - goicq.org
   - gokbayrak.com
-  - golang.com
-  - golang.net
-  - golang.org
   - gold-gay.com
   - gold-usergeneratedcontent.net
   - goldbet.com
@@ -10035,11 +10988,9 @@ domain_suffix_set:
   - goliathguitartutorials.com
   - golosameriki.com
   - gongkou-cc.sbs
-  - gonglchuangl.net
   - gongmeng.info
   - gongminliliang.com
   - gongwt.com
-  - gongyichuangyi.net
   - gonike.com
   - gonzo-movies.com
   - gonzo.com
@@ -10055,13 +11006,6 @@ domain_suffix_set:
   - goodreads.com
   - goodtv.tv
   - goofind.com
-  - goog
-  - googel.com
-  - googil.com
-  - googl.com
-  - googlr.com
-  - goolge.com
-  - gooogle.com
   - gopayment.com
   - gopayments.com
   - gopetition.com
@@ -10160,12 +11104,8 @@ domain_suffix_set:
   - greenvpn.org
   - greginhollywood.com
   - grep.app
-  - gridaware.app
   - grindr.com
-  - grok.com
-  - grokipedia.com
   - grooby.com
-  - groq.com
   - grotty-monday.com
   - ground.news
   - group-ib.ae
@@ -10183,14 +11123,9 @@ domain_suffix_set:
   - gsearch.media
   - gshow.com
   - gshow.com.br
-  - gsrc.io
-  - gstatic-cn.com
-  - gstatic.com
-  - gsuite.com
   - gsuus.com
   - gszyi.com
   - gt536.top
-  - gtm.oasisfeng.com
   - gtranslate.net
   - gtricks.com
   - gts-vpn.com
@@ -10225,21 +11160,11 @@ domain_suffix_set:
   - guru
   - gutteruncensored.com
   - guysnightlife.com
-  - gv.com
   - gvlib.com
-  - gvt0.com
-  - gvt1-cn.com
-  - gvt2-cn.com
-  - gvt3.com
-  - gvt5.com
-  - gvt6.com
-  - gvt7.com
-  - gvt9.com
   - gw2ru.com
   - gw3.io
   - gwiki.net
   - gwins.org
-  - gwtproject.org
   - gyakusimei.com
   - gyalwarinpoche.com
   - gyatsostudio.com
@@ -10327,7 +11252,6 @@ domain_suffix_set:
   - hao21.xyz
   - hao62.xyz
   - haori888.com
-  - haplorrhini.com
   - happ.info
   - happy-vpn.com
   - happymeal.com
@@ -10418,7 +11342,6 @@ domain_suffix_set:
   - hdouban.com
   - hdouban2.com
   - hdouga.com
-  - hdrplusdata.org
   - hdsex.pro
   - hdsexxx.net
   - hdsky.me
@@ -10633,14 +11556,11 @@ domain_suffix_set:
   - hexieshe.com
   - hexieshe.xyz
   - hexxeh.net
-  - hey.boo
   - heydoga.com
   - heydouga.com
   - heyuedi.com
   - heywire.com
   - heyzo.com
-  - hf.co
-  - hf.space
   - hg.cool
   - hgagecdn.com
   - hgamer.pro
@@ -10695,7 +11615,6 @@ domain_suffix_set:
   - himemix.com
   - himemix.net
   - hindawi.com
-  - hindiweb.com
   - hindustantimes.com
   - hinet.net
   - hippyhillscomix.com
@@ -11127,7 +12046,6 @@ domain_suffix_set:
   - htkou.net
   - htl.li
   - htlvbooks.com
-  - html5rocks.com
   - htnewbooks.com
   - https443.net
   - https443.org
@@ -11181,7 +12099,6 @@ domain_suffix_set:
   - hugebil.com
   - hugedildo.com
   - hugesex.tv
-  - huggingface.co
   - hugoal.com
   - huhaitai.com
   - huhamhire.com
@@ -11252,7 +12169,6 @@ domain_suffix_set:
   - hutpromos.com
   - huyandex.com
   - hva.im
-  - hwgo.com
   - hwinfo.com
   - hwslabs.com
   - hxcsxs.pro
@@ -11287,10 +12203,8 @@ domain_suffix_set:
   - iaablog.com
   - iaea.org
   - iafd.com
-  - iam.soy
   - iamakamai.com
   - iamakamai.net
-  - iamremarkable.org
   - iamtopone.com
   - iana.org
   - iask.bz
@@ -11391,7 +12305,6 @@ domain_suffix_set:
   - idrive.com
   - idsam.com
   - idservice.inc
-  - idx.dev
   - ie
   - ie10.com
   - ie11.com
@@ -11629,7 +12542,6 @@ domain_suffix_set:
   - impactdesignhub.com
   - imperialbusiness.school
   - imperiodefamosas.com
-  - impermium.com
   - improd.works
   - imstagram.com
   - imtagram.com
@@ -12066,7 +12978,6 @@ domain_suffix_set:
   - itaboo.info
   - itaeromanga.com
   - italiatibet.org
-  - itasoftware.com
   - itcanwait.com
   - itcfonts.com
   - itch.io
@@ -12120,7 +13031,6 @@ domain_suffix_set:
   - izlesem.org
   - izmirautodeskegitimleri.com
   - j.mp
-  - j2objc.org
   - jabcomix.com
   - jable.org
   - jable.tv
@@ -12371,7 +13281,6 @@ domain_suffix_set:
   - jiaochuanba26.buzz
   - jiaoyou8.com
   - jiayoulu.com
-  - jibemobile.com
   - jieav.com
   - jiehua.tv
   - jiepang.com
@@ -12601,10 +13510,6 @@ domain_suffix_set:
   - k9vidz.com
   - ka-wai.com
   - kaamuu.com
-  - kaggle.com
-  - kaggle.io
-  - kaggle.net
-  - kaggleusercontent.com
   - kagi.com
   - kagyu.org
   - kagyumonlam.org
@@ -12712,10 +13617,6 @@ domain_suffix_set:
   - keybaseapi.com
   - keyboardmen.com
   - keycdn.com
-  - keyhole.com
-  - keytransparency.com
-  - keytransparency.foo
-  - keytransparency.org
   - kfor.com
   - kfs.io
   - kg
@@ -12939,7 +13840,6 @@ domain_suffix_set:
   - lanmdh.net
   - lanniser-ylo.shop
   - lantern.io
-  - lanternal.com
   - lantosfoundation.org
   - laogai.org
   - laogairesearch.org
@@ -13112,7 +14012,6 @@ domain_suffix_set:
   - lihkg.com
   - lihksnap.com
   - like-video.com
-  - like.com
   - like.video
   - likee.com
   - likee.video
@@ -13235,7 +14134,6 @@ domain_suffix_set:
   - lizhizhuangbi.com
   - lkcn.net
   - ll82y2ifdd.top
-  - llama.com
   - llbd10.shop
   - llcaoxm-avi.sbs
   - lldns.net
@@ -13466,7 +14364,6 @@ domain_suffix_set:
   - maddenseason.info
   - maddenseason.net
   - maddenseason.org
-  - madewithcode.com
   - madewithmaya.com
   - madewithstudiotools.com
   - madonna-av.com
@@ -13611,7 +14508,6 @@ domain_suffix_set:
   - markingmenus.com
   - markzuckerberg.com
   - marranazas.com
-  - marscode.com
   - martau.com
   - martincartoons.com
   - martinoei.com
@@ -13705,7 +14601,6 @@ domain_suffix_set:
   - matainja.com
   - matchmover.com
   - mate-desktop.org
-  - material.io
   - mathable.io
   - mathiew-badimon.com
   - mathjax.org
@@ -13786,7 +14681,6 @@ domain_suffix_set:
   - md-t.org
   - mdbankpublic.com
   - mdhcdn.com
-  - mdialog.com
   - mdn.dev
   - mdnkids.com
   - mdnplay.dev
@@ -13925,7 +14819,6 @@ domain_suffix_set:
   - mexcsensors.com
   - meyul.com
   - mfcimg.com
-  - mfg-inspector.com
   - mfmf.club
   - mfxmedia.com
   - mg
@@ -14037,7 +14930,6 @@ domain_suffix_set:
   - midatlanticbmwmotorcycles.com
   - middle-way.net
   - midentsolutions.com
-  - midjourney.com
   - midoushe.com
   - miexnoviadesnuda.com
   - mihomeone.info
@@ -14362,7 +15254,6 @@ domain_suffix_set:
   - mobileicq.com
   - mobileinternational.com
   - mobilemarketo.com
-  - mobileview.page
   - mobilevrxxx.com
   - mobilius.top
   - mobmyanmar.com
@@ -14452,7 +15343,6 @@ domain_suffix_set:
   - monster.com
   - monstercockland.com
   - monthlyav.com
-  - moodstocks.com
   - moodyz.com
   - moomoo.com
   - moomooequity.com
@@ -14997,7 +15887,6 @@ domain_suffix_set:
   - ndi.org
   - ndtv.com
   - ndtvimg.com
-  - near.by
   - nebay.net
   - ned.org
   - nee4you.com
@@ -15039,7 +15928,6 @@ domain_suffix_set:
   - nephobox.com
   - nerdnudes.com
   - nervanasys.com
-  - nest.com
   - nest.land
   - netacad.com
   - netacad.net
@@ -15104,7 +15992,6 @@ domain_suffix_set:
   - new-akiba.com
   - new-jero.net
   - new-redtube.com
-  - new.day
   - new2fea.com
   - new3dcomics.com
   - newbienudes.com
@@ -15472,7 +16359,6 @@ domain_suffix_set:
   - nokola.com
   - nomachine.com
   - nomadproject.io
-  - nomulus.foo
   - nomyne.com
   - nondh-room.mom
   - nonktube.com
@@ -15687,9 +16573,6 @@ domain_suffix_set:
   - o365weve-dev.com
   - o365weve-ppe.com
   - o365weve.com
-  - oaistatic.com
-  - oaistatsig.com
-  - oaiusercontent.com
   - oanda.com
   - oanencore.com
   - oann.com
@@ -15698,7 +16581,6 @@ domain_suffix_set:
   - oath.cloud
   - oath.com
   - oauth.net
-  - oauthz.com
   - objectarx.com
   - observable.net
   - observableusercontent.com
@@ -15803,7 +16685,6 @@ domain_suffix_set:
   - olevod.tv
   - olevodtv.com
   - oli-school.com
-  - ollama.com
   - olumpo.com
   - olympics.com
   - olympicwatch.org
@@ -15828,8 +16709,6 @@ domain_suffix_set:
   - omscr.com
   - on-fleek.app
   - on.cc
-  - on.here
-  - on2.com
   - onahodouga.com
   - onamae-desktop.com
   - onamae-office.com
@@ -15844,8 +16723,6 @@ domain_suffix_set:
   - oneapi.io
   - onedinesfree.com
   - onedumb.com
-  - onefifteen.net
-  - onefifteen.org
   - onejapanese.com
   - onejav.com
   - onekey-asset.com
@@ -15860,7 +16737,6 @@ domain_suffix_set:
   - oneteamconference.com
   - onetrust.com
   - onevps.com
-  - oneworldmanystories.com
   - onexray.com
   - onfinality.io
   - onindiansex.com
@@ -15905,8 +16781,6 @@ domain_suffix_set:
   - oopsforum.com
   - ooyala.com
   - op7979.com
-  - openai.com
-  - openai.org
   - openallweb.com
   - openamt.com
   - openapiplatform.com
@@ -15936,8 +16810,6 @@ domain_suffix_set:
   - openreview.net
   - opensea.io
   - opensource.guide
-  - opensourceinsight.dev
-  - opensourceinsights.dev
   - openspec.dev
   - openssl.org
   - openstreetmap.com
@@ -15949,16 +16821,13 @@ domain_suffix_set:
   - opentech.fund
   - opentelemetry.io
   - opentgc.com
-  - openthread.io
   - opentranslatorstothings.org
   - openvinotoolkit.org
   - openvpn.net
   - openvpn.org
   - openweathermap.org
-  - openweave.io
   - openwebster.com
   - openwrt.org
-  - openxla.org
   - opera.com
   - operacdn.com
   - opinionjournal.com
@@ -15978,7 +16847,6 @@ domain_suffix_set:
   - oracleimg.com
   - oracleinfinity.io
   - oranum.com
-  - orbitera.com
   - orbstack.dev
   - oreilly.com
   - oreilly.review
@@ -16130,7 +16998,6 @@ domain_suffix_set:
   - paddleapi.com
   - padmanet.com
   - paerosnen.club
-  - page.link
   - page.tl
   - page2rss.com
   - page3.com
@@ -16138,8 +17005,6 @@ domain_suffix_set:
   - pagecdn.io
   - pages.dev
   - pagesix.com
-  - pagespeedmobilizer.com
-  - pageview.mobi
   - pagodabox.com
   - pahabicilemezsurprizler.com
   - paheal.net
@@ -16213,7 +17078,6 @@ domain_suffix_set:
   - partnerstack.xyz
   - party
   - partycasino.com
-  - partylikeits1986.org
   - partypoker.com
   - pashtovoa.com
   - pasionmujeres.com
@@ -16236,7 +17100,6 @@ domain_suffix_set:
   - pawchive.pw
   - pawoo.net
   - paxful.com
-  - paxlicense.org
   - paydiant.com
   - payget.pro
   - paygonline.com
@@ -16340,7 +17203,6 @@ domain_suffix_set:
   - perl.org
   - perma.cc
   - permaweb.io
-  - perplexity.com
   - persagg.com
   - persecutionblog.com
   - persianepochtimes.com
@@ -16402,10 +17264,6 @@ domain_suffix_set:
   - picacomic.com
   - picacomic.xyz
   - picacomiccn.com
-  - picasa.com
-  - picasaweb.com
-  - picasaweb.net
-  - picasaweb.org
   - picgo.net
   - pichost.top
   - pichunter.com
@@ -16413,7 +17271,6 @@ domain_suffix_set:
   - picjs.xyz
   - pickinguppussy.com
   - pickpackapp.com
-  - picnik.com
   - picpost.com
   - pics.vc
   - picsart.com
@@ -16462,13 +17319,11 @@ domain_suffix_set:
   - piring.com
   - pirouvr.com
   - pise.pw
-  - pittpatt.com
   - pivotalinitiative.com
   - piwheels.org
   - pixanalytics.com
   - pixapp.net
   - pixar.com
-  - pixate.com
   - pixelcdn.net
   - pixeldrain.com
   - pixelmator.com
@@ -16562,7 +17417,6 @@ domain_suffix_set:
   - plumperpass.com
   - plunder.com
   - plurk.com
-  - plus.codes
   - plus28.com
   - plusbb.com
   - plusone8.com
@@ -16586,8 +17440,6 @@ domain_suffix_set:
   - podbean.com
   - podcast.co
   - podictionary.com
-  - poe.com
-  - poecdn.net
   - poeditor.com
   - pogo.com
   - pogobeta.com
@@ -16637,9 +17489,7 @@ domain_suffix_set:
   - polyfill-fastly.io
   - polygon.com
   - polymarket.com
-  - polymer-project.org
   - polymerhk.com
-  - polymerproject.org
   - pomf.cat
   - ponyanimalsex.com
   - poofetish.com
@@ -16679,7 +17529,6 @@ domain_suffix_set:
   - postimages.org
   - postimg.cc
   - postimg.org
-  - postini.com
   - postman.com
   - postmarkapp.com
   - potato.im
@@ -16780,7 +17629,6 @@ domain_suffix_set:
   - pritunl.com
   - privacyguides.org
   - privacyguidesusercontent.com
-  - privacysandbox.com
   - privacysimplified.com
   - privacytest.info
   - privacytools.io
@@ -16809,8 +17657,6 @@ domain_suffix_set:
   - project-syndicate.org
   - project1content.com
   - projectapex.com
-  - projectara.com
-  - projectbaseline.com
   - projectcircuitbreaker.com
   - projecteuclid.org
   - projectjav.com
@@ -16881,13 +17727,11 @@ domain_suffix_set:
   - ptwxz.com
   - ptzwx.com
   - pu82.vip
-  - pub.dev
   - pubg.com
   - public-trust.com
   - publicagentxxx.com
   - publicsexhub.com
   - publicsuffix.org
-  - publishproxy.com
   - puffin.com
   - puffinbrowser.com
   - puffstore.com
@@ -16992,7 +17836,6 @@ domain_suffix_set:
   - qianglie.com
   - qiangwaikan.com
   - qiangyou.org
-  - qiao-cn.com
   - qienkuen.org
   - qinav.com
   - qiniuyun22.xyz
@@ -17043,7 +17886,6 @@ domain_suffix_set:
   - quantumbooter.net
   - quatrum.com.br
   - quay.io
-  - questvisual.com
   - quicinc.com
   - quickbook.com.br
   - quickbooks.com
@@ -17051,9 +17893,7 @@ domain_suffix_set:
   - quickbooks2000.com
   - quickbooksonline.com
   - quickiepage.com
-  - quickoffice.com
   - quicktake.video
-  - quiksee.com
   - quillbot.com
   - quiltmc.org
   - quip-cdn.com
@@ -17293,8 +18133,6 @@ domain_suffix_set:
   - rebatesrule.net
   - rebirth-fy.com
   - rebrandly.com
-  - recaptcha-cn.net
-  - recaptcha.net
   - recelebrity.com
   - rechargecdn.com
   - recharts.org
@@ -17337,7 +18175,6 @@ domain_suffix_set:
   - redgifs.com
   - redhat.com
   - redhat.org
-  - redhotlabs.com
   - redis.io
   - redislabs.com
   - redkix.com
@@ -17385,7 +18222,6 @@ domain_suffix_set:
   - renyurenquan.org
   - renzhe.cloud
   - repe21.com
-  - replicate.delivery
   - replicateassets.com
   - replit.com
   - report-uri.com
@@ -17427,7 +18263,6 @@ domain_suffix_set:
   - revitsucks.net
   - revleft.com
   - revocationcheck.com
-  - revolv.com
   - revuestarlight.com
   - revver.com
   - rewrite-anime.tv
@@ -17444,7 +18279,6 @@ domain_suffix_set:
   - rhyw.me
   - rhyw31.life
   - ricefever.com
-  - ridepenguin.com
   - rightbtc.com
   - rigpa.org
   - rigums.xyz
@@ -17648,7 +18482,6 @@ domain_suffix_set:
   - rule34h.com
   - rule34video.com
   - rumah123.com
-  - run.app
   - runbtx.com
   - runewsrt.com
   - runkit-packages.com
@@ -17792,7 +18625,6 @@ domain_suffix_set:
   - saucenao.com
   - saveliuxiaobo.com
   - savemedia.com
-  - savethedate.foo
   - savethesounds.info
   - savetibet.org
   - savetibetstore.org
@@ -17803,7 +18635,6 @@ domain_suffix_set:
   - savitahd.net
   - savoycomputing.com
   - say2.info
-  - saynow.com
   - sb
   - sb-cd.com
   - sb-telecom.net
@@ -17846,9 +18677,7 @@ domain_suffix_set:
   - scea.com
   - scene7.com
   - scenesource.me
-  - schema.org
   - schemastore.org
-  - schemer.com
   - schiffvitamins.com
   - scholarpedia.org
   - schwab.com
@@ -17890,8 +18719,6 @@ domain_suffix_set:
   - scpic.net
   - scpwiki.com
   - scramble.io
-  - screenwisetrends.com
-  - screenwisetrendspanel.com
   - screw-my-wife.com
   - scribd.com
   - scribdassets.com
@@ -18228,7 +19055,6 @@ domain_suffix_set:
   - sharizelvideos.com
   - sharmota.com
   - shat-tibet.com
-  - shattered.io
   - shdd.ink
   - shedevrum.com
   - sheflix.com
@@ -18599,7 +19425,6 @@ domain_suffix_set:
   - snapdragon.cn
   - snapdragonbooth.com
   - snapkit.co
-  - snapseed.com
   - snapstore.io
   - snaptu.com
   - snapvolumes.com
@@ -18677,7 +19502,6 @@ domain_suffix_set:
   - solscan.io
   - solutionstation.com
   - solv.finance
-  - solveforx.com
   - somee.com
   - someonewhocares.org
   - sonatype.org
@@ -18736,7 +19560,6 @@ domain_suffix_set:
   - sopcast.com
   - sopcast.org
   - sophos.com
-  - sora.com
   - sora6.com
   - sorazone.net
   - sorcerersarena.com
@@ -18940,7 +19763,6 @@ domain_suffix_set:
   - stackpath.dev
   - stacksnippets.net
   - stacyvandenbergboobs.com
-  - stadia.dev
   - staffhub.ms
   - standardchartered.com
   - standardsuniversity.org
@@ -19029,8 +19851,6 @@ domain_suffix_set:
   - staxus.com
   - stboy.net
   - stc-server.com
-  - stcroixmosquito.com
-  - stcroixmosquitoproject.com
   - stealthex.io
   - steel-storm.com
   - steelbrick.com
@@ -19141,8 +19961,6 @@ domain_suffix_set:
   - studioncorp.com
   - studiopaint.com
   - studiosucks.com
-  - studywatchbyverily.com
-  - studywatchbyverily.org
   - stufferdb.com
   - stuidok110.com
   - stumbleupon.com
@@ -19150,10 +19968,6 @@ domain_suffix_set:
   - stupidcams.com
   - stupidvideos.com
   - stweetly.com
-  - stxmosquito.com
-  - stxmosquitoproject.com
-  - stxmosquitoproject.net
-  - stxmosquitoproject.org
   - stylexjs.com
   - su
   - sub147.com
@@ -19183,7 +19997,6 @@ domain_suffix_set:
   - sundanceignite2016.com
   - sundayguardianlive.com
   - sundayready.com
-  - suno.com
   - sunskyforum.com
   - sunvpn.net
   - suoluo.org
@@ -19316,7 +20129,6 @@ domain_suffix_set:
   - synapse.org
   - synaptic.net
   - syncback.com
-  - synergyse.com
   - synology.com
   - synology.me
   - synologydownload.com
@@ -19476,7 +20288,6 @@ domain_suffix_set:
   - tdm.com.mo
   - teacherfucksteens.com
   - teachmyass.com
-  - teachparentstech.org
   - teamamericany.com
   - teamneedforspeed.com
   - teamskeet.com
@@ -19552,8 +20363,6 @@ domain_suffix_set:
   - temu.com
   - tenacy.com
   - tenbyfotolia.com
-  - tenor.com
-  - tensorflow.org
   - tenzinpalmo.com
   - teo-rum.com
   - terabox.com
@@ -19581,7 +20390,6 @@ domain_suffix_set:
   - texttobuy.org
   - tfbnw.net
   - tferwq.com
-  - tfhub.dev
   - tfiflve.com
   - tfsallin.net
   - tg-me.com
@@ -19631,7 +20439,6 @@ domain_suffix_set:
   - thechinacollection.org
   - thechinastory.org
   - theclasshroom.com
-  - thecleversense.com
   - theclubprive.com
   - thecompaqstore.com
   - thecontentserver.com
@@ -19737,7 +20544,6 @@ domain_suffix_set:
   - thinkingtaiwan.com
   - thinkofliving.com
   - thinkorswim.com
-  - thinkquarterly.com
   - thirdmill.org
   - thirdweb.com
   - thirdwebcdn.com
@@ -19893,7 +20699,6 @@ domain_suffix_set:
   - tile.thunderforest.com
   - tile2.opencyclemap.org
   - tile3.opencyclemap.org
-  - tiltbrush.com
   - timdir.com
   - time.com
   - timefxapp.com
@@ -20439,11 +21244,9 @@ domain_suffix_set:
   - twvid.com
   - twyac.org
   - tx5254.com
-  - txcloud.net
   - txdirectv.com
   - txmblr.com
   - txqzz34r.com
-  - txvia.com
   - txvlog.com
   - txxx.com
   - txxx1.com
@@ -20572,7 +21375,6 @@ domain_suffix_set:
   - underhentai.net
   - underlords.com
   - underwoodammo.com
-  - unfiltered.news
   - ungh.cc
   - ungrounded.net
   - unholyknight.com
@@ -20647,7 +21449,6 @@ domain_suffix_set:
   - urasma.com
   - urbandictionary.com
   - urbansurvival.com
-  - urchin.com
   - urduvoa.com
   - urhtbooks.com
   - urlborg.com
@@ -20664,7 +21465,6 @@ domain_suffix_set:
   - usefreevpn.com
   - uselessjunk.com
   - usenix.org
-  - useplannr.com
   - userapi.com
   - userdrive.org
   - userpxt.io
@@ -20677,8 +21477,6 @@ domain_suffix_set:
   - ustream.tv
   - usunitednews.com
   - usus.cc
-  - usvimosquito.com
-  - usvimosquitoproject.com
   - ut-assets.com
   - utdstc.com
   - utopianpal.com
@@ -20744,8 +21542,6 @@ domain_suffix_set:
   - v2ray.cool
   - v2raycn.com
   - v7hds.com
-  - v8.dev
-  - v8project.org
   - va
   - vagabundasdoorkut.net
   - vaginacontest.com
@@ -20835,7 +21631,6 @@ domain_suffix_set:
   - velasystems.com
   - velatest.com
   - velocloud.com
-  - velostrata.com
   - venbbs.com
   - venchina.com
   - vendu.com
@@ -20859,11 +21654,6 @@ domain_suffix_set:
   - vercel.pub
   - vercel.store
   - verhentai.tv
-  - verily.com
-  - verilylifesciences.com
-  - verilystudyhub.com
-  - verilystudywatch.com
-  - verilystudywatch.org
   - verisign.asia
   - verisign.biz
   - verisign.com
@@ -21434,7 +22224,6 @@ domain_suffix_set:
   - wakatime.com
   - wal-mart.com
   - wal.co
-  - wallet.com
   - walletconnect.com
   - walletconnect.org
   - wallhaven.cc
@@ -21525,11 +22314,8 @@ domain_suffix_set:
   - wattpad.com
   - wav.tv
   - waveomoney.com.mm
-  - waveprotocol.org
   - waybackmachine.org
   - waybig.com
-  - waymo.com
-  - waze.com
   - wb.am
   - wb.kz
   - wbagora.com
@@ -21554,11 +22340,8 @@ domain_suffix_set:
   - wearehairy.com
   - wearn.com
   - weav.xyz
-  - web.app
-  - web.dev
   - web2project.net
   - web3modal.org
-  - webappfieldguide.com
   - webbang.net
   - webcam-teen.net
   - webcamgirls.chat
@@ -21583,13 +22366,10 @@ domain_suffix_set:
   - weblate.org
   - webmademovies.org
   - webmoneyinfo.com
-  - webmproject.org
   - webnovel.com
   - webofknowledge.com
   - webofscience.com
   - webpass.net
-  - webpkgcache.com
-  - webrtc.org
   - webrush.net
   - webs-tv.net
   - websdr.org
@@ -21656,7 +22436,6 @@ domain_suffix_set:
   - what-fan.net
   - whatblocked.com
   - whatboyswant.com
-  - whatbrowser.org
   - whatisairwatch.com
   - whatisworkspaceone.com
   - whatsonweibo.com
@@ -21708,7 +22487,6 @@ domain_suffix_set:
   - wibes.com
   - widen.net
   - widencdn.net
-  - widevine.com
   - widget.cluster.groovehq.com
   - widget.clutch.co
   - wife-home-videos.com
@@ -21797,8 +22575,6 @@ domain_suffix_set:
   - windowsuem.com
   - windowsupdate.com
   - windscribe.com
-  - windsurf.build
-  - windsurf.com
   - windy.com
   - wing.com
   - wingamestore.com
@@ -21873,8 +22649,6 @@ domain_suffix_set:
   - wolongcdnm3u8.com
   - wolongzywcdn3.com
   - womensnikeshox.com
-  - womenwill.com
-  - womenwill.com.br
   - woodmancastingx.com
   - woolite.com
   - woolitecarpet.com
@@ -21987,11 +22761,9 @@ domain_suffix_set:
   - wwr-stardom.com
   - wwtbam.com
   - www-bestbuystores.com
-  - www.destinationurl.com
   - www.lamenhu.com
   - www.msn.com
   - www.orchidbbs.com
-  - www.pxcc.com
   - www1.biz
   - www8-hp.com
   - wwwdecide.com
@@ -22020,9 +22792,7 @@ domain_suffix_set:
   - x-wall.org
   - x.co
   - x.com
-  - x.company
   - x.org
-  - x.team
   - x0rd38.xyz
   - x18r.co
   - x18r.com
@@ -22244,9 +23014,7 @@ domain_suffix_set:
   - xn--90aifd0azb.xn--p1acf
   - xn--90wwvt03e.com
   - xn--9iqy04a7fi01l.com
-  - xn--9kr7l.com
   - xn--9pr62r24a.com
-  - xn--9trs65b.com
   - xn--av-o44ep1d.com
   - xn--b1aechhj6bof8g5a.site
   - xn--c1acbl2abdlkab1og.xn--p1ai
@@ -22260,12 +23028,8 @@ domain_suffix_set:
   - xn--fiq80y.xn--j6w193g
   - xn--fiq80y3xbiwr.xn--j6w193g
   - xn--fiq80y3xbiwrs0kiu9d.xn--j6w193g
-  - xn--flw351e.com
-  - xn--ggle-55da.com
   - xn--gmq348bujlxrb.com
   - xn--gmq92kd2rm1kx34a.com
-  - xn--gogl-0nd52e.com
-  - xn--gogl-1nd42e.com
   - xn--h1ao.site
   - xn--hb4aw0g.com
   - xn--hckl3e1e8a8ajin0czf.net
@@ -22274,10 +23038,8 @@ domain_suffix_set:
   - xn--kcrv3utim32hx9f6qe.com
   - xn--mts47c3w9b1qr.net
   - xn--mtswd61ejxq.com
-  - xn--ngstr-lra8j.com
   - xn--noss43i.com
   - xn--oiq.cc
-  - xn--p8j9a0d9c9a.xn--q9jyb4c
   - xn--pearsonenespaol-brb.com
   - xn--pssu7ci2j23mp9ny48b.xn--j6w193g
   - xn--pssu7ci3q5oge0ai91q.xn--j6w193g
@@ -22352,7 +23114,6 @@ domain_suffix_set:
   - xpaja.net
   - xpdo.net
   - xpee.com
-  - xplr.co
   - xpoleuno.com
   - xposed.info
   - xpressunblock.com
@@ -23093,7 +23854,6 @@ domain_suffix_set:
   - zuola.com
   - zvereff.com
   - zwtvusa.com
-  - zynamics.com
   - zyngapoker.com
   - zyns.com
   - zyxel.com
@@ -23112,9 +23872,18 @@ domain_suffix_set:
 domain_keyword_set:
   - youtube
   - telegram
-  - colab
-  - developerprofiles
-  - generativelanguage
+  - "chatgpt"
+  - "chatgpt-async-webps-prod"
+  - "openai"
+  - "colab"
+  - "developerprofiles"
+  - "generativelanguage"
+  - appspot
+  - blogspot
+  - gmail
+  - google
+  - googlesource
+  - recaptcha
   - -assets.dmm.co.jp
   - -assets.worldsex.com
   - -files.gitbook.io
@@ -23130,7 +23899,6 @@ domain_keyword_set:
   - assets.trustpilot.net
   - avtb
   - beetalk
-  - blogspot
   - browserleaks
   - cdn.adultempire.com
   - cdn.trustpilot.net
@@ -23142,8 +23910,6 @@ domain_keyword_set:
   - facebook
   - fbcdn
   - github
-  - gmail
-  - google
   - hotmail
   - images.trustpilot.com
   - images.trustpilot.net
