@@ -15,13 +15,14 @@ NAMES = [
     "YouTube",
     "YouTubeMusic",
     "Telegram",
+    "Gemini",
     "Apple",
     "China",
     "ChinaIPs",
     "Global",
 ]
 DEDUPE = {"Privacy": "AdvertisingLite"}
-FOREIGN_DNS = ["YouTubeMusic", "YouTube", "Telegram", "Global"]
+FOREIGN_DNS = ["YouTubeMusic", "YouTube", "Telegram", "Gemini", "Global"]
 DOMAIN_TYPES = (
     "domain_set",
     "domain_suffix_set",
@@ -31,7 +32,6 @@ DOMAIN_TYPES = (
 )
 ORDER = [
     "Lan",
-    "ModuleReject",
     "Hijacking",
     "AdvertisingLite",
     "Privacy",
@@ -39,6 +39,7 @@ ORDER = [
     "YouTubeMusic",
     "YouTube",
     "Telegram",
+    "Gemini",
     "Apple",
     "China",
     "Global",
@@ -50,6 +51,24 @@ KEEP = {
     "wxa.wxs.qq.com",
     "gvideo.qpic.cn",
 }
+# MagicRule 把同一批广告域名灌进了 Lan、Telegram、Apple。Lan 排最前且是直连，
+# 这些域名会绕过去广告。只从 Lan 删掉同时出现在下面规则集里的域名。
+LAN_SHARED_WITH = ("AdvertisingLite", "Telegram", "Apple")
+LAN_PROTECTED = {
+    "miwifi.com",
+    "asusrouter.com",
+    "routerlogin.com",
+    "tplogin.cn",
+    "localhost.weixin.qq.com",
+    "local",
+    "lan",
+    "home",
+    "internal",
+    "home.arpa",
+}
+# 整段顶级域，拒绝后正常网站打不开。apis.google.com 会被登录、地图等非 AI 流量用到。
+DROP_SUFFIX = {"data"}
+GEMINI_SKIP = {"apis.google.com"}
 MODULES = [
     "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module",
     "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockHTTPDNS.module",
@@ -112,6 +131,42 @@ def rewrite(body, drop):
     return "\n".join(out) + "\n"
 
 
+def merge_rules(base, extra):
+    have = {(sec, value(v)) for sec, v in entries(base)}
+    add = {}
+    for sec, v in entries(extra):
+        item = value(v)
+        if (sec, item) in have:
+            continue
+        have.add((sec, item))
+        add.setdefault(sec, []).append(item)
+    if not add:
+        return base if base.endswith("\n") else base + "\n"
+    lines = base.splitlines()
+
+    def section_index(sec):
+        for i, line in enumerate(lines):
+            if re.match(r"^" + re.escape(sec) + r":", line):
+                return i
+        return None
+
+    present = []
+    missing = []
+    for sec, items in add.items():
+        idx = section_index(sec)
+        (present if idx is not None else missing).append((idx, sec, items))
+    for idx, sec, items in sorted(present, reverse=True):
+        end = idx + 1
+        while end < len(lines) and re.match(r"^\s+- ", lines[end]):
+            end += 1
+        block = ["  - " + json.dumps(i, ensure_ascii=False) for i in items]
+        lines[end:end] = block
+    for _, sec, items in missing:
+        lines.append(sec + ":")
+        lines.extend("  - " + json.dumps(i, ensure_ascii=False) for i in items)
+    return "\n".join(lines) + "\n"
+
+
 def module_reject():
     sets = {v: [] for v in MODULE_TYPES.values()}
     for url in MODULES:
@@ -144,6 +199,27 @@ def module_reject():
     return "\n".join(lines) + "\n"
 
 
+def strip_lan(bodies):
+    shared = set()
+    for name in LAN_SHARED_WITH:
+        for sec, v in entries(bodies[name]):
+            if sec in ("domain_set", "domain_suffix_set"):
+                shared.add(value(v))
+    removed = set()
+
+    def drop(sec, v):
+        item = value(v)
+        if sec not in ("domain_set", "domain_suffix_set") or item not in shared:
+            return False
+        if item in LAN_PROTECTED:
+            raise RuntimeError("lan filter would drop " + item)
+        removed.add(item)
+        return True
+
+    bodies["Lan"] = rewrite(bodies["Lan"], drop)
+    print("Lan pollution removed", len(removed))
+
+
 def prune(body):
     lines = body.splitlines()
     out = []
@@ -154,6 +230,65 @@ def prune(body):
                 continue
         out.append(line)
     return "\n".join(out) + "\n"
+
+
+def build(bodies, module_body):
+    before = sum(1 for _ in entries(bodies["AdvertisingLite"]))
+    bodies["AdvertisingLite"] = merge_rules(bodies["AdvertisingLite"], module_body)
+    print(
+        "AdvertisingLite added from modules",
+        sum(1 for _ in entries(bodies["AdvertisingLite"])) - before,
+    )
+    strip_lan(bodies)
+    for name, base in DEDUPE.items():
+        seen = {(sec, value(v)) for sec, v in entries(bodies[base])}
+        bodies[name] = rewrite(
+            bodies[name], lambda s, v, seen=seen: (s, value(v)) in seen
+        )
+    for name in REJECT:
+        bodies[name] = rewrite(
+            bodies[name],
+            lambda s, v: s in ("domain_set", "domain_suffix_set") and value(v) in KEEP,
+        )
+        bodies[name] = rewrite(
+            bodies[name],
+            lambda s, v: s == "domain_suffix_set" and value(v) in DROP_SUFFIX,
+        )
+    bodies["Gemini"] = rewrite(
+        bodies["Gemini"], lambda s, v: value(v) in GEMINI_SKIP
+    )
+    exact = set()
+    suffixes = set()
+
+    def covered(s, v):
+        item = value(v)
+        if (s, item) in exact:
+            return True
+        if s not in ("domain_set", "domain_suffix_set"):
+            return False
+        parts = item.split(".")
+        return any(".".join(parts[i:]) in suffixes for i in range(len(parts)))
+
+    for name in ORDER:
+        bodies[name] = rewrite(bodies[name], covered)
+        for s, v in entries(bodies[name]):
+            exact.add((s, value(v)))
+            if s == "domain_suffix_set":
+                suffixes.add(value(v))
+    merged = {t: [] for t in DOMAIN_TYPES}
+    seen = set()
+    for name in FOREIGN_DNS:
+        for s, v in entries(bodies[name]):
+            if s in merged and (s, v) not in seen:
+                seen.add((s, v))
+                merged[s].append(v)
+    lines = []
+    for t, items in merged.items():
+        if items:
+            lines.append(t + ":")
+            lines.extend("  - " + v for v in items)
+    bodies["ForeignDNS"] = "\n".join(lines) + "\n"
+    return bodies
 
 
 def main():
@@ -174,52 +309,18 @@ def main():
             failed.append(name)
             print(name, "failed:", e, file=sys.stderr)
     try:
-        bodies["ModuleReject"] = module_reject()
+        module_body = module_reject()
     except Exception as e:
-        failed.append("ModuleReject")
-        print("ModuleReject failed:", e, file=sys.stderr)
+        failed.append("modules")
+        print("modules failed:", e, file=sys.stderr)
     if failed:
         sys.exit(1)
-    for name, base in DEDUPE.items():
-        seen = set(entries(bodies[base]))
-        bodies[name] = rewrite(bodies[name], lambda s, v: (s, v) in seen)
-    for name in REJECT:
-        bodies[name] = rewrite(
-            bodies[name],
-            lambda s, v: s in ("domain_set", "domain_suffix_set") and value(v) in KEEP,
-        )
-    exact = set()
-    suffixes = set()
-
-    def covered(s, v):
-        if (s, v) in exact:
-            return True
-        if s not in ("domain_set", "domain_suffix_set"):
-            return False
-        parts = value(v).split(".")
-        return any(".".join(parts[i:]) in suffixes for i in range(len(parts)))
-
-    for name in ORDER:
-        bodies[name] = rewrite(bodies[name], covered)
-        for s, v in entries(bodies[name]):
-            exact.add((s, v))
-            if s == "domain_suffix_set":
-                suffixes.add(value(v))
-    merged = {t: [] for t in DOMAIN_TYPES}
-    seen = set()
-    for name in FOREIGN_DNS:
-        for s, v in entries(bodies[name]):
-            if s in merged and (s, v) not in seen:
-                seen.add((s, v))
-                merged[s].append(v)
-    lines = []
-    for t, items in merged.items():
-        if items:
-            lines.append(t + ":")
-            lines.extend("  - " + v for v in items)
-    bodies["ForeignDNS"] = "\n".join(lines) + "\n"
+    bodies = build(bodies, module_body)
+    stale = os.path.join(OUT, "ModuleReject.yaml")
+    if os.path.exists(stale):
+        os.remove(stale)
     for name, body in bodies.items():
-        with open(os.path.join(OUT, name + ".yaml"), "w", encoding="utf-8") as f:
+        with open(os.path.join(OUT, name + ".yaml"), "w", encoding="utf-8", newline="\n") as f:
             f.write(prune(body))
         print(name, sum(1 for _ in entries(body)))
 

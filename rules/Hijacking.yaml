@@ -16,6 +16,8 @@ domain_suffix_set:
   - 51chumoping.com
   - 51mld.cn
   - 51mypc.cn
+  - 58mingri.cn
+  - 58mingtian.cn
   - 5vl58stm.com
   - 6d63d3.com
   - 7gg.cc
@@ -31,6 +33,7 @@ domain_suffix_set:
   - beilamusi.com
   - benshiw.net
   - betterzip.net
+  - betterzipcn.com
   - beyondcompare.cc
   - bianxianmao.com
   - bingdianhuanyuan.cn
@@ -38,6 +41,7 @@ domain_suffix_set:
   - bryonypie.com
   - chemdraw.com.cn
   - cishantao.com
+  - cjmakeding.com
   - cjmkt.com
   - codesoftchina.com
   - coreldrawchina.com
@@ -46,9 +50,11 @@ domain_suffix_set:
   - cudaojia.com
   - dafapromo.com
   - daitdai.com
+  - dongmansoft.com
   - dsaeerf.com
   - dugesheying.com
   - dv8c1t.cn
+  - earmasterchina.cn
   - easyrecoverychina.com
   - echatu.com
   - ediuschina.com
@@ -70,10 +76,12 @@ domain_suffix_set:
   - gzxnlk.com
   - haoshengtoys.com
   - hbssjd.cn
+  - huishenghuiying.com.cn
   - hypersnap.net
   - hyunke.com
   - ichaosheng.com
   - iconworkshop.cn
+  - idmchina.net
   - imindmap.cc
   - ishop789.com
   - jdkic.com
@@ -85,19 +93,24 @@ domain_suffix_set:
   - kawo77.com
   - keyshot.cc
   - kingdeecn.cn
+  - kuaizip.com
   - kualianyingxiao.cn
   - kumihua.com
   - logoshejishi.com
   - ltheanine.cn
+  - luping.net.cn
   - lvehaisen.com
+  - mackeeper.com
   - maipinshangmao.com
   - mairuan.cn
   - mairuan.com
   - mairuan.com.cn
   - mairuan.net
   - mairuanwang.com
+  - makeding.com
   - mathtype.cn
   - mindmanager.cc
+  - mindmanager.cn
   - mindmapper.cc
   - minisplat.cn
   - mkitgfs.com
@@ -112,6 +125,7 @@ domain_suffix_set:
   - overturechina.com
   - passwordrecovery.cn
   - pdfexpert.cc
+  - photozoomchina.com
   - pinzhitmall.com
   - poppyta.com
   - qianchuanghr.com
@@ -138,6 +152,7 @@ domain_suffix_set:
   - tjqonline.cn
   - topitme.com
   - tt3sm4.cn
+  - tuia.cn
   - tuipenguin.com
   - tuitiger.com
   - ultraiso.net
@@ -149,6 +164,7 @@ domain_suffix_set:
   - wx16999.com
   - xchmai.com
   - xiaohuau.xyz
+  - xitongqingli.com
   - xmindchina.net
   - xshellcn.com
   - ygyzx.cn
@@ -164,6 +180,7 @@ domain_suffix_set:
   - zhzzx.com
   - zlne800.com
   - zmlled.cn
+  - zryydi.com
   - zunmi.cn
   - zzd6.com
 ip_cidr_set:

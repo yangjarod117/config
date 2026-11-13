@@ -5,7 +5,6 @@
 no_resolve: true
 domain_set:
   - data.bilibili.com
-  - livewebbs2pcdn.msstatic.com
   - qn-cdnfile1pcdn.msstatic.com
   - stun.douyucdn.cn
   - stun1.douyucdn.cn
@@ -14,7 +13,12 @@ domain_set:
 domain_suffix_set:
   - 1558334541.rsc.cdn77.org
   - 1cros.net
+  - 3.km7ru2n2jhtfjurotvho91ulyl4gk1121v.cfd
+  - 3m3vmyfg5ew8.8x3hooqfp5hme63yviqpece.cyou
+  - 3wvn3zttj9jjr2t223b17y.75bg8nhzf4kngjg.cfd
   - 4251.tech
+  - 67bu6n1xpg38vtk141.1xulomppkrwcr8zni6yz.cfd
+  - 6hrcl.rh2yexwirpw7guh1h6fy3e2twn8.cfd
   - a.emea01.idio.episerver.net
   - a.itsmore.cn
   - a.smetrics.sovereign.com
@@ -1409,6 +1413,7 @@ domain_suffix_set:
   - dii4.zooplus.se
   - dk-go.experian.com
   - dl.episerver.net
+  - e1h5pn.b182z39mu43o4wujttoxlq2hmct9ub.cfd
   - ebis-tracking.hirakata-skin-clinic.com
   - ebis-tracking.okinawa-keisei.com
   - ebis-tracking.shinyokohama-beauty.com
@@ -1422,6 +1427,7 @@ domain_suffix_set:
   - email.everyonesocial.inmoment.com
   - email.strava.com
   - emailsnow.info
+  - embitterlorrycar.com
   - emea-go.experian.com
   - engage.3m.co.cr
   - engage.3m.co.id
@@ -1483,6 +1489,7 @@ domain_suffix_set:
   - firebaselogging-pa.googleapis.com
   - fls-na.amazon.com
   - fr-go.experian.com
+  - g28ri3nji.8kwmh8h5myqkf951t5.cfd
   - geo.ngtv.io
   - gjfzpt.cn
   - global-go.experian.com
@@ -1490,6 +1497,7 @@ domain_suffix_set:
   - goat.skeetstats.xyz
   - gr-business.vodafone.com
   - gr-go.experian.com
+  - hguv.hn3h5lwzrbwi82kwegwjnc2iw6.cfd
   - hk-go.experian.com
   - horizoneurope.ukri.org
   - hu-business.vodafone.com
@@ -1644,6 +1652,7 @@ domain_suffix_set:
   - nsmetrics.themercury.com.au
   - nsmetrics.vogue.com.au
   - nz-go.experian.com
+  - o4bk.yl5t41964nw9v2gmc9i82w9xihweozouvi4.cfd
   - om-ssl.consorsbank.de
   - omniture.walmart.com
   - omsc.kpn.com
@@ -1756,6 +1765,7 @@ domain_suffix_set:
   - plausible.yalepaprika.com
   - plausible.zest.dev
   - plausible.zorin.com
+  - pml.ewqv6zcjlnw3hw.cfd
   - ppio.cloud
   - pr.cision.com
   - proftrafficcounter.com
@@ -2214,6 +2224,7 @@ domain_suffix_set:
   - seniorliving.whitneycenter.com
   - seniorliving.winchestergardens.com
   - seniorliving.wyndemerelcs.com
+  - ser678uikl.xyz
   - service.trustpid.com
   - service.utiq.com
   - sg-go.experian.com
@@ -5331,6 +5342,7 @@ domain_suffix_set:
   - swasc.homedepot.com
   - syfwnf.society6.com
   - szbdyd.com
+  - t.92b94jt6icqlrxmoipg.cfd
   - t.vrbo.io
   - target.footlocker.at
   - target.footlocker.be
@@ -5384,6 +5396,7 @@ domain_suffix_set:
   - trcka8net.lenszero.com
   - trcka8net.qieto.net
   - try.abtasty.com
+  - ttt.cqzrlquec45klq.cfd
   - tw-go.experian.com
   - tw.cx
   - uhabo.com
@@ -5397,6 +5410,7 @@ domain_suffix_set:
   - url2987.affirm.com
   - url4324.affirm.com
   - url6514.affirm.com
+  - uryiu.jjxhwow75cehgr7yhe4.cfd
   - us-go.experian.com
   - usmetric.rediff.com
   - utiq.11freunde.de
@@ -5782,6 +5796,7 @@ domain_suffix_set:
   - vge-business.vodafone.com
   - vge-mktg.vodafone.com
   - visitorlando.actonsoftware.com
+  - w.1ecjbovmygj6ph8.cfd
   - wds.weqs.me
   - web.collaboration-access.com
   - web.hikari-ocn.com
@@ -5790,6 +5805,7 @@ domain_suffix_set:
   - website-security.geotrust.com
   - www.brillen.demarketing.net.brillen.pl
   - www.smetrics.imedeen.us
+  - xml.proxywood-box.online
   - xycdn.com
   - yfcdn.net
   - yfcloud.com

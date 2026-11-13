@@ -1,5 +1,0 @@
-#!name=规则顺序测试
-#!desc=临时测试：模块规则排在主配置规则前面还是后面，测完删除
-[Rule]
-DOMAIN,example.org,REJECT
-DOMAIN,www.icloud.com.cn,REJECT

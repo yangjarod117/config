@@ -79,6 +79,13 @@ policy_groups:
         - 我的订阅
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
   - select:
+      name: Google AI
+      policies:
+        - 美国
+        - 日本
+        - 我的订阅
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AI.png
+  - select:
       name: Apple
       policies:
         - DIRECT
@@ -91,9 +98,6 @@ rules:
   - rule_set:
       match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Lan.yaml
       policy: DIRECT
-  - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/ModuleReject.yaml
-      policy: REJECT
   - rule_set:
       match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Hijacking.yaml
       policy: REJECT
@@ -115,6 +119,9 @@ rules:
   - rule_set:
       match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Telegram.yaml
       policy: Telegram
+  - rule_set:
+      match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Gemini.yaml
+      policy: Google AI
   - rule_set:
       match: https://raw.githubusercontent.com/yangjarod117/config/main/rules/Apple.yaml
       policy: Apple
@@ -145,3 +152,5 @@ modules:
     url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module
   - name: HTTPDNS拦截器
     url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockHTTPDNS.module
+  - name: 墨鱼去开屏2.0
+    url: https://raw.githubusercontent.com/ifflagged/Romeo/main/Modules/Surge/ddgksf2013/StartUpAds.sgmodule
