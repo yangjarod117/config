@@ -40,8 +40,9 @@ dns:
 policy_groups:
   - select:
       name: 我的订阅
-      policies:
-        - DIRECT
+      flatten: true
+      urls:
+        - 订阅链接
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
   - select:
       name: 美国
