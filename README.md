@@ -22,10 +22,6 @@ https://raw.githubusercontent.com/yangjarod117/config/main/egern.yaml
 - 美国：`(?i)(美国|🇺🇸|(^|[^a-z])us)`
 - 日本：`(?i)(日本|🇯🇵|(^|[^a-z])jp)`
 
-## QUIC
-
-直连不屏蔽 QUIC，抖音、今日头条在蜂窝网络上可以走 QUIC。走代理的策略组单独屏蔽 QUIC。
-
 ## 分流顺序
 
 1. 局域网 → DIRECT
