@@ -157,6 +157,7 @@ mitm:
   hostnames:
     excludes:
       - '*.googlevideo.com'
+      - 'youtubei.googleapis.com'
 
 modules:
   - name: HTTPDNS拦截器
