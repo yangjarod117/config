@@ -70,7 +70,6 @@ policy_groups:
         - 美国
         - 日本
         - 我的订阅
-      block_quic: false
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
   - select:
       name: Telegram
@@ -137,6 +136,9 @@ rules:
 mitm:
   ca_p12: egern.p12
   ca_passphrase: egern
+  hostnames:
+    excludes:
+      - '*.googlevideo.com'
 
 modules:
   - name: 广告拦截&净化合集
