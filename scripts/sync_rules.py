@@ -19,7 +19,6 @@ NAMES = [
     "Google",
     "Apple",
     "China",
-    "ChinaIPs",
     "Global",
 ]
 DEDUPE = {"Privacy": "AdvertisingLite"}
@@ -44,7 +43,6 @@ ORDER = [
     "Apple",
     "China",
     "Global",
-    "ChinaIPs",
 ]
 REJECT = ["Hijacking", "AdvertisingLite", "Privacy"]
 # 走代理的规则集。其余规则集是直连或拒绝，Apple 默认直连。
@@ -795,7 +793,7 @@ def main():
     if failed:
         sys.exit(1)
     bodies = build(bodies, module_body)
-    for stale_name in ("ModuleReject.yaml", "Gemini.yaml", "YouTubeMusic.yaml"):
+    for stale_name in ("ModuleReject.yaml", "Gemini.yaml", "YouTubeMusic.yaml", "ChinaIPs.yaml"):
         stale = os.path.join(OUT, stale_name)
         if os.path.exists(stale):
             os.remove(stale)

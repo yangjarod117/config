@@ -148,9 +148,6 @@ rules:
   - domain_suffix:
       match: cn
       policy: DIRECT
-  - rule_set:
-      match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/ChinaIPs.yaml
-      policy: DIRECT
   - geoip:
       match: CN
       policy: DIRECT
