@@ -18,7 +18,10 @@ https://raw.githubusercontent.com/yangjarod117/config/main/surge/surge.conf
 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockHTTPDNS.module
 https://raw.githubusercontent.com/ifflagged/Romeo/main/Modules/Surge/ddgksf2013/StartUpAds.sgmodule
 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module
+https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/Surge/Module/Surge_SoftwareUpdate.sgmodule
 ```
+
+最后一个是屏蔽 iOS 更新，只在 iPhone/iPad 上生效，要升级系统时先关掉它。
 
 规则集和节点每天自动更新。配置本身有改动时再重新下载，把旧配置里 `[MITM]` 的 `ca-passphrase`、`ca-p12` 两行和订阅链接贴回去，证书就不用重新生成。
 
