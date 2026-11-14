@@ -25,3 +25,5 @@ https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds
 ## 分流顺序
 
 同 Egern，最后多一条系统 LAN 规则，再到 GEOIP CN 和 FINAL。
+
+反劫持、去广告、隐私三个拒绝规则集带 `pre-matching`，在 DNS 和 TCP 握手阶段就拒绝，优先级高于所有规则。要放行被误拦的域名，加进同步脚本的 `KEEP`，在前面加直连规则不管用。

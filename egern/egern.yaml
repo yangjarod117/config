@@ -142,6 +142,9 @@ rules:
   - rule_set:
       match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/Global.yaml
       policy: Global
+  - domain_suffix:
+      match: cn
+      policy: DIRECT
   - rule_set:
       match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/ChinaIPs.yaml
       policy: DIRECT

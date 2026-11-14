@@ -22,8 +22,9 @@ https://raw.githubusercontent.com/yangjarod117/config/main/egern/egern.yaml
 8. Apple → Apple（默认 DIRECT）
 9. 中国域名 → DIRECT
 10. 境外域名 → Global
-11. 中国 IP → DIRECT
-12. 其余 → Global
+11. `.cn` 域名 → DIRECT（MagicRule 的中国规则集不含 `.cn`）
+12. 中国 IP → DIRECT
+13. 其余 → Global
 
 ## DNS
 
