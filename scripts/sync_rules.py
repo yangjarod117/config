@@ -58,6 +58,28 @@ KEEP = {
     # 墨鱼模块单独放行它，拦了 12306 会出问题。
     "ad.12306.cn",
 }
+# 广告平台拦截器里的这几个域名不是广告，拦了会出问题：api.sm.cn、c.sm.cn 是夸克/UC 搜索，
+# atoken.m.taobao.com 是淘宝登录令牌。
+KEEP |= {"api.sm.cn", "c.sm.cn", "atoken.m.taobao.com"}
+# 登录和网络配置接口，参照可莉「广告平台拦截器」的放行名单：MobTech 短信验证码、
+# 极光本机号码一键登录、字节系 App 的 TTNet 配置（tnc 开头）。拒绝规则里凡是会拦到它们的条目都删掉，
+# 包括 mob.com、jiguang.cn 这种整域后缀；单独列出的广告子域名照常拦截。
+ALLOW = {
+    "init.sms.mob.com",
+    "sdkapi.sms.mob.com",
+    "code.sms.mob.com",
+    "smartop-sdkapi.jiguang.cn",
+    "sdk.verification.jiguang.cn",
+}
+TNC_SUFFIXES = (
+    "capcutapi.com",
+    "zijieapi.com",
+    "isnssdk.com",
+    "toutiaoapi.com",
+    "bytedance.com",
+    "snssdk.com",
+    "sgsnssdk.com",
+)
 # openx 关键词会拦掉 openxlab.org.cn、openxla.org。换成 OpenX 自己的域名。
 DROP_KEYWORD = {"openx"}
 EXTRA_REJECT_SUFFIX = ["openx.com"]
@@ -216,6 +238,8 @@ AI_EXTRA_DOMAIN = [
 MODULES = [
     "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module",
     "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockHTTPDNS.module",
+    # 可莉「广告平台拦截器」，只取拒绝规则：倍孜、AdScope、TopOn、广点通等第三方广告 SDK 平台。
+    "https://raw.githubusercontent.com/ifflagged/Romeo/main/Modules/Surge/Kelee/BlockAdvertisers.sgmodule",
 ]
 MODULE_TYPES = {
     "DOMAIN": "domain_set",
@@ -315,6 +339,25 @@ def merge_rules(base, extra):
 
 def under(item, suffixes):
     return any(item == d or item.endswith("." + d) for d in suffixes)
+
+
+def allowed(host):
+    host = host.lower()
+    if host in ALLOW:
+        return True
+    return host.split(".")[0].startswith("tnc") and under(host, TNC_SUFFIXES)
+
+
+def blocks_allowed(sec, item):
+    """这条拒绝规则会不会拦到放行名单里的域名。"""
+    item = item.lower()
+    if sec == "domain_set":
+        return allowed(item)
+    if sec == "domain_suffix_set":
+        return allowed(item) or any(under(h, [item]) for h in ALLOW)
+    if sec == "domain_keyword_set":
+        return any(item in h for h in ALLOW)
+    return False
 
 
 def china_domains(body):
@@ -513,6 +556,17 @@ def build(bodies, module_body):
             bodies[name],
             lambda s, v: s == "domain_keyword_set" and value(v) in DROP_KEYWORD,
         )
+        dropped = []
+
+        def drop_allowed(s, v, dropped=dropped):
+            if blocks_allowed(s, plain(v)):
+                dropped.append(plain(v))
+                return True
+            return False
+
+        bodies[name] = rewrite(bodies[name], drop_allowed)
+        if dropped:
+            print(name, "allow-list dropped", dropped)
     extra = ["domain_suffix_set:"]
     extra.extend("  - " + json.dumps(i) for i in EXTRA_REJECT_SUFFIX)
     bodies["AdvertisingLite"] = merge_rules(bodies["AdvertisingLite"], "\n".join(extra) + "\n")

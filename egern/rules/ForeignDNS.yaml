@@ -51,7 +51,6 @@ domain_set:
   - alt8-mtalk.google.com
   - analytics.google.com
   - android.googlesource.com
-  - app-analytics-services.com
   - app-measurement-cn.com
   - avail.googleflights.net
   - c.android.clients.google.com
@@ -79,7 +78,6 @@ domain_set:
   - firebasedynamiclinks-ipv4.googleapis.com
   - firebasedynamiclinks-ipv6.googleapis.com
   - firebasedynamiclinks.googleapis.com
-  - firebaseinappmessaging.googleapis.com
   - firebaseinstallations.googleapis.com
   - firebaseperusertopics-pa.googleapis.com
   - firebaseremoteconfig.googleapis.com
@@ -3465,6 +3463,7 @@ domain_suffix_set:
   - 51luoben.com
   - 51luoli.info
   - 51mh.app
+  - 51papaya.com
   - 51pincha.cc
   - 51tuqiang.com
   - 520aa.tv

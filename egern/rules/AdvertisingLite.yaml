@@ -21940,12 +21940,6 @@ domain_set:
   - tmyxrlpkn.com
   - tnative.ru
   - tnbyhwawsh.com
-  - tnc0-aliec2.zijieapi.com
-  - tnc0-alisc1.zijieapi.com
-  - tnc0-bjlgy.zijieapi.com
-  - tnc3-aliec2.zijieapi.com
-  - tnc3-alisc1.zijieapi.com
-  - tnc3-bjlgy.zijieapi.com
   - tncexvzu.com
   - tncred.com
   - tnctrx.com
@@ -26869,9 +26863,7 @@ domain_set:
   - "ug-sinfonlinea.bytedance.com"
   - "activity-ag.awemeughun.com"
   - "mcs.snssdk.com"
-  - "tnc3-alisc1.snssdk.com"
   - "security-lq.snssdk.com"
-  - "tnc3-aliec2.snssdk.com"
   - "v6-novelapp.ixigua.com"
   - "msync-im1-vip6-std.easemob.com"
   - "api.iegadp.qq.com"
@@ -26955,9 +26947,7 @@ domain_set:
   - "config.jpush.cn"
   - "fcapi-ipv6.jpush.cn"
   - "s.jpush.cn"
-  - "sdk.verification.jiguang.cn"
   - "sis-ipv6.jpush.cn"
-  - "smartop-sdkapi.jiguang.cn"
   - "status-ipv6.jpush.cn"
   - "user.jpush.cn"
   - "sdk.tianmu.mobi"
@@ -27127,6 +27117,56 @@ domain_set:
   - "httpdns.n.shifen.com"
   - "kuaishou.httpdns.pro"
   - "twns.p2ptun.qq.com"
+  - "open.e.kuaishou.cn"
+  - "bgg.baidu.com"
+  - "cpro.baidustatic.com"
+  - "eclick.baidu.com"
+  - "wn.pos.baidu.com"
+  - "miao.baidu.com"
+  - "pro.bugly.qq.com"
+  - "stat6.y.qq.com"
+  - "ossgw.alicdn.com"
+  - "ems.youku.com"
+  - "hudong.alicdn.com"
+  - "et.tanx.com"
+  - "df.tanx.com"
+  - "opehs.tanx.com"
+  - "beacon-api.aliyuncs.com"
+  - "adash.man.aliyuncs.com"
+  - "adashx.m.taobao.com"
+  - "applog.uc.cn"
+  - "nbsdk-baichuan.alicdn.com"
+  - "content-understand-strategy.sm.cn"
+  - "sdk-log.partner.sm.cn"
+  - "partner.uc.cn"
+  - "cpc-service-square.aiclk.com"
+  - "logrcv.aiclk.com"
+  - "acjs.aliyun.com"
+  - "retcode.alicdn.com"
+  - "arms-retcode.aliyuncs.com"
+  - "al-log.d.meituan.net"
+  - "babel-statistics-android.d.meituan.net"
+  - "maplocatesdksnapshot.d.meituan.net"
+  - "metrics-picture.d.meituan.net"
+  - "route-stats.d.meituan.net"
+  - "xlog.jd.com"
+  - "sdk.zhangyuyidong.cn"
+  - "sdklog.zhangyuyidong.cn"
+  - "ad-evods.tianya.tv"
+  - "app-analytics-services.com"
+  - "odm.app-ads-services.com"
+  - "firebaselogging-pa.googleapis.com"
+  - "firebaseinappmessaging.googleapis.com"
+  - "fundingchoicesmessages.google.com"
+  - "statis.miwuad.com"
+  - "ad.shunchangzhixing.com"
+  - "redirect.shunchangzhixing.com"
+  - "api.touch-moblie.com"
+  - "mercury-gateway.ixiaochuan.cn"
+  - "ad.aggrxinc.com"
+  - "adx.zuoyebang.com"
+  - "xadsmartget.adgain.cn"
+  - "ep7.facebook.com"
 domain_suffix_set:
   - 0.avmarket.rs
   - 0.myikas.com
@@ -92688,7 +92728,6 @@ domain_suffix_set:
   - jigool.org
   - jigsawlucky.com
   - jigsawthirsty.com
-  - jiguang.cn
   - jiguangyi.com.cn
   - jihehuaban.com
   - jihihbae.shopmylegacy.ca
@@ -117161,7 +117200,6 @@ domain_suffix_set:
   - moat4shot.com
   - moatads.com
   - moatads.com.edgekey.net
-  - mob.com
   - mob.huimee.net
   - mob1ledev1ces.com
   - mob2.bpt.apprevork.com
@@ -171007,19 +171045,7 @@ domain_suffix_set:
   - tnabotwhfdqvp.website
   - tnavb.elvou.com
   - tnbjek.indekskitap.com
-  - tnc-boot.capcutapi.com
-  - tnc-sg.capcutapi.com
-  - tnc-v2-boot.capcutapi.com
-  - tnc16-alisg.isnssdk.com
   - tnc16-normal-us-ttp.capcutapi.us
-  - tnc16-useast1a.isnssdk.com
-  - tnc3-aliec1.toutiaoapi.com
-  - tnc3-aliec2.snssdk.com
-  - tnc3-aliec2.toutiaoapi.com
-  - tnc3-alisc1.snssdk.com
-  - tnc3-alisc1.toutiaoapi.com
-  - tnc3-bjlgy.snssdk.com
-  - tnc3-bjlgy.toutiaoapi.com
   - tncid.app
   - tncpzu.marelbo.com
   - tndhlsnrpzgph.online
@@ -190076,6 +190102,107 @@ domain_suffix_set:
   - "tosv.byted.org"
   - "tosv.boe.byted.org"
   - "sdfp.snssdk.com"
+  - "byteadverts.com"
+  - "halomobi.com"
+  - "partner.gifshow.com"
+  - "adn-plus.com.cn"
+  - "adhub.com.cn"
+  - "adnplus.com.cn"
+  - "adscope.com.cn"
+  - "adscope.cn"
+  - "adscope.xyz"
+  - "beizi.info"
+  - "beizi.online"
+  - "tianmu.mobi"
+  - "admobile.mobi"
+  - "admobile.net.cn"
+  - "popadshop.com"
+  - "admobile.vip"
+  - "yksdks.com"
+  - "gdtimg.com"
+  - "opadlink.com"
+  - "staevent.work"
+  - "openinstall.online"
+  - "statchannel.store"
+  - "oplinking.com"
+  - "deepinstall.com"
+  - "openinstall.com"
+  - "installtongji.top"
+  - "openlink.cc"
+  - "opstatistics.com"
+  - "installtongji.online"
+  - "statschannel.xyz"
+  - "staevent.xyz"
+  - "opstatistics.cn"
+  - "openinstall.top"
+  - "statsinstall.xyz"
+  - "statchannel.top"
+  - "lydass.net"
+  - "lydass.com.cn"
+  - "lydaas.net"
+  - "lydass.cn"
+  - "lydaas.cn"
+  - "lydaas.com.cn"
+  - "fwosapp.com"
+  - "rhinokeen.com"
+  - "lydaas.com"
+  - "xixikf.com"
+  - "um0.cn"
+  - "umv0.com"
+  - "umtrack1.com"
+  - "eshiqi.com"
+  - "umv5.com"
+  - "dratio.com"
+  - "umtrack0.com"
+  - "umtrack2.com"
+  - "um1.cn"
+  - "iytcdn.com"
+  - "toponad.com"
+  - "readgps.com"
+  - "17admob.com"
+  - "slyxmobi.com"
+  - "mobrtb.com"
+  - "maplehaze.cn"
+  - "birdgesdk.com"
+  - "anyrtb.com"
+  - "combocn.com"
+  - "beanxin.com"
+  - "letway.cn"
+  - "newitai.com"
+  - "fireluck.cn"
+  - "setway.cn"
+  - "artcto.com"
+  - "wayio.cn"
+  - "iaddata.com"
+  - "66mobi.com"
+  - "xdplt.com"
+  - "adjust.net.in"
+  - "xinduoad.com"
+  - "api.touch-moblie.com"
+  - "bxsnews.com"
+  - "adsrvr.cn"
+  - "etoolads.cn"
+  - "mentamob.com"
+  - "advlion.com"
+  - "shanghailingye.cn"
+  - "shenshiads.com"
+  - "adshenshi.com"
+  - "qidianad.com"
+  - "kuaichuanad.com"
+  - "cxwlad.com"
+  - "yiweiads.com"
+  - "adx.52qumao.com"
+  - "hzjizhun.cn"
+  - "hzjizhun.com"
+  - "sogaha.cn"
+  - "medproad.com"
+  - "adsappier.com"
+  - "appsflyersdk.com"
+  - "skarb.club"
+  - "skarb.work"
+  - "fivecdm.com"
+  - "tobidad.cn"
+  - "tobidad.com"
   - "openx.com"
 domain_keyword_set:
   - -ad.a.yximgs.com
@@ -190343,6 +190470,12 @@ domain_keyword_set:
   - "client-dmp.suishenyun.cn"
   - "pc.suishenyun.net"
   - "v0-client-lz.rili.cn"
+  - "adstrategy"
+  - "pangolin"
+  - "pglstatp"
+  - "panplayable-toutiao"
+  - "bjimp.voiceads.cn"
+  - "ad.hunyuan.tencent.com"
 domain_wildcard_set:
   - "*-pcdn-*.biliapi.net"
   - "*.ad.*.prod.hosts.ooklaserver.net"

@@ -960,7 +960,6 @@ DOMAIN-SUFFIX,byteactivity13.com
 DOMAIN-SUFFIX,byteactivity14.com
 DOMAIN-SUFFIX,byteactivity15.com
 DOMAIN-SUFFIX,byteactivity16.com
-DOMAIN-SUFFIX,byteadverts.com
 DOMAIN-SUFFIX,byteapi.com
 DOMAIN-SUFFIX,bytecdn.com
 DOMAIN-SUFFIX,bytecdn.net
@@ -1866,7 +1865,6 @@ DOMAIN-SUFFIX,downyi.com
 DOMAIN-SUFFIX,dpfile.com
 DOMAIN-SUFFIX,dpma.cc
 DOMAIN-SUFFIX,draftstatic.com
-DOMAIN-SUFFIX,dratio.com
 DOMAIN-SUFFIX,dreame.tech
 DOMAIN-SUFFIX,dreams-travel.com
 DOMAIN-SUFFIX,drivergenius.com
@@ -2302,7 +2300,6 @@ DOMAIN-SUFFIX,gcores.com
 DOMAIN-SUFFIX,gdjdxy.com
 DOMAIN-SUFFIX,gdliontech.com
 DOMAIN-SUFFIX,gdrc.com
-DOMAIN-SUFFIX,gdtimg.com
 DOMAIN-SUFFIX,geekbang.org
 DOMAIN-SUFFIX,geekpark.net
 DOMAIN-SUFFIX,geektool.top
@@ -3617,9 +3614,6 @@ DOMAIN-SUFFIX,lxjiasu.com
 DOMAIN-SUFFIX,lxway.com
 DOMAIN-SUFFIX,lxzjjt.com
 DOMAIN-SUFFIX,ly.com
-DOMAIN-SUFFIX,lydaas.com
-DOMAIN-SUFFIX,lydaas.net
-DOMAIN-SUFFIX,lydass.net
 DOMAIN-SUFFIX,lyihub.com
 DOMAIN-SUFFIX,lynkco-test.com
 DOMAIN-SUFFIX,lynkco.com
@@ -3803,6 +3797,7 @@ DOMAIN-SUFFIX,mnc007.mcc460.pub.3gppnetwork.org
 DOMAIN-SUFFIX,mnc011.mcc460.pub.3gppnetwork.org
 DOMAIN-SUFFIX,mnc015.mcc460.pub.3gppnetwork.org
 DOMAIN-SUFFIX,mndqlib.net
+DOMAIN-SUFFIX,mob.com
 DOMAIN-SUFFIX,mobike.com
 DOMAIN-SUFFIX,mobsdks.com
 DOMAIN-SUFFIX,modaiyun.com
@@ -4050,7 +4045,6 @@ DOMAIN-SUFFIX,open-douyin.com
 DOMAIN-SUFFIX,openapp.run
 DOMAIN-SUFFIX,openbcs.com
 DOMAIN-SUFFIX,openevai.com
-DOMAIN-SUFFIX,openinstall.com
 DOMAIN-SUFFIX,openkylin.top
 DOMAIN-SUFFIX,openlearning.com
 DOMAIN-SUFFIX,openmidas.com
@@ -5655,7 +5649,6 @@ DOMAIN-SUFFIX,xcz.im
 DOMAIN-SUFFIX,xczim.com
 DOMAIN-SUFFIX,xd.com
 DOMAIN-SUFFIX,xdcdn.net
-DOMAIN-SUFFIX,xdplt.com
 DOMAIN-SUFFIX,xdqtech.com
 DOMAIN-SUFFIX,xdrtc.com
 DOMAIN-SUFFIX,xdtool.com
@@ -5911,7 +5904,6 @@ DOMAIN-SUFFIX,yizhibo.com
 DOMAIN-SUFFIX,yizhitou.com
 DOMAIN-SUFFIX,yjbys.com
 DOMAIN-SUFFIX,ykimg.com
-DOMAIN-SUFFIX,yksdks.com
 DOMAIN-SUFFIX,ykzq.com
 DOMAIN-SUFFIX,yl-scm.com
 DOMAIN-SUFFIX,ylike.net
@@ -8066,6 +8058,7 @@ IP-CIDR,124.71.0.0/17
 IP-CIDR,124.71.128.0/18
 IP-CIDR,124.71.192.0/19
 IP-CIDR,124.71.224.0/20
+IP-CIDR,124.71.241.0/24
 IP-CIDR,124.71.244.0/23
 IP-CIDR,124.71.250.0/24
 IP-CIDR,124.72.0.0/13

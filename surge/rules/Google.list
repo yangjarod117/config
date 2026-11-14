@@ -9,7 +9,6 @@ DOMAIN,alt7-mtalk.google.com
 DOMAIN,alt8-mtalk.google.com
 DOMAIN,analytics.google.com
 DOMAIN,android.googlesource.com
-DOMAIN,app-analytics-services.com
 DOMAIN,app-measurement-cn.com
 DOMAIN,avail.googleflights.net
 DOMAIN,c.android.clients.google.com
@@ -37,7 +36,6 @@ DOMAIN,firebaseapptesters.googleapis.com
 DOMAIN,firebasedynamiclinks-ipv4.googleapis.com
 DOMAIN,firebasedynamiclinks-ipv6.googleapis.com
 DOMAIN,firebasedynamiclinks.googleapis.com
-DOMAIN,firebaseinappmessaging.googleapis.com
 DOMAIN,firebaseinstallations.googleapis.com
 DOMAIN,firebaseperusertopics-pa.googleapis.com
 DOMAIN,firebaseremoteconfig.googleapis.com

@@ -1,7 +1,7 @@
 # NAME: China
 # AUTHOR: MagicRule
 # REPO: https://magicrule.pages.dev
-# UPDATED: 2026-11-13 23:09:20
+# UPDATED: 2026-11-14 13:11:50
 no_resolve: true
 domain_set:
   - api.blipsandchitz.me
@@ -967,7 +967,6 @@ domain_suffix_set:
   - byteactivity14.com
   - byteactivity15.com
   - byteactivity16.com
-  - byteadverts.com
   - byteapi.com
   - bytecdn.com
   - bytecdn.net
@@ -1873,7 +1872,6 @@ domain_suffix_set:
   - dpfile.com
   - dpma.cc
   - draftstatic.com
-  - dratio.com
   - dreame.tech
   - dreams-travel.com
   - drivergenius.com
@@ -2309,7 +2307,6 @@ domain_suffix_set:
   - gdjdxy.com
   - gdliontech.com
   - gdrc.com
-  - gdtimg.com
   - geekbang.org
   - geekpark.net
   - geektool.top
@@ -3624,9 +3621,6 @@ domain_suffix_set:
   - lxway.com
   - lxzjjt.com
   - ly.com
-  - lydaas.com
-  - lydaas.net
-  - lydass.net
   - lyihub.com
   - lynkco-test.com
   - lynkco.com
@@ -3810,6 +3804,7 @@ domain_suffix_set:
   - mnc011.mcc460.pub.3gppnetwork.org
   - mnc015.mcc460.pub.3gppnetwork.org
   - mndqlib.net
+  - mob.com
   - mobike.com
   - mobsdks.com
   - modaiyun.com
@@ -4057,7 +4052,6 @@ domain_suffix_set:
   - openapp.run
   - openbcs.com
   - openevai.com
-  - openinstall.com
   - openkylin.top
   - openlearning.com
   - openmidas.com
@@ -5662,7 +5656,6 @@ domain_suffix_set:
   - xczim.com
   - xd.com
   - xdcdn.net
-  - xdplt.com
   - xdqtech.com
   - xdrtc.com
   - xdtool.com
@@ -5918,7 +5911,6 @@ domain_suffix_set:
   - yizhitou.com
   - yjbys.com
   - ykimg.com
-  - yksdks.com
   - ykzq.com
   - yl-scm.com
   - ylike.net
@@ -8081,6 +8073,7 @@ ip_cidr_set:
   - 124.71.128.0/18
   - 124.71.192.0/19
   - 124.71.224.0/20
+  - 124.71.241.0/24
   - 124.71.244.0/23
   - 124.71.250.0/24
   - 124.72.0.0/13
