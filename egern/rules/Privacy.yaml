@@ -2232,6 +2232,7 @@ domain_suffix_set:
   - service.trustpid.com
   - service.utiq.com
   - sg-go.experian.com
+  - sgimage.netmarble.com
   - shop.anu-cosme.com
   - shopify-webhooks.sailthru.com
   - sit-smetrics.nab.com.au
