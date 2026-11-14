@@ -51,26 +51,71 @@ REJECT = ["Hijacking", "AdvertisingLite", "Privacy"]
 PROXY_SETS = {"YouTube", "Telegram", "AI", "Google", "Global"}
 # 直连规则集里被 ForeignDNS 覆盖的域名，收进 DirectDNS，改用国内 DNS。
 DIRECT_DNS = ["Lan", "iCloud", "Apple", "China"]
-KEEP = {
-    "wxs.qq.com",
-    "wxa.wxs.qq.com",
-    "gvideo.qpic.cn",
-    # 墨鱼模块单独放行它，拦了 12306 会出问题。
+# 放行名单。三类规则在合并完所有来源之后统一生效：拒绝规则里只要有条目会拦到它们，就自动删掉，
+# 不报错；删掉了什么打印在 Actions 日志里。Surge 的拒绝规则集开了 pre-matching，直连规则压不过它，
+# 所以误拦只能在这里修。
+#
+# PROTECT：必须能访问的具体主机。会拦到这个主机的条目（同名、父域名后缀、关键词、通配）都删掉；
+# 只针对它下面其他子域名的条目不动，例如 dns.weixin.qq.com 这类 HTTPDNS 照常拦。
+PROTECT = {
+    # 微信、QQ：消息、公众号、小程序、图片、视频号、登录
+    "weixin.qq.com", "wx.qq.com", "long.weixin.qq.com", "short.weixin.qq.com",
+    "szlong.weixin.qq.com", "szshort.weixin.qq.com", "szextshort.weixin.qq.com",
+    "extshort.weixin.qq.com", "mp.weixin.qq.com", "open.weixin.qq.com", "api.weixin.qq.com",
+    "res.wx.qq.com", "servicewechat.com", "mmbiz.qpic.cn", "mmbiz.qlogo.cn", "wx.qlogo.cn",
+    "thirdwx.qlogo.cn", "wxapp.tc.qq.com", "wxs.qq.com", "wxa.wxs.qq.com", "gvideo.qpic.cn",
+    "ssl.ptlogin2.qq.com", "xui.ptlogin2.qq.com", "graph.qq.com",
+    # 支付
+    "pay.weixin.qq.com", "wx.tenpay.com", "mobilegw.alipay.com", "openapi.alipay.com",
+    "render.alipay.com", "gw.alipayobjects.com", "cashier.95516.com", "base.95516.com",
+    "wallet.95516.com",
+    # 验证码
+    "captcha.qq.com", "ssl.captcha.qq.com", "t.captcha.qq.com", "turing.captcha.qcloud.com",
+    "static.geetest.com", "api.geetest.com", "gcaptcha4.geetest.com", "c.dun.163.com",
+    "cf.aliyun.com", "sec.taobao.com",
+    # 短信验证码、本机号码一键登录（MobTech、极光、移动、电信、联通）
+    "init.sms.mob.com", "sdkapi.sms.mob.com", "code.sms.mob.com",
+    "smartop-sdkapi.jiguang.cn", "sdk.verification.jiguang.cn",
+    "verify5.cmpassport.com", "onekey.cmpassport.com", "www.cmpassport.com",
+    "id6.me", "e.189.cn", "opencloud.wostore.cn", "enrichgw.10010.com",
+    "auth.wosms.cn", "msv6.wosms.cn",
+    # Apple：证书校验、账号、App Store、推送、iCloud
+    "ocsp.apple.com", "ocsp2.apple.com", "valid.apple.com", "crl.apple.com", "gs.apple.com",
+    "gsa.apple.com", "appleid.apple.com", "idmsa.apple.com", "init.itunes.apple.com",
+    "buy.itunes.apple.com", "api.push.apple.com", "setup.icloud.com", "www.icloud.com",
+    # 云盘
+    "pan.baidu.com", "pcs.baidu.com", "d.pcs.baidu.com", "c.pcs.baidu.com",
+    "drive.quark.cn", "drive-pc.quark.cn", "pan.quark.cn", "api.aliyundrive.com",
+    "api.alipan.com", "user.alipan.com", "www.123pan.com", "cloud.189.cn", "api.cloud.189.cn",
+    # 地图、定位
+    "apilocate.amap.com", "restapi.amap.com", "m5.amap.com", "lbs.qq.com", "apis.map.qq.com",
+    "api.map.baidu.com", "loc.map.baidu.com",
+    # 电商主接口和图片
+    "acs.m.taobao.com", "guide-acs.m.taobao.com", "img.alicdn.com", "gw.alicdn.com",
+    "g.alicdn.com", "heic.alicdn.com", "api.m.jd.com", "m.360buyimg.com", "img11.360buyimg.com",
+    "wmapi.meituan.com", "p0.meituan.net", "mpay.meituan.com", "mobile.yangkeduo.com",
+    "api.pinduoduo.com",
+    # 字节、Telegram、12306
+    "aweme.snssdk.com", "api.amemv.com", "api.telegram.org",
+    "kyfw.12306.cn", "mobile.12306.cn",
+    # 墨鱼模块单独放行它，拦了 12306 会出问题
     "ad.12306.cn",
+    # 广告平台拦截器里夹带的非广告域名：夸克/UC 搜索、淘宝登录令牌
+    "api.sm.cn", "c.sm.cn", "atoken.m.taobao.com",
 }
-# 广告平台拦截器里的这几个域名不是广告，拦了会出问题：api.sm.cn、c.sm.cn 是夸克/UC 搜索，
-# atoken.m.taobao.com 是淘宝登录令牌。
-KEEP |= {"api.sm.cn", "c.sm.cn", "atoken.m.taobao.com"}
-# 登录和网络配置接口，参照可莉「广告平台拦截器」的放行名单：MobTech 短信验证码、
-# 极光本机号码一键登录、字节系 App 的 TTNet 配置（tnc 开头）。拒绝规则里凡是会拦到它们的条目都删掉，
-# 包括 mob.com、jiguang.cn 这种整域后缀；单独列出的广告子域名照常拦截。
-ALLOW = {
-    "init.sms.mob.com",
-    "sdkapi.sms.mob.com",
-    "code.sms.mob.com",
-    "smartop-sdkapi.jiguang.cn",
-    "sdk.verification.jiguang.cn",
+# ALLOW_DOMAINS：整个域名都放行，包括子域名。设备风控（网易易盾、数美、阿里设备指纹、同盾、顶象、
+# 极验），拦了会频繁弹滑块或提示环境异常。
+ALLOW_DOMAINS = {
+    "dun.163.com", "dun.163yun.com", "fengkongcloud.com", "fengkongcloud.cn", "ishumei.com",
+    "ynuf.aliapp.org", "umid.alipay.com", "tongdun.net", "dingxiang-inc.com", "geetest.com",
 }
+# PUSH_DOMAINS：推送服务（极光、个推），拦了用它们的 App 收不到通知。整域放行，
+# 但子域名里带统计、日志、广告字样的照常拦。
+PUSH_DOMAINS = {"jpush.cn", "jpush.io", "getui.com", "getui.net", "igexin.com", "gepush.com"}
+PUSH_KEEP_BLOCKED = re.compile(
+    r"(^|[.-])(stats?|logs?|ads?|adv|track\w*|analytics?|report|apm|collect\w*|lbs|loc|phone)(?=$|[.\-\d])", re.I
+)
+# 字节系 App 启动先请求的 TTNet 网络配置，主机名以 tnc 开头。
 TNC_SUFFIXES = (
     "capcutapi.com",
     "zijieapi.com",
@@ -80,6 +125,15 @@ TNC_SUFFIXES = (
     "snssdk.com",
     "sgsnssdk.com",
 )
+# 用户规定：fmz200 广告合集自己拦截的地址，一律不放行，以它为准。下面三个集合在解析它的规则时填充。
+FMZ_ADS = "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module"
+FMZ_EXACT = set()
+FMZ_SUFFIX = set()
+FMZ_KEYWORD = []
+# 只收集直连规则、不合并拒绝规则的模块（拒绝规则由模块自己在设备上生效）。
+DIRECT_ONLY_MODULES = [
+    "https://raw.githubusercontent.com/ifflagged/Romeo/main/Modules/Surge/ddgksf2013/StartUpAds.sgmodule",
+]
 # openx 关键词会拦掉 openxlab.org.cn、openxla.org。换成 OpenX 自己的域名。
 DROP_KEYWORD = {"openx"}
 EXTRA_REJECT_SUFFIX = ["openx.com"]
@@ -341,22 +395,61 @@ def under(item, suffixes):
     return any(item == d or item.endswith("." + d) for d in suffixes)
 
 
-def allowed(host):
-    host = host.lower()
-    if host in ALLOW:
+def push_ok_to_block(host):
+    """推送域名下的统计、日志、广告子域名，照常拦。"""
+    for d in PUSH_DOMAINS:
+        if under(host, [d]) and host != d:
+            return bool(PUSH_KEEP_BLOCKED.search(host[: -len(d) - 1]))
+    return False
+
+
+def fmz_blocks(host):
+    """fmz200 广告合集自己会不会拦这个主机。"""
+    parts = host.split(".")
+    if host in FMZ_EXACT:
         return True
-    return host.split(".")[0].startswith("tnc") and under(host, TNC_SUFFIXES)
+    if any(".".join(parts[i:]) in FMZ_SUFFIX for i in range(len(parts))):
+        return True
+    return any(k in host for k in FMZ_KEYWORD)
+
+
+def protected(host):
+    """这个主机必须能访问。fmz200 广告合集也拦的，不算。"""
+    host = host.lower()
+    if fmz_blocks(host):
+        return False
+    if host in PROTECT:
+        return True
+    if host.split(".")[0].startswith("tnc") and under(host, TNC_SUFFIXES):
+        return True
+    if under(host, ALLOW_DOMAINS):
+        return True
+    return under(host, PUSH_DOMAINS) and not push_ok_to_block(host)
+
+
+def wildcard_hits(pattern, hosts):
+    rx = re.compile(fnmatch.translate(pattern.lower()))
+    return any(rx.match(h) for h in hosts)
 
 
 def blocks_allowed(sec, item):
-    """这条拒绝规则会不会拦到放行名单里的域名。"""
+    """这条拒绝规则会不会拦到放行名单。"""
     item = item.lower()
+    whole = ALLOW_DOMAINS | PUSH_DOMAINS
     if sec == "domain_set":
-        return allowed(item)
+        return protected(item)
+    guarded = [h for h in PROTECT | whole if protected(h)]
     if sec == "domain_suffix_set":
-        return allowed(item) or any(under(h, [item]) for h in ALLOW)
+        # 条目本身受保护，或者它是某个受保护主机/域名的父域名
+        return protected(item) or any(under(h, [item]) for h in guarded)
     if sec == "domain_keyword_set":
-        return any(item in h for h in ALLOW)
+        if any(item in h for h in guarded):
+            return True
+        # 关键词本身像一个推送/风控域名下的主机名，例如 c-hzgt2.getui.com
+        return any(d in item for d in whole) and protected(item.strip("."))
+    if sec == "domain_wildcard_set":
+        samples = PROTECT | whole | {"x." + d for d in whole}
+        return wildcard_hits(item, [h for h in samples if protected(h)])
     return False
 
 
@@ -463,6 +556,32 @@ def make_ai(bodies):
     return body
 
 
+def collect_module_direct(line):
+    """模块里的直连规则并入放行名单，让 Surge 的 pre-matching 也遵守模块作者的放行。"""
+    parts = [p.strip() for p in line.split(",")]
+    while len(parts) > 2 and parts[-1] in ("no-resolve", "extended-matching"):
+        parts.pop()
+    if len(parts) != 3 or parts[2] != "DIRECT":
+        return
+    host = parts[1].strip('"').lower()
+    if parts[0] == "DOMAIN":
+        PROTECT.add(host)
+    elif parts[0] == "DOMAIN-SUFFIX":
+        ALLOW_DOMAINS.add(host)
+
+
+def module_direct_only():
+    for url in DIRECT_ONLY_MODULES:
+        section = None
+        for line in get(url).decode("utf-8").splitlines():
+            line = line.strip()
+            if line.startswith("["):
+                section = line
+                continue
+            if section == "[Rule]" and line and not line.startswith("#"):
+                collect_module_direct(line)
+
+
 def module_reject():
     sets = {v: [] for v in MODULE_TYPES.values()}
     for url in MODULES:
@@ -474,6 +593,7 @@ def module_reject():
                 continue
             if section != "[Rule]" or not line or line.startswith("#"):
                 continue
+            collect_module_direct(line)
             parts = [p.strip() for p in line.split(",")]
             kind = MODULE_TYPES.get(parts[0])
             while len(parts) > 2 and parts[-1] in ("no-resolve", "extended-matching"):
@@ -483,6 +603,12 @@ def module_reject():
             item = ",".join(parts[1:-1])
             if len(item) > 1 and item[0] == item[-1] == '"':
                 item = item[1:-1]
+            if url == FMZ_ADS:
+                {"domain_set": FMZ_EXACT, "domain_suffix_set": FMZ_SUFFIX}.get(kind, set()).add(
+                    item.lower()
+                )
+                if kind == "domain_keyword_set":
+                    FMZ_KEYWORD.append(item.lower())
             if item not in sets[kind]:
                 sets[kind].append(item)
     if not sets["domain_suffix_set"]:
@@ -544,10 +670,6 @@ def build(bodies, module_body):
             bodies[name], lambda s, v, seen=seen: (s, value(v)) in seen
         )
     for name in REJECT:
-        bodies[name] = rewrite(
-            bodies[name],
-            lambda s, v: s in ("domain_set", "domain_suffix_set") and value(v) in KEEP,
-        )
         bodies[name] = rewrite(
             bodies[name],
             lambda s, v: s == "domain_suffix_set" and value(v) in DROP_SUFFIX,
@@ -666,6 +788,7 @@ def main():
             print(name, "failed:", e, file=sys.stderr)
     try:
         module_body = module_reject()
+        module_direct_only()
     except Exception as e:
         failed.append("modules")
         print("modules failed:", e, file=sys.stderr)

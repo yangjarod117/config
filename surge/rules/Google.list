@@ -199,7 +199,6 @@ DOMAIN-SUFFIX,ampproject.com
 DOMAIN-SUFFIX,ampproject.net
 DOMAIN-SUFFIX,ampproject.org
 DOMAIN-SUFFIX,analytics-alv.google.com
-DOMAIN-SUFFIX,android
 DOMAIN-SUFFIX,android.com
 DOMAIN-SUFFIX,androidify.com
 DOMAIN-SUFFIX,androidtv.com
@@ -323,7 +322,6 @@ DOMAIN-SUFFIX,certificate-transparency.org
 DOMAIN-SUFFIX,charlestonroadregistry.com
 DOMAIN-SUFFIX,chat.gle
 DOMAIN-SUFFIX,checkin.gstatic.com
-DOMAIN-SUFFIX,chrome
 DOMAIN-SUFFIX,chrome.com
 DOMAIN-SUFFIX,chromebook.com
 DOMAIN-SUFFIX,chromecast.com
@@ -365,7 +363,6 @@ DOMAIN-SUFFIX,dartsearch-cn.net
 DOMAIN-SUFFIX,dartsearch.net
 DOMAIN-SUFFIX,data-vocabulary.org
 DOMAIN-SUFFIX,dataliberation.org
-DOMAIN-SUFFIX,dclk
 DOMAIN-SUFFIX,debug.com
 DOMAIN-SUFFIX,debugproject.com
 DOMAIN-SUFFIX,deja.com
@@ -413,7 +410,6 @@ DOMAIN-SUFFIX,g1.gstatic.com
 DOMAIN-SUFFIX,g2.gstatic.com
 DOMAIN-SUFFIX,g3.gstatic.com
 DOMAIN-SUFFIX,gateway.dev
-DOMAIN-SUFFIX,gbiz
 DOMAIN-SUFFIX,gcr.io
 DOMAIN-SUFFIX,gerritcodereview.com
 DOMAIN-SUFFIX,get.app
@@ -428,9 +424,7 @@ DOMAIN-SUFFIX,getoutline.org
 DOMAIN-SUFFIX,ggoogle.com
 DOMAIN-SUFFIX,gipscorp.com
 DOMAIN-SUFFIX,gkecnapps.cn
-DOMAIN-SUFFIX,gle
 DOMAIN-SUFFIX,globaledu.org
-DOMAIN-SUFFIX,gmail
 DOMAIN-SUFFIX,gmail.com
 DOMAIN-SUFFIX,gmodules.com
 DOMAIN-SUFFIX,go-lang.com
@@ -446,11 +440,9 @@ DOMAIN-SUFFIX,golang.org
 DOMAIN-SUFFIX,gonglchuangl.net
 DOMAIN-SUFFIX,gongyichuangyi.net
 DOMAIN-SUFFIX,goo.gl
-DOMAIN-SUFFIX,goog
 DOMAIN-SUFFIX,googel.com
 DOMAIN-SUFFIX,googil.com
 DOMAIN-SUFFIX,googl.com
-DOMAIN-SUFFIX,google
 DOMAIN-SUFFIX,google-access.net
 DOMAIN-SUFFIX,google-syndication.com
 DOMAIN-SUFFIX,google.ad
@@ -701,7 +693,6 @@ DOMAIN-SUFFIX,gstaticadssl.l.google.com
 DOMAIN-SUFFIX,gstaticcnapps.cn
 DOMAIN-SUFFIX,gsuite.com
 DOMAIN-SUFFIX,gtm.oasisfeng.com
-DOMAIN-SUFFIX,guge
 DOMAIN-SUFFIX,gv.com
 DOMAIN-SUFFIX,gvt0.com
 DOMAIN-SUFFIX,gvt1-cn.com
@@ -712,7 +703,6 @@ DOMAIN-SUFFIX,gvt6.com
 DOMAIN-SUFFIX,gvt7.com
 DOMAIN-SUFFIX,gvt9.com
 DOMAIN-SUFFIX,gwtproject.org
-DOMAIN-SUFFIX,hangout
 DOMAIN-SUFFIX,haplorrhini.com
 DOMAIN-SUFFIX,hdrplusdata.org
 DOMAIN-SUFFIX,hey.boo
@@ -752,7 +742,6 @@ DOMAIN-SUFFIX,near.by
 DOMAIN-SUFFIX,nest.com
 DOMAIN-SUFFIX,neverware.com
 DOMAIN-SUFFIX,new.day
-DOMAIN-SUFFIX,nexus
 DOMAIN-SUFFIX,nomulus.foo
 DOMAIN-SUFFIX,oasisfeng.com
 DOMAIN-SUFFIX,oauthz.com
@@ -983,14 +972,12 @@ DOMAIN-SUFFIX,x.company
 DOMAIN-SUFFIX,x.team
 DOMAIN-SUFFIX,xn--9kr7l.com
 DOMAIN-SUFFIX,xn--9trs65b.com
-DOMAIN-SUFFIX,xn--flw351e
 DOMAIN-SUFFIX,xn--flw351e.com
 DOMAIN-SUFFIX,xn--ggle-55da.com
 DOMAIN-SUFFIX,xn--gogl-0nd52e.com
 DOMAIN-SUFFIX,xn--gogl-1nd42e.com
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-SUFFIX,xn--p8j9a0d9c9a.xn--q9jyb4c
-DOMAIN-SUFFIX,xn--qcka1pmc
 DOMAIN-SUFFIX,xplr.co
 DOMAIN-SUFFIX,zukunftswerkstatt.de
 DOMAIN-SUFFIX,zynamics.com

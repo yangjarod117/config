@@ -2335,7 +2335,6 @@ domain_suffix_set:
   - ampproject.net
   - ampproject.org
   - analytics-alv.google.com
-  - android
   - android.com
   - androidify.com
   - androidtv.com
@@ -2459,7 +2458,6 @@ domain_suffix_set:
   - charlestonroadregistry.com
   - chat.gle
   - checkin.gstatic.com
-  - chrome
   - chrome.com
   - chromebook.com
   - chromecast.com
@@ -2501,7 +2499,6 @@ domain_suffix_set:
   - dartsearch.net
   - data-vocabulary.org
   - dataliberation.org
-  - dclk
   - debug.com
   - debugproject.com
   - deja.com
@@ -2548,7 +2545,6 @@ domain_suffix_set:
   - g2.gstatic.com
   - g3.gstatic.com
   - gateway.dev
-  - gbiz
   - gcr.io
   - gerritcodereview.com
   - get.app
@@ -2563,9 +2559,7 @@ domain_suffix_set:
   - ggoogle.com
   - gipscorp.com
   - gkecnapps.cn
-  - gle
   - globaledu.org
-  - gmail
   - gmail.com
   - gmodules.com
   - go-lang.com
@@ -2581,11 +2575,9 @@ domain_suffix_set:
   - gonglchuangl.net
   - gongyichuangyi.net
   - goo.gl
-  - goog
   - googel.com
   - googil.com
   - googl.com
-  - google
   - google-access.net
   - google-syndication.com
   - google.ad
@@ -2836,7 +2828,6 @@ domain_suffix_set:
   - gstaticcnapps.cn
   - gsuite.com
   - gtm.oasisfeng.com
-  - guge
   - gv.com
   - gvt0.com
   - gvt1-cn.com
@@ -2847,7 +2838,6 @@ domain_suffix_set:
   - gvt7.com
   - gvt9.com
   - gwtproject.org
-  - hangout
   - haplorrhini.com
   - hdrplusdata.org
   - hey.boo
@@ -2887,7 +2877,6 @@ domain_suffix_set:
   - nest.com
   - neverware.com
   - new.day
-  - nexus
   - nomulus.foo
   - oasisfeng.com
   - oauthz.com
@@ -3117,14 +3106,12 @@ domain_suffix_set:
   - x.team
   - xn--9kr7l.com
   - xn--9trs65b.com
-  - xn--flw351e
   - xn--flw351e.com
   - xn--ggle-55da.com
   - xn--gogl-0nd52e.com
   - xn--gogl-1nd42e.com
   - xn--ngstr-lra8j.com
   - xn--p8j9a0d9c9a.xn--q9jyb4c
-  - xn--qcka1pmc
   - xplr.co
   - zukunftswerkstatt.de
   - zynamics.com
@@ -6998,6 +6985,7 @@ domain_suffix_set:
   - christianstudy.com
   - christusrex.org
   - christymarks.com
+  - chrome
   - chuang-yen.org
   - chuangb15.xyz
   - chubold.com
@@ -10817,6 +10805,7 @@ domain_suffix_set:
   - glarity.app
   - glasamerike.net
   - glbimg.com
+  - gle
   - gleline.com
   - glitch.com
   - glitchprod.com
@@ -10967,6 +10956,7 @@ domain_suffix_set:
   - goodreads.com
   - goodtv.tv
   - goofind.com
+  - goog
   - gopayment.com
   - gopayments.com
   - gopetition.com

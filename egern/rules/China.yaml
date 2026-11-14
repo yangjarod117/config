@@ -2107,6 +2107,7 @@ domain_suffix_set:
   - fengedu.com
   - fengimg.com
   - fengkongbao.com
+  - fengkongcloud.com
   - fengniao.com
   - fengniaojipei.net
   - fengsutb.com
@@ -2766,6 +2767,7 @@ domain_suffix_set:
   - icswb.com
   - ictbda.com
   - id6.com
+  - id6.me
   - idazhe.net
   - idcgcloudcs.com
   - idcquan.com
@@ -3804,7 +3806,6 @@ domain_suffix_set:
   - mnc011.mcc460.pub.3gppnetwork.org
   - mnc015.mcc460.pub.3gppnetwork.org
   - mndqlib.net
-  - mob.com
   - mobike.com
   - mobsdks.com
   - modaiyun.com
