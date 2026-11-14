@@ -106,6 +106,9 @@ policy_groups:
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
 
 rules:
+  - protocol:
+      match: quic
+      policy: REJECT
   - rule_set:
       match: https://raw.githubusercontent.com/yangjarod117/config/main/egern/rules/Lan.yaml
       policy: DIRECT
