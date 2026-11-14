@@ -1,0 +1,10 @@
+name: 测试-UDP443拒绝
+description: 临时测试，按 UDP + 443 端口直接拒绝，测完删除
+rules:
+  - and:
+      match:
+        - protocol:
+            match: udp
+        - dest_port:
+            match: "443"
+      policy: REJECT

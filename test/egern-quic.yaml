@@ -1,0 +1,6 @@
+name: 测试-QUIC拒绝
+description: 临时测试，按 QUIC 协议直接拒绝，测完删除
+rules:
+  - protocol:
+      match: quic
+      policy: REJECT
