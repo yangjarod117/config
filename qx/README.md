@@ -17,4 +17,4 @@ https://raw.githubusercontent.com/yangjarod117/config/main/qx/qx.conf
 
 ## 分流顺序
 
-同 Egern，`.cn` 直连并在 China 规则集里，最后是系统 LAN、GEOIP CN 和 Global 兜底。
+同 Egern，最后是系统 LAN、GEOIP CN 和 Global 兜底。

@@ -873,7 +873,13 @@ QX_POLICY = {"Lan": "direct", "iCloud": "direct", "China": "direct", "Apple": "d
 QX_POLICY.update({n: "reject" for n in REJECT})
 # 屏蔽 iOS 更新：只拦 gdmf.apple.com（检查新版本的接口），和 Surge/Egern 用的模块一致。
 # QX 没有模块，单独做成一个能在 App 里开关的规则集。
-QX_EXTRA = {"BlockiOSUpdate": ["host, gdmf.apple.com, reject"]}
+# CN：MagicRule 的中国规则集没有 .cn 后缀，单独一个规则集放在 Global 后面，和 Egern/Surge 的位置一致
+# （Global 里有 lightnovel.cn、futu.cn 这类要走代理的 .cn 域名，不能并进排在前面的 China）。
+# 不写成本地规则，因为 QX 本地规则和远程规则的先后不好控制。
+QX_EXTRA = {
+    "BlockiOSUpdate": ["host, gdmf.apple.com, reject"],
+    "CN": ["host-suffix, cn, direct"],
+}
 
 
 def write_qx(bodies):
@@ -889,10 +895,6 @@ def write_qx(bodies):
             kind = QX_TYPES.get(sec)
             if kind:
                 lines.append(f"{kind}, {plain(v)}, {policy}")
-        if name == "China":
-            # MagicRule 的中国规则集没有 .cn 后缀。QX 本地规则和远程规则的先后不好控制，
-            # 所以不写成本地规则，直接并进中国规则集。
-            lines.append("host-suffix, cn, direct")
         wanted.add(name + ".list")
         with open(os.path.join(QX_OUT, name + ".list"), "w", encoding="utf-8", newline="\n") as f:
             f.write("\n".join(lines) + "\n")
