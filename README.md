@@ -7,7 +7,7 @@
 | [egern](egern) | Egern |
 | [surge](surge) | Surge |
 | loon | Loon（待添加） |
-| qx | Quantumult X（待添加） |
+| [qx](qx) | Quantumult X |
 
 各目录下的 `rules/` 由 GitHub Actions 每天北京时间 4:30 同步生成。
 

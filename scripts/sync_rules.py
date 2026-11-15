@@ -304,6 +304,7 @@ MODULE_TYPES = {
 }
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "egern", "rules")
 SURGE_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "surge", "rules")
+QX_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "qx", "rules")
 HEADERS = {"User-Agent": "Mozilla/5.0", "Referer": "https://magicrule.pages.dev/"}
 
 
@@ -802,6 +803,7 @@ def main():
             f.write(prune(body))
         print(name, sum(1 for _ in entries(body)))
     write_surge(bodies)
+    write_qx(bodies)
 
 
 # Egern 字段 → Surge 规则类型。Surge 没有 DOMAIN-REGEX，domain_regex_set 不输出。
@@ -852,6 +854,56 @@ def write_surge(bodies):
     for stale in os.listdir(SURGE_OUT):
         if stale.endswith(".list") and stale not in wanted:
             os.remove(os.path.join(SURGE_OUT, stale))
+
+
+# Egern 字段 → Quantumult X 规则类型。QX 的分流规则不支持 URL 正则和域名正则，这两类不输出
+# （URL 正则基本都在去广告模块里，由模块自己处理）。
+QX_TYPES = {
+    "domain_set": "host",
+    "domain_suffix_set": "host-suffix",
+    "domain_keyword_set": "host-keyword",
+    "domain_wildcard_set": "host-wildcard",
+    "ip_cidr_set": "ip-cidr",
+    "ip_cidr6_set": "ip6-cidr",
+    "asn_set": "ip-asn",
+    "user_agent_set": "user-agent",
+}
+# 每行的策略字段。配置里的 force-policy 会覆盖它，这里只是让文件单独看也说得通。
+QX_POLICY = {"Lan": "direct", "iCloud": "direct", "China": "direct", "Apple": "direct"}
+QX_POLICY.update({n: "reject" for n in REJECT})
+# 屏蔽 iOS 更新：只拦 gdmf.apple.com（检查新版本的接口），和 Surge/Egern 用的模块一致。
+# QX 没有模块，单独做成一个能在 App 里开关的规则集。
+QX_EXTRA = {"BlockiOSUpdate": ["host, gdmf.apple.com, reject"]}
+
+
+def write_qx(bodies):
+    """把处理好的规则集转成 Quantumult X 的远程分流规则。"""
+    os.makedirs(QX_OUT, exist_ok=True)
+    wanted = set()
+    for name, body in bodies.items():
+        if name in SURGE_SKIP:
+            continue
+        policy = QX_POLICY.get(name, "proxy")
+        lines = []
+        for sec, v in entries(body):
+            kind = QX_TYPES.get(sec)
+            if kind:
+                lines.append(f"{kind}, {plain(v)}, {policy}")
+        if name == "China":
+            # MagicRule 的中国规则集没有 .cn 后缀。QX 本地规则和远程规则的先后不好控制，
+            # 所以不写成本地规则，直接并进中国规则集。
+            lines.append("host-suffix, cn, direct")
+        wanted.add(name + ".list")
+        with open(os.path.join(QX_OUT, name + ".list"), "w", encoding="utf-8", newline="\n") as f:
+            f.write("\n".join(lines) + "\n")
+        print("qx", name, len(lines))
+    for name, lines in QX_EXTRA.items():
+        wanted.add(name + ".list")
+        with open(os.path.join(QX_OUT, name + ".list"), "w", encoding="utf-8", newline="\n") as f:
+            f.write("\n".join(lines) + "\n")
+    for stale in os.listdir(QX_OUT):
+        if stale.endswith(".list") and stale not in wanted:
+            os.remove(os.path.join(QX_OUT, stale))
 
 
 if __name__ == "__main__":

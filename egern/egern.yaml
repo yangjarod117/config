@@ -10,6 +10,17 @@ direct_latency_test_url: http://wifi.vivo.com.cn/generate_204
 close_connections_on_policy_change: true
 real_ip_domains:
   - '*.push.apple.com'
+  - '*.cmpassport.com'
+  - 'id6.me'
+  - 'open.e.189.cn'
+  - 'opencloud.wostore.cn'
+  - 'mdn.open.wo.cn'
+  - 'auth.wosms.cn'
+  - '*.10099.com.cn'
+  - '*.jegotrip.com.cn'
+  - '*.icitymobile.mobi'
+  - '*.pingan.com.cn'
+  - '*.cmbchina.com'
 default_subscription_group: 我的订阅
 default_proxy_group: 我的订阅
 
@@ -62,13 +73,6 @@ policy_groups:
       filter: '(?i)(日本|🇯🇵|(^|[^a-z])jp)'
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   - select:
-      name: Global
-      policies:
-        - 美国
-        - 日本
-        - 我的订阅
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
-  - select:
       name: YouTube
       policies:
         - 美国
@@ -104,6 +108,13 @@ policy_groups:
         - 日本
         - 我的订阅
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+  - select:
+      name: Global
+      policies:
+        - 美国
+        - 日本
+        - 我的订阅
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
 
 rules:
   - protocol:
