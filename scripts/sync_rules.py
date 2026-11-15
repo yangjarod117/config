@@ -305,6 +305,7 @@ MODULE_TYPES = {
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "egern", "rules")
 SURGE_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "surge", "rules")
 QX_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "qx", "rules")
+LOON_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "loon", "rules")
 HEADERS = {"User-Agent": "Mozilla/5.0", "Referer": "https://magicrule.pages.dev/"}
 
 
@@ -804,6 +805,7 @@ def main():
         print(name, sum(1 for _ in entries(body)))
     write_surge(bodies)
     write_qx(bodies)
+    write_loon(bodies)
 
 
 # Egern 字段 → Surge 规则类型。Surge 没有 DOMAIN-REGEX，domain_regex_set 不输出。
@@ -906,6 +908,41 @@ def write_qx(bodies):
     for stale in os.listdir(QX_OUT):
         if stale.endswith(".list") and stale not in wanted:
             os.remove(os.path.join(QX_OUT, stale))
+
+
+# Loon 的规则写法和 Surge 一样，区别是 no-resolve 写在每条 IP 规则上（远程规则行没有这个参数）。
+LOON_NO_RESOLVE = {"IP-CIDR", "IP-CIDR6", "IP-ASN"}
+# 屏蔽 iOS 更新用仓库里的 loon/BlockiOSUpdate.plugin，不在这里生成。
+# CN：.cn 后缀和 GEOIP CN，放在 Global 后面。不写成本地规则，因为 Loon 本地规则优先于所有远程规则，
+# 本地的 .cn 会抢在 Global 前面，本地的 GEOIP CN 会抢在去广告规则集的 IP 规则前面。
+LOON_EXTRA = {
+    "CN": ["DOMAIN-SUFFIX,cn", "GEOIP,CN"],
+}
+
+
+def write_loon(bodies):
+    """把处理好的规则集转成 Loon 的远程规则。"""
+    os.makedirs(LOON_OUT, exist_ok=True)
+    wanted = set()
+    for name, body in bodies.items():
+        if name in SURGE_SKIP:
+            continue
+        lines = []
+        for sec, v in entries(body):
+            kind = SURGE_TYPES.get(sec)
+            if kind:
+                lines.append(kind + "," + plain(v) + (",no-resolve" if kind in LOON_NO_RESOLVE else ""))
+        wanted.add(name + ".list")
+        with open(os.path.join(LOON_OUT, name + ".list"), "w", encoding="utf-8", newline="\n") as f:
+            f.write("\n".join(lines) + "\n")
+        print("loon", name, len(lines))
+    for name, lines in LOON_EXTRA.items():
+        wanted.add(name + ".list")
+        with open(os.path.join(LOON_OUT, name + ".list"), "w", encoding="utf-8", newline="\n") as f:
+            f.write("\n".join(lines) + "\n")
+    for stale in os.listdir(LOON_OUT):
+        if stale.endswith(".list") and stale not in wanted:
+            os.remove(os.path.join(LOON_OUT, stale))
 
 
 if __name__ == "__main__":

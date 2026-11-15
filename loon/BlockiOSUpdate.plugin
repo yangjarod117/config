@@ -1,0 +1,15 @@
+#!name=屏蔽iOS更新
+#!desc=屏蔽 iOS/iPadOS 系统更新，升级系统前先关掉。改写自 TributePaulWalker 的 Surge 模块。
+#!author=TributePaulWalker[https://github.com/TributePaulWalker/Profiles]
+#!homepage=https://github.com/yangjarod117/config
+#!system=iOS,iPadOS
+
+[Rule]
+DOMAIN,gdmf.apple.com,REJECT
+
+[Rewrite]
+# iPadOS
+^https:\/\/mesu\.apple\.com\/assets\/com_apple_MobileAsset_SoftwareUpdate\/com_apple_MobileAsset_SoftwareUpdate\.xml reject
+
+[MitM]
+hostname = mesu.apple.com
