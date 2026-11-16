@@ -26,10 +26,18 @@ https://raw.githubusercontent.com/yangjarod117/config/main/singbox/mac.json
 https://raw.githubusercontent.com/yangjarod117/config/main/singbox/windows.json
 ```
 
-Sub-Store 脚本操作，把 `订阅名称` 换成自己的订阅名，组合订阅在后面加 `&type=collection`：
+Sub-Store 脚本操作，把 `订阅名称` 换成自己的订阅名。
+
+单条订阅：
 
 ```
 https://raw.githubusercontent.com/yangjarod117/config/main/singbox/substore.js#name=订阅名称
+```
+
+组合订阅：
+
+```
+https://raw.githubusercontent.com/yangjarod117/config/main/singbox/substore.js#name=订阅名称&type=collection
 ```
 
 GUI.for.SingBox 脚本，打开后整段复制：
