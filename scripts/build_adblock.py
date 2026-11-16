@@ -439,6 +439,15 @@ def to_egern(e):
     raise ValueError("egern: " + text_of(e))
 
 
+def port_hosts(groups):
+    out = []
+    for e in groups:
+        m = re.match(r"\^?\(?https?\??:?\\?/\\?/([A-Za-z0-9*\-]+(?:\\?\.[A-Za-z0-9*\-]+)+):(\d+)", e["pattern"])
+        if m and m.group(2) not in ("80", "443"):
+            out.append(m.group(1).replace("\\", "") + ":" + m.group(2))
+    return merge_hosts(out)
+
+
 def write(path, text):
     with open(os.path.join(ROOT, path), "w", encoding="utf-8", newline="\n") as f:
         f.write(text)
@@ -459,7 +468,7 @@ def build_surge(groups, general, hosts):
     for k in order:
         if out[k]:
             lines += ["[%s]" % k] + out[k]
-    lines += ["[MITM]", "hostname = %APPEND% " + ", ".join(hosts)]
+    lines += ["[MITM]", "hostname = %APPEND% " + ", ".join(merge_hosts(hosts, port_hosts(groups)))]
     write("surge/adblock.sgmodule", "\n".join(lines) + "\n")
 
 
@@ -477,7 +486,7 @@ def build_egern(groups, hosts):
     for k in order:
         if out[k]:
             lines += [k + ":"] + out[k]
-    lines += ["mitm:", "  hostnames:", "    includes:"] + ["      - " + q(h) for h in hosts]
+    lines += ["mitm:", "  hostnames:", "    includes:"] + ["      - " + q(h) for h in merge_hosts(hosts, port_hosts(groups))]
     write("egern/adblock.yaml", "\n".join(lines) + "\n")
 
 
