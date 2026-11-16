@@ -1,10 +1,20 @@
 /**
- * Sub-Store「文件」脚本：把订阅节点填进 singbox/ 下的配置模板，输出 sing-box 官方客户端可以直接用的完整配置。
+ * Sub-Store「文件」脚本：把订阅节点填进 singbox/ 下的配置模板，输出 sing-box 客户端可以直接导入的完整配置。
  *
- * 用法（详见 singbox/README.md）：
- *   文件来源填模板地址，例如 https://raw.githubusercontent.com/yangjarod117/config/main/singbox/phone.json
- *   脚本操作填本文件地址，后面带参数：
- *   https://raw.githubusercontent.com/yangjarod117/config/main/singbox/substore.js#name=订阅名称&type=subscription
+ * 用法：每个平台在 Sub-Store 里建一个「文件」。
+ *
+ * 1. 来源选「远程」，链接填对应平台的模板：
+ *      手机（官方 iOS、安卓客户端）  https://raw.githubusercontent.com/yangjarod117/config/main/singbox/phone.json
+ *      Mac（官方 Mac 客户端）        https://raw.githubusercontent.com/yangjarod117/config/main/singbox/mac.json
+ *      Windows（GUI.for.SingBox）    https://raw.githubusercontent.com/yangjarod117/config/main/singbox/windows.json
+ *
+ * 2. 添加「脚本操作」，选链接，填本文件的地址，把「订阅名称」换成 Sub-Store 里你的订阅名：
+ *      https://raw.githubusercontent.com/yangjarod117/config/main/singbox/substore.js#name=订阅名称
+ *    用的是组合订阅，就在后面再加 &type=collection。
+ *
+ * 3. 保存后复制这个文件的链接：
+ *      手机、Mac：在官方客户端里新建配置，类型选「远程」，填这个链接。
+ *      Windows：填进 gui-for-singbox.js 开头的 SUBSTORE_URL，用法见那个文件。
  *
  * 参数：
  *   name  必填，Sub-Store 里单条订阅或组合订阅的名称
