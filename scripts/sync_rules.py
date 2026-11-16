@@ -2,7 +2,10 @@ import fnmatch
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
+import tempfile
 import time
 import urllib.request
 
@@ -306,6 +309,7 @@ OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "egern", "r
 SURGE_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "surge", "rules")
 QX_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "qx", "rules")
 LOON_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "loon", "rules")
+SINGBOX_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "singbox", "rules")
 HEADERS = {"User-Agent": "Mozilla/5.0", "Referer": "https://magicrule.pages.dev/"}
 
 
@@ -806,6 +810,7 @@ def main():
     write_surge(bodies)
     write_qx(bodies)
     write_loon(bodies)
+    write_singbox(bodies)
 
 
 # Egern 字段 → Surge 规则类型。Surge 没有 DOMAIN-REGEX，domain_regex_set 不输出。
@@ -943,6 +948,71 @@ def write_loon(bodies):
     for stale in os.listdir(LOON_OUT):
         if stale.endswith(".list") and stale not in wanted:
             os.remove(os.path.join(LOON_OUT, stale))
+
+
+# Egern 字段 → sing-box 规则集字段。sing-box 没有通配规则，通配转成域名正则。
+# 不输出的类型：ASN（sing-box 没有 IP-ASN），URL 正则和 User-Agent（要解密才能匹配，sing-box 不支持）。
+SINGBOX_TYPES = {
+    "domain_set": "domain",
+    "domain_suffix_set": "domain_suffix",
+    "domain_keyword_set": "domain_keyword",
+    "domain_regex_set": "domain_regex",
+    "domain_wildcard_set": "domain_regex",
+    "ip_cidr_set": "ip_cidr",
+    "ip_cidr6_set": "ip_cidr",
+}
+# 规则集源文件版本 3，sing-box 1.11 起支持。我们只用到最基本的字段，不需要更高的版本。
+SINGBOX_VERSION = 3
+
+
+def wildcard_regex(pattern):
+    """通配写法转成正则：* 匹配任意字符（含点），? 匹配一个字符，和 Egern、Surge 一致。"""
+    out = []
+    for c in pattern:
+        out.append(".*" if c == "*" else "." if c == "?" else re.escape(c))
+    return "^" + "".join(out) + "$"
+
+
+def singbox_rule(body):
+    rule = {}
+    for sec, v in entries(body):
+        key = SINGBOX_TYPES.get(sec)
+        if not key:
+            continue
+        item = plain(v)
+        if sec == "domain_wildcard_set":
+            item = wildcard_regex(item)
+        rule.setdefault(key, []).append(item)
+    return rule
+
+
+def write_singbox(bodies):
+    """把处理好的规则集转成 sing-box 规则集，用 sing-box 编译成 .srs。
+
+    需要 sing-box 程序：环境变量 SING_BOX 或 PATH 里的 sing-box。本地没有时跳过，
+    GitHub Actions 里没有时报错。
+    """
+    exe = os.environ.get("SING_BOX") or shutil.which("sing-box")
+    if not exe:
+        if os.environ.get("GITHUB_ACTIONS"):
+            raise RuntimeError("sing-box not found, set SING_BOX")
+        print("singbox skipped: sing-box not found")
+        return
+    os.makedirs(SINGBOX_OUT, exist_ok=True)
+    wanted = set()
+    with tempfile.TemporaryDirectory() as tmp:
+        for name, body in bodies.items():
+            rule = singbox_rule(body)
+            src = os.path.join(tmp, name + ".json")
+            with open(src, "w", encoding="utf-8") as f:
+                json.dump({"version": SINGBOX_VERSION, "rules": [rule] if rule else []}, f, ensure_ascii=False)
+            out = os.path.join(SINGBOX_OUT, name + ".srs")
+            subprocess.run([exe, "rule-set", "compile", "--output", out, src], check=True)
+            wanted.add(name + ".srs")
+            print("singbox", name, sum(len(v) for v in rule.values()))
+    for stale in os.listdir(SINGBOX_OUT):
+        if stale.endswith(".srs") and stale not in wanted:
+            os.remove(os.path.join(SINGBOX_OUT, stale))
 
 
 if __name__ == "__main__":

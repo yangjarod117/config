@@ -1,0 +1,422 @@
+{
+  "$schema": "https://sing-box.sagernet.org/schema.json",
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "ali",
+        "type": "https",
+        "server": "223.5.5.5"
+      },
+      {
+        "tag": "google",
+        "type": "https",
+        "server": "8.8.8.8",
+        "detour": "Global"
+      },
+      {
+        "tag": "fakeip",
+        "type": "fakeip",
+        "inet4_range": "198.18.0.0/15"
+      }
+    ],
+    "rules": [
+      {
+        "query_type": [
+          "HTTPS",
+          "SVCB"
+        ],
+        "action": "reject"
+      },
+      {
+        "clash_mode": "Direct",
+        "server": "ali"
+      },
+      {
+        "clash_mode": "Global",
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "fakeip"
+      },
+      {
+        "domain_suffix": [
+          "push.apple.com",
+          "cmpassport.com",
+          "id6.me",
+          "open.e.189.cn",
+          "opencloud.wostore.cn",
+          "mdn.open.wo.cn",
+          "auth.wosms.cn",
+          "10099.com.cn",
+          "jegotrip.com.cn",
+          "icitymobile.mobi",
+          "pingan.com.cn",
+          "cmbchina.com"
+        ],
+        "server": "ali"
+      },
+      {
+        "rule_set": "Lan",
+        "server": "ali"
+      },
+      {
+        "rule_set": [
+          "Hijacking",
+          "AdvertisingLite",
+          "Privacy"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": "DirectDNS",
+        "server": "ali"
+      },
+      {
+        "rule_set": "ForeignDNS",
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "fakeip"
+      },
+      {
+        "rule_set": [
+          "iCloud",
+          "Apple",
+          "China"
+        ],
+        "server": "ali"
+      },
+      {
+        "domain_suffix": [
+          "cn"
+        ],
+        "server": "ali"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "action": "evaluate",
+        "server": "google",
+        "client_subnet": "223.5.5.0/24",
+        "timeout": "2s"
+      },
+      {
+        "match_response": true,
+        "rule_set": "geoip-cn",
+        "server": "ali"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "fakeip",
+        "rewrite_ttl": 1
+      }
+    ],
+    "final": "google",
+    "strategy": "ipv4_only",
+    "cache_capacity": 8192,
+    "optimistic": {
+      "enabled": true
+    },
+    "reverse_mapping": true
+  },
+  "outbounds": [
+    {
+      "tag": "我的订阅",
+      "type": "selector",
+      "outbounds": [],
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "美国",
+      "type": "selector",
+      "outbounds": [],
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "日本",
+      "type": "selector",
+      "outbounds": [],
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "YouTube",
+      "type": "selector",
+      "outbounds": [
+        "美国",
+        "日本",
+        "我的订阅"
+      ],
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "Telegram",
+      "type": "selector",
+      "outbounds": [
+        "美国",
+        "日本",
+        "我的订阅"
+      ],
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "AI",
+      "type": "selector",
+      "outbounds": [
+        "美国",
+        "日本",
+        "我的订阅"
+      ],
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "Google",
+      "type": "selector",
+      "outbounds": [
+        "美国",
+        "日本",
+        "我的订阅"
+      ],
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "Apple",
+      "type": "selector",
+      "outbounds": [
+        "直连",
+        "美国",
+        "日本",
+        "我的订阅"
+      ],
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "Global",
+      "type": "selector",
+      "outbounds": [
+        "美国",
+        "日本",
+        "我的订阅"
+      ],
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "GLOBAL",
+      "type": "selector",
+      "outbounds": [
+        "Global",
+        "YouTube",
+        "Telegram",
+        "AI",
+        "Google",
+        "Apple",
+        "美国",
+        "日本",
+        "我的订阅",
+        "直连"
+      ],
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "直连",
+      "type": "direct",
+      "domain_resolver": "ali"
+    }
+  ],
+  "http_clients": [
+    {
+      "tag": "直连下载",
+      "detour": "直连"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "domain_suffix": [
+              "push.apple.com"
+            ]
+          },
+          {
+            "rule_set": "Telegram"
+          }
+        ],
+        "invert": true,
+        "action": "sniff",
+        "sniffer": [
+          "http",
+          "tls",
+          "quic",
+          "dns"
+        ],
+        "timeout": "100ms"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 53
+          },
+          {
+            "protocol": "dns"
+          }
+        ],
+        "action": "hijack-dns"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 853
+          },
+          {
+            "protocol": "quic"
+          }
+        ],
+        "action": "reject",
+        "no_drop": true
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "直连"
+      },
+      {
+        "network": "icmp",
+        "action": "resolve"
+      },
+      {
+        "network": "icmp",
+        "outbound": "直连"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "直连"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "GLOBAL"
+      },
+      {
+        "rule_set": "Lan",
+        "outbound": "直连"
+      },
+      {
+        "rule_set": [
+          "Hijacking",
+          "AdvertisingLite",
+          "Privacy"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": "iCloud",
+        "outbound": "直连"
+      },
+      {
+        "rule_set": "YouTube",
+        "outbound": "YouTube"
+      },
+      {
+        "rule_set": "Telegram",
+        "outbound": "Telegram"
+      },
+      {
+        "rule_set": "AI",
+        "outbound": "AI"
+      },
+      {
+        "rule_set": "Google",
+        "outbound": "Google"
+      },
+      {
+        "rule_set": "Apple",
+        "outbound": "Apple"
+      },
+      {
+        "rule_set": "China",
+        "outbound": "直连"
+      },
+      {
+        "rule_set": "Global",
+        "outbound": "Global"
+      },
+      {
+        "domain_suffix": [
+          "cn"
+        ],
+        "outbound": "直连"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "直连"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": [
+          "Lan",
+          "Hijacking",
+          "AdvertisingLite",
+          "Privacy",
+          "iCloud",
+          "YouTube",
+          "Telegram",
+          "AI",
+          "Google",
+          "Apple",
+          "China",
+          "Global",
+          "DirectDNS",
+          "ForeignDNS"
+        ],
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/yangjarod117/config/main/singbox/rules/{tag}.srs"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
+      }
+    ],
+    "final": "Global",
+    "default_http_client": "直连下载",
+    "auto_detect_interface": true,
+    "default_domain_resolver": {
+      "server": "ali"
+    }
+  },
+  "inbounds": [
+    {
+      "tag": "tun-in",
+      "type": "tun",
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true
+    }
+  ],
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    }
+  }
+}
