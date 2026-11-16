@@ -9,3 +9,31 @@
 | `windows.json` | GUI.for.SingBox | 端口和 GUI 的默认值一致：代理 `20122`，面板 `20123` |
 
 模板里的策略组是空的，要用 Sub-Store 把节点填进去，生成客户端能直接导入的在线配置。
+
+## 链接
+
+Sub-Store 文件来源，按平台选一个：
+
+```
+https://raw.githubusercontent.com/yangjarod117/config/main/singbox/phone.json
+```
+
+```
+https://raw.githubusercontent.com/yangjarod117/config/main/singbox/mac.json
+```
+
+```
+https://raw.githubusercontent.com/yangjarod117/config/main/singbox/windows.json
+```
+
+Sub-Store 脚本操作，把 `订阅名称` 换成自己的订阅名，组合订阅在后面加 `&type=collection`：
+
+```
+https://raw.githubusercontent.com/yangjarod117/config/main/singbox/substore.js#name=订阅名称
+```
+
+GUI.for.SingBox 脚本，打开后整段复制：
+
+```
+https://raw.githubusercontent.com/yangjarod117/config/main/singbox/gui-for-singbox.js
+```
