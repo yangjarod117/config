@@ -168,17 +168,9 @@ rules:
 mitm:
   ca_p12: egern.p12
   ca_passphrase: egern
-  hostnames:
-    excludes:
-      - '*.googlevideo.com'
-      - 'youtubei.googleapis.com'
 
 modules:
-  - name: HTTPDNS拦截器
-    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockHTTPDNS.module
-  - name: 墨鱼去开屏2.0
-    url: https://raw.githubusercontent.com/ifflagged/Romeo/main/Modules/Surge/ddgksf2013/StartUpAds.sgmodule
-  - name: 广告拦截&净化合集
-    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module
+  - name: 去广告合集
+    url: https://raw.githubusercontent.com/yangjarod117/config/main/egern/adblock.yaml
   - name: 屏蔽iOS更新
     url: https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/Surge/Module/Surge_SoftwareUpdate.sgmodule

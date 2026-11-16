@@ -13,7 +13,7 @@ https://raw.githubusercontent.com/yangjarod117/config/main/qx/qx.conf
 2. 在 `[server_remote]` 里添加 Sub-Store 的 QX 格式订阅，标签写 `我的订阅`。
 3. 生成并信任 MITM 证书。
 
-规则集、去广告重写和节点每天自动更新。「屏蔽iOS更新」在 Mac 上要关掉，升级系统前也要关掉。
+规则集和节点每天自动更新，去广告合集每周更新。「屏蔽iOS更新」在 Mac 上要关掉，升级系统前也要关掉。
 
 ## 分流顺序
 

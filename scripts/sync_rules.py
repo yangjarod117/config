@@ -131,10 +131,6 @@ FMZ_ADS = "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/modu
 FMZ_EXACT = set()
 FMZ_SUFFIX = set()
 FMZ_KEYWORD = []
-# 只收集直连规则、不合并拒绝规则的模块（拒绝规则由模块自己在设备上生效）。
-DIRECT_ONLY_MODULES = [
-    "https://raw.githubusercontent.com/ifflagged/Romeo/main/Modules/Surge/ddgksf2013/StartUpAds.sgmodule",
-]
 # openx 关键词会拦掉 openxlab.org.cn、openxla.org。换成 OpenX 自己的域名。
 DROP_KEYWORD = {"openx"}
 EXTRA_REJECT_SUFFIX = ["openx.com"]
@@ -290,11 +286,15 @@ AI_EXTRA_DOMAIN = [
     "copilot-telemetry-service.githubusercontent.com",
     "copilot-workspace.githubnext.com",
 ]
+# 可莉「广告平台拦截器」官方插件，只取拒绝规则：穿山甲、广点通、倍孜、AdScope 等第三方广告 SDK 平台。
+# 官网只放行 Surge、Egern 的 User-Agent。拉取成功时把规则存一份到 KELEE_BACKUP，拉不到时用这份备份。
+KELEE_ADS = "https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx"
+KELEE_HEADERS = {"User-Agent": "Surge iOS/3000"}
+KELEE_BACKUP = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "BlockAdvertisers.list")
 MODULES = [
     "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module",
     "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockHTTPDNS.module",
-    # 可莉「广告平台拦截器」，只取拒绝规则：倍孜、AdScope、TopOn、广点通等第三方广告 SDK 平台。
-    "https://raw.githubusercontent.com/ifflagged/Romeo/main/Modules/Surge/Kelee/BlockAdvertisers.sgmodule",
+    KELEE_ADS,
 ]
 MODULE_TYPES = {
     "DOMAIN": "domain_set",
@@ -313,11 +313,11 @@ SINGBOX_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "si
 HEADERS = {"User-Agent": "Mozilla/5.0", "Referer": "https://magicrule.pages.dev/"}
 
 
-def get(url):
+def get(url, headers=HEADERS):
     last = None
     for _ in range(3):
         try:
-            req = urllib.request.Request(url, headers=HEADERS)
+            req = urllib.request.Request(url, headers=headers)
             with urllib.request.urlopen(req, timeout=60) as r:
                 return r.read()
         except Exception as e:
@@ -574,23 +574,37 @@ def collect_module_direct(line):
         ALLOW_DOMAINS.add(host)
 
 
-def module_direct_only():
-    for url in DIRECT_ONLY_MODULES:
+def kelee_lines():
+    """可莉插件的 [Rule] 段。拉取成功就更新备份，失败就读备份。"""
+    try:
+        text = get(KELEE_ADS, KELEE_HEADERS).decode("utf-8")
+        rules = []
         section = None
-        for line in get(url).decode("utf-8").splitlines():
+        for line in text.splitlines():
             line = line.strip()
             if line.startswith("["):
                 section = line
                 continue
             if section == "[Rule]" and line and not line.startswith("#"):
-                collect_module_direct(line)
+                rules.append(line)
+        if not rules:
+            raise ValueError("empty kelee rules")
+        os.makedirs(os.path.dirname(KELEE_BACKUP), exist_ok=True)
+        with open(KELEE_BACKUP, "w", encoding="utf-8", newline="\n") as f:
+            f.write("\n".join(rules) + "\n")
+    except Exception as e:
+        print("kelee failed, using backup:", e, file=sys.stderr)
+        with open(KELEE_BACKUP, encoding="utf-8") as f:
+            rules = [line.strip() for line in f if line.strip()]
+    return ["[Rule]"] + rules
 
 
 def module_reject():
     sets = {v: [] for v in MODULE_TYPES.values()}
     for url in MODULES:
         section = None
-        for line in get(url).decode("utf-8").splitlines():
+        lines = kelee_lines() if url == KELEE_ADS else get(url).decode("utf-8").splitlines()
+        for line in lines:
             line = line.strip()
             if line.startswith("["):
                 section = line
@@ -792,7 +806,6 @@ def main():
             print(name, "failed:", e, file=sys.stderr)
     try:
         module_body = module_reject()
-        module_direct_only()
     except Exception as e:
         failed.append("modules")
         print("modules failed:", e, file=sys.stderr)
