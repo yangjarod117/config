@@ -10,7 +10,7 @@
 | [qx](qx) | Quantumult X |
 | [singbox](singbox) | sing-box |
 
-各目录下的 `rules/` 由 GitHub Actions 每天北京时间 4:30 同步生成。
+各目录下的 `rules/` 由 GitHub Actions 每天北京时间凌晨 1:00 同步生成。
 
 ## 来源与许可
 
