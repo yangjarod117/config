@@ -81,7 +81,8 @@ def hosts_of(lines):
     for s in lines:
         m = re.match(r"hostname\s*=\s*(.*)$", s, re.I)
         if m:
-            out += [h.strip() for h in m.group(1).replace("%APPEND%", "").split(",") if h.strip()]
+            value = re.sub(r"(?<=\S)hostname\s*=\s*", ",", m.group(1).replace("%APPEND%", ""))
+            out += [re.sub(r"(?<=.)hostname$", "", h.strip()) for h in value.split(",") if h.strip()]
     return out
 
 
