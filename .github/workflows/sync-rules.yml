@@ -17,10 +17,14 @@ jobs:
         with:
           python-version: "3.x"
       - name: Install sing-box
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          tag=$(curl -fsSL https://api.github.com/repos/SagerNet/sing-box/releases/latest | python3 -c 'import json,sys; print(json.load(sys.stdin)["tag_name"])')
-          curl -fsSL "https://github.com/SagerNet/sing-box/releases/download/$tag/sing-box-${tag#v}-linux-amd64.tar.gz" | tar xz -C "$RUNNER_TEMP"
-          echo "SING_BOX=$RUNNER_TEMP/sing-box-${tag#v}-linux-amd64/sing-box" >> "$GITHUB_ENV"
+          gh release download --repo SagerNet/sing-box --pattern 'sing-box-*-linux-amd64.tar.gz' --dir "$RUNNER_TEMP"
+          tar xzf "$RUNNER_TEMP"/sing-box-*-linux-amd64.tar.gz -C "$RUNNER_TEMP"
+          bin=$(echo "$RUNNER_TEMP"/sing-box-*-linux-amd64/sing-box)
+          "$bin" version
+          echo "SING_BOX=$bin" >> "$GITHUB_ENV"
       - run: python scripts/sync_rules.py
       - run: |
           git config user.name "github-actions[bot]"
