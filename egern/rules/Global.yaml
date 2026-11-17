@@ -1,7 +1,7 @@
 # NAME: Global
 # AUTHOR: MagicRule
 # REPO: https://magicrule.pages.dev
-# UPDATED: 2026-11-15 09:57:26
+# UPDATED: 2026-11-17 20:13:49
 no_resolve: true
 domain_set:
   - 3dna.nationbuilder.com
@@ -224,6 +224,7 @@ domain_set:
   - brandwidgets.outtra.com
   - bucket.noy.asia
   - bucket1.notaku.so
+  - builds.dotnet.microsoft.com
   - bundle.trysavvy.com
   - bundlephobia.com
   - bundler.nice-team.net
@@ -838,6 +839,7 @@ domain_set:
   - hips.hearstapps.com
   - home.integrate.com
   - hpstore.corpmerchandise.com
+  - http-intake.logs.us5.datadoghq.com
   - hub-assets.displaycal.net
   - hub.slarker.me
   - hubspotonwebflow.com
@@ -1135,6 +1137,7 @@ domain_set:
   - media.convertkit.com
   - media.currys.biz
   - media.daily.dev
+  - media.datacamp.com
   - media.datacenterdynamics.com
   - media.e4le.me
   - media.fidoalliance.org
@@ -1528,6 +1531,7 @@ domain_set:
   - static.j51.net
   - static.jup.ag
   - static.k2s.cc
+  - static.karousell.com
   - static.klaviyo.com
   - static.licdn.com
   - static.lwn.net
@@ -6270,6 +6274,7 @@ domain_suffix_set:
   - cyberghostvpn.com
   - cyberpunk.net
   - cyberx.com
+  - cygames.com
   - cygwin.com
   - cylink.pro
   - cylink0122.icu
@@ -9673,6 +9678,8 @@ domain_suffix_set:
   - grabpussy.com
   - gradconnection.com
   - gradeuptube.com
+  - grafana.com
+  - grafana.net
   - grafolio.com
   - graias.com
   - graiasmovies.com
@@ -16509,6 +16516,7 @@ domain_suffix_set:
   - quantumbooter.net
   - quatrum.com.br
   - quay.io
+  - questionablequesting.com
   - quicinc.com
   - quickbook.com.br
   - quickbooks.com
@@ -16831,6 +16839,7 @@ domain_suffix_set:
   - religionnews.com
   - religioustolerance.org
   - remirepo.net
+  - remna.dev
   - renchead.com
   - render.com
   - renderingtoolkit.org
@@ -18220,6 +18229,7 @@ domain_suffix_set:
   - soylent.com
   - soylentnews.org
   - sp.cool
+  - spacebattles.com
   - spaceexplored.com
   - spacemail.com
   - spaceship-cdn.com
@@ -20157,6 +20167,7 @@ domain_suffix_set:
   - v.recipes
   - v.roucdn
   - v2.help
+  - v2ex.co
   - v2ex.com
   - v2fly.org
   - v2mm.tech

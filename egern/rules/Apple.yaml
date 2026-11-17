@@ -1,7 +1,7 @@
 # NAME: Apple
 # AUTHOR: MagicRule
 # REPO: https://magicrule.pages.dev
-# UPDATED: 2026-11-12 19:50:48
+# UPDATED: 2026-11-17 20:23:16
 no_resolve: true
 domain_set:
   - a1.mzstatic.com
@@ -81,6 +81,7 @@ domain_set:
   - configuration-lb.ls-apple.com.akadns.net
   - configuration.apple.com
   - configuration.apple.com.akadns.net
+  - configuration.ls.apple.com
   - crl-lb.apple.com.akadns.net
   - crl.apple.com
   - cstat.apple.com
@@ -174,9 +175,11 @@ domain_set:
   - misc-assets.itunes.apple.com
   - ml.cdn-apple.com
   - music.apple.com
+  - musicstatus.itunes.apple.com
   - musicstatus.music.apple.com
   - mvod.itunes.apple.com
   - myapp.itunes.apple.com
+  - mzstorekit.itunes.apple.com
   - news-assets.apple.com
   - news-client.apple.com
   - news-edge.apple.com
@@ -1031,6 +1034,7 @@ domain_suffix_set:
   - camelphat.com
   - camelspaceeffect.com
   - canada-beatsbydre.com
+  - captive.apple.com
   - carbon.com
   - carekit.org
   - casque-fr.com
@@ -1598,6 +1602,7 @@ domain_suffix_set:
   - lojaiphone.com.br
   - lovebeatsdr.com
   - lovemarca.com
+  - ls-apple.com.akadns.net
   - ls.apple.com
   - luckyissue.com
   - lyzsxx.com
@@ -1655,6 +1660,7 @@ domain_suffix_set:
   - mallheadphone.com
   - mbeats-tech.com
   - mbheadphone.com
+  - me.com.akadns.net
   - mensura.cdn-apple.com
   - mesu-cdn.apple.com.akadns.net
   - mesu-china.apple.com.akadns.net
@@ -1972,7 +1978,6 @@ domain_suffix_set:
   - wwwitunes.com
   - wwwlapple.com
   - wwwmacbookair.com
-  - xmrmngqivbgpx.site
   - xn--czrs0t4phtr3a.cn
   - xn--fiqs8sxootzz.cn
   - xn--fiqs8sxootzz.xn--hxt814e
@@ -2015,9 +2020,7 @@ ip_cidr_set:
   - 17.0.0.0/8
   - 192.35.50.0/24
   - 198.183.17.0/24
-  - 203.205.64.0/19
   - 205.180.175.0/24
-  - 218.98.111.0/24
   - 63.92.224.0/19
   - 65.199.22.0/23
 ip_cidr6_set:

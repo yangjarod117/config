@@ -11,7 +11,6 @@ host-suffix, video.google.com, proxy
 host-suffix, wide-youtube.l.google.com, proxy
 host-suffix, withyoutube.com, proxy
 host-suffix, youtu.be, proxy
-host-suffix, youtube, proxy
 host-suffix, youtube-nocookie.com, proxy
 host-suffix, youtube-ui.l.google.com, proxy
 host-suffix, youtube.ae, proxy

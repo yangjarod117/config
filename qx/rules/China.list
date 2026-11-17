@@ -648,6 +648,7 @@ host-suffix, appshike.com, direct
 host-suffix, appsimg.com, direct
 host-suffix, appvipshop.com, direct
 host-suffix, arco.design, direct
+host-suffix, arknights.com, direct
 host-suffix, arpun.com, direct
 host-suffix, asczwa.com, direct
 host-suffix, asczxcefsv.com, direct
@@ -2535,6 +2536,7 @@ host-suffix, hezuvip.com, direct
 host-suffix, hf-aw.com, direct
 host-suffix, hftfund.com, direct
 host-suffix, hfx.net, direct
+host-suffix, hgto.cc, direct
 host-suffix, hhtravel.com, direct
 host-suffix, hiaiabc.com, direct
 host-suffix, hiascend.com, direct
@@ -2715,9 +2717,12 @@ host-suffix, hxfy888.com, direct
 host-suffix, hxnews.com, direct
 host-suffix, hxsd.com, direct
 host-suffix, hybiome.com, direct
+host-suffix, hycdn.com, direct
 host-suffix, hydun.com, direct
 host-suffix, hypercachenet.com, direct
 host-suffix, hypercachenode.com, direct
+host-suffix, hypergryph.com, direct
+host-suffix, hypergryph.net, direct
 host-suffix, hzchengdun.com, direct
 host-suffix, hzchengdun.net, direct
 host-suffix, hzdtv.tv, direct
@@ -4006,6 +4011,7 @@ host-suffix, obriccloud.com, direct
 host-suffix, obricclouddw.com, direct
 host-suffix, oceancloudapi.com, direct
 host-suffix, oceanengine.com, direct
+host-suffix, octavedge.com, direct
 host-suffix, ocwms.com, direct
 host-suffix, oeeee.com, direct
 host-suffix, oend.net, direct
@@ -4611,6 +4617,8 @@ host-suffix, sipeed.com, direct
 host-suffix, sjfls6.com, direct
 host-suffix, sjwyx.com, direct
 host-suffix, skimit.net, direct
+host-suffix, skland.com, direct
+host-suffix, skland.net, direct
 host-suffix, sksight.com, direct
 host-suffix, skycn.com, direct
 host-suffix, skypixel.com, direct
@@ -8102,6 +8110,8 @@ ip-cidr, 132.232.0.0/16, direct
 ip-cidr, 132.237.134.0/24, direct
 ip-cidr, 133.226.32.0/20, direct
 ip-cidr, 134.175.0.0/16, direct
+ip-cidr, 135.84.80.0/22, direct
+ip-cidr, 136.143.176.0/23, direct
 ip-cidr, 138.252.72.0/23, direct
 ip-cidr, 139.129.0.0/16, direct
 ip-cidr, 139.148.0.0/16, direct
@@ -8315,6 +8325,10 @@ ip-cidr, 163.61.178.0/23, direct
 ip-cidr, 163.61.202.0/23, direct
 ip-cidr, 163.61.214.0/23, direct
 ip-cidr, 165.101.70.0/24, direct
+ip-cidr, 165.173.128.0/23, direct
+ip-cidr, 165.173.174.0/23, direct
+ip-cidr, 165.173.176.0/24, direct
+ip-cidr, 165.173.180.0/22, direct
 ip-cidr, 166.111.0.0/16, direct
 ip-cidr, 167.139.0.0/16, direct
 ip-cidr, 167.220.244.0/22, direct
@@ -8490,6 +8504,7 @@ ip-cidr, 198.208.61.0/24, direct
 ip-cidr, 198.208.63.0/24, direct
 ip-cidr, 198.208.67.0/24, direct
 ip-cidr, 199.244.144.0/24, direct
+ip-cidr, 199.67.64.0/23, direct
 ip-cidr, 2.56.255.0/24, direct
 ip-cidr, 2.58.242.0/24, direct
 ip-cidr, 2.59.151.0/24, direct
@@ -8703,6 +8718,7 @@ ip-cidr, 203.2.112.0/21, direct
 ip-cidr, 203.2.160.0/21, direct
 ip-cidr, 203.2.64.0/21, direct
 ip-cidr, 203.202.236.0/23, direct
+ip-cidr, 203.205.64.0/19, direct
 ip-cidr, 203.207.104.0/22, direct
 ip-cidr, 203.207.112.0/20, direct
 ip-cidr, 203.207.128.0/18, direct
@@ -10096,6 +10112,7 @@ ip-cidr, 8.164.0.0/14, direct
 ip-cidr, 8.168.0.0/14, direct
 ip-cidr, 8.176.0.0/17, direct
 ip-cidr, 8.176.128.0/19, direct
+ip-cidr, 8.39.54.0/23, direct
 ip-cidr, 81.173.18.0/23, direct
 ip-cidr, 81.173.20.0/22, direct
 ip-cidr, 81.23.208.0/20, direct

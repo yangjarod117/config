@@ -117,6 +117,7 @@ domain_suffix_set:
   - "stitch.withgoogle.com"
   - "grok.com"
   - "grok.x.com"
+  - "grokbot.com"
   - "grokipedia.com"
   - "x.ai"
   - "groq.com"
@@ -188,6 +189,8 @@ domain_keyword_set:
   - "colab"
   - "developerprofiles"
   - "generativelanguage"
+domain_regex_set:
+  - "^chatgpt-async-webps-prod-\\S+-\\d+\\.webpubsub\\.azure\\.com$"
 ip_cidr_set:
   - "199.47.142.0/23"
   - "24.199.123.28/32"

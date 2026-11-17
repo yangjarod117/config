@@ -218,6 +218,7 @@ DOMAIN,brand-sdk.kmsmep.com
 DOMAIN,brandwidgets.outtra.com
 DOMAIN,bucket.noy.asia
 DOMAIN,bucket1.notaku.so
+DOMAIN,builds.dotnet.microsoft.com
 DOMAIN,bundle.trysavvy.com
 DOMAIN,bundlephobia.com
 DOMAIN,bundler.nice-team.net
@@ -832,6 +833,7 @@ DOMAIN,heroicons.com
 DOMAIN,hips.hearstapps.com
 DOMAIN,home.integrate.com
 DOMAIN,hpstore.corpmerchandise.com
+DOMAIN,http-intake.logs.us5.datadoghq.com
 DOMAIN,hub-assets.displaycal.net
 DOMAIN,hub.slarker.me
 DOMAIN,hubspotonwebflow.com
@@ -1129,6 +1131,7 @@ DOMAIN,media.cleanshot.cloud
 DOMAIN,media.convertkit.com
 DOMAIN,media.currys.biz
 DOMAIN,media.daily.dev
+DOMAIN,media.datacamp.com
 DOMAIN,media.datacenterdynamics.com
 DOMAIN,media.e4le.me
 DOMAIN,media.fidoalliance.org
@@ -1522,6 +1525,7 @@ DOMAIN,static.izanmei.icu
 DOMAIN,static.j51.net
 DOMAIN,static.jup.ag
 DOMAIN,static.k2s.cc
+DOMAIN,static.karousell.com
 DOMAIN,static.klaviyo.com
 DOMAIN,static.licdn.com
 DOMAIN,static.lwn.net
@@ -6263,6 +6267,7 @@ DOMAIN-SUFFIX,cyberghost.app
 DOMAIN-SUFFIX,cyberghostvpn.com
 DOMAIN-SUFFIX,cyberpunk.net
 DOMAIN-SUFFIX,cyberx.com
+DOMAIN-SUFFIX,cygames.com
 DOMAIN-SUFFIX,cygwin.com
 DOMAIN-SUFFIX,cylink.pro
 DOMAIN-SUFFIX,cylink0122.icu
@@ -9666,6 +9671,8 @@ DOMAIN-SUFFIX,grabhentai.com
 DOMAIN-SUFFIX,grabpussy.com
 DOMAIN-SUFFIX,gradconnection.com
 DOMAIN-SUFFIX,gradeuptube.com
+DOMAIN-SUFFIX,grafana.com
+DOMAIN-SUFFIX,grafana.net
 DOMAIN-SUFFIX,grafolio.com
 DOMAIN-SUFFIX,graias.com
 DOMAIN-SUFFIX,graiasmovies.com
@@ -16502,6 +16509,7 @@ DOMAIN-SUFFIX,quantil.com
 DOMAIN-SUFFIX,quantumbooter.net
 DOMAIN-SUFFIX,quatrum.com.br
 DOMAIN-SUFFIX,quay.io
+DOMAIN-SUFFIX,questionablequesting.com
 DOMAIN-SUFFIX,quicinc.com
 DOMAIN-SUFFIX,quickbook.com.br
 DOMAIN-SUFFIX,quickbooks.com
@@ -16824,6 +16832,7 @@ DOMAIN-SUFFIX,releaseinternational.org
 DOMAIN-SUFFIX,religionnews.com
 DOMAIN-SUFFIX,religioustolerance.org
 DOMAIN-SUFFIX,remirepo.net
+DOMAIN-SUFFIX,remna.dev
 DOMAIN-SUFFIX,renchead.com
 DOMAIN-SUFFIX,render.com
 DOMAIN-SUFFIX,renderingtoolkit.org
@@ -18213,6 +18222,7 @@ DOMAIN-SUFFIX,soyinyj.top
 DOMAIN-SUFFIX,soylent.com
 DOMAIN-SUFFIX,soylentnews.org
 DOMAIN-SUFFIX,sp.cool
+DOMAIN-SUFFIX,spacebattles.com
 DOMAIN-SUFFIX,spaceexplored.com
 DOMAIN-SUFFIX,spacemail.com
 DOMAIN-SUFFIX,spaceship-cdn.com
@@ -20150,6 +20160,7 @@ DOMAIN-SUFFIX,v-cdn.net
 DOMAIN-SUFFIX,v.recipes
 DOMAIN-SUFFIX,v.roucdn
 DOMAIN-SUFFIX,v2.help
+DOMAIN-SUFFIX,v2ex.co
 DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,v2fly.org
 DOMAIN-SUFFIX,v2mm.tech

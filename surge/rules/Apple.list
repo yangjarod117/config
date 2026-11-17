@@ -75,6 +75,7 @@ DOMAIN,communities.apple.com
 DOMAIN,configuration-lb.ls-apple.com.akadns.net
 DOMAIN,configuration.apple.com
 DOMAIN,configuration.apple.com.akadns.net
+DOMAIN,configuration.ls.apple.com
 DOMAIN,crl-lb.apple.com.akadns.net
 DOMAIN,crl.apple.com
 DOMAIN,cstat.apple.com
@@ -168,9 +169,11 @@ DOMAIN,mesu.apple.com
 DOMAIN,misc-assets.itunes.apple.com
 DOMAIN,ml.cdn-apple.com
 DOMAIN,music.apple.com
+DOMAIN,musicstatus.itunes.apple.com
 DOMAIN,musicstatus.music.apple.com
 DOMAIN,mvod.itunes.apple.com
 DOMAIN,myapp.itunes.apple.com
+DOMAIN,mzstorekit.itunes.apple.com
 DOMAIN,news-assets.apple.com
 DOMAIN,news-client.apple.com
 DOMAIN,news-edge.apple.com
@@ -1024,6 +1027,7 @@ DOMAIN-SUFFIX,calendarserver.org
 DOMAIN-SUFFIX,camelphat.com
 DOMAIN-SUFFIX,camelspaceeffect.com
 DOMAIN-SUFFIX,canada-beatsbydre.com
+DOMAIN-SUFFIX,captive.apple.com
 DOMAIN-SUFFIX,carbon.com
 DOMAIN-SUFFIX,carekit.org
 DOMAIN-SUFFIX,casque-fr.com
@@ -1591,6 +1595,7 @@ DOMAIN-SUFFIX,livephotos.tv
 DOMAIN-SUFFIX,lojaiphone.com.br
 DOMAIN-SUFFIX,lovebeatsdr.com
 DOMAIN-SUFFIX,lovemarca.com
+DOMAIN-SUFFIX,ls-apple.com.akadns.net
 DOMAIN-SUFFIX,ls.apple.com
 DOMAIN-SUFFIX,luckyissue.com
 DOMAIN-SUFFIX,lyzsxx.com
@@ -1648,6 +1653,7 @@ DOMAIN-SUFFIX,makeeu.com
 DOMAIN-SUFFIX,mallheadphone.com
 DOMAIN-SUFFIX,mbeats-tech.com
 DOMAIN-SUFFIX,mbheadphone.com
+DOMAIN-SUFFIX,me.com.akadns.net
 DOMAIN-SUFFIX,mensura.cdn-apple.com
 DOMAIN-SUFFIX,mesu-cdn.apple.com.akadns.net
 DOMAIN-SUFFIX,mesu-china.apple.com.akadns.net
@@ -1965,7 +1971,6 @@ DOMAIN-SUFFIX,wwwipodlounge.com
 DOMAIN-SUFFIX,wwwitunes.com
 DOMAIN-SUFFIX,wwwlapple.com
 DOMAIN-SUFFIX,wwwmacbookair.com
-DOMAIN-SUFFIX,xmrmngqivbgpx.site
 DOMAIN-SUFFIX,xn--czrs0t4phtr3a.cn
 DOMAIN-SUFFIX,xn--fiqs8sxootzz.cn
 DOMAIN-SUFFIX,xn--fiqs8sxootzz.xn--hxt814e
@@ -2005,9 +2010,7 @@ IP-CIDR,144.178.48.0/20
 IP-CIDR,17.0.0.0/8
 IP-CIDR,192.35.50.0/24
 IP-CIDR,198.183.17.0/24
-IP-CIDR,203.205.64.0/19
 IP-CIDR,205.180.175.0/24
-IP-CIDR,218.98.111.0/24
 IP-CIDR,63.92.224.0/19
 IP-CIDR,65.199.22.0/23
 IP-CIDR6,2403:300::/32

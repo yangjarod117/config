@@ -6,12 +6,7 @@ host, upos-sz-302kodo.bilivideo.com, reject
 host, upos-sz-302ppio.bilivideo.com, reject
 host-suffix, 1558334541.rsc.cdn77.org, reject
 host-suffix, 1cros.net, reject
-host-suffix, 3.km7ru2n2jhtfjurotvho91ulyl4gk1121v.cfd, reject
-host-suffix, 3m3vmyfg5ew8.8x3hooqfp5hme63yviqpece.cyou, reject
-host-suffix, 3wvn3zttj9jjr2t223b17y.75bg8nhzf4kngjg.cfd, reject
 host-suffix, 4251.tech, reject
-host-suffix, 67bu6n1xpg38vtk141.1xulomppkrwcr8zni6yz.cfd, reject
-host-suffix, 6hrcl.rh2yexwirpw7guh1h6fy3e2twn8.cfd, reject
 host-suffix, a.emea01.idio.episerver.net, reject
 host-suffix, a.itsmore.cn, reject
 host-suffix, a.smetrics.sovereign.com, reject
@@ -1159,7 +1154,6 @@ host-suffix, adtarget.fcbarcelona.net, reject
 host-suffix, ae-go.experian.com, reject
 host-suffix, af.shozankan-shop.com, reject
 host-suffix, afep.pivn.shop, reject
-host-suffix, affectionparson.com, reject
 host-suffix, affiliate.dietician-family.jp, reject
 host-suffix, affiliate.taihoshop.jp, reject
 host-suffix, affiliate.tripact.jp, reject
@@ -1407,8 +1401,6 @@ host-suffix, dii4.zooplus.ro, reject
 host-suffix, dii4.zooplus.se, reject
 host-suffix, dk-go.experian.com, reject
 host-suffix, dl.episerver.net, reject
-host-suffix, dw9uc6c6b8nwx.cloudfront.net, reject
-host-suffix, e1h5pn.b182z39mu43o4wujttoxlq2hmct9ub.cfd, reject
 host-suffix, ebis-tracking.hirakata-skin-clinic.com, reject
 host-suffix, ebis-tracking.okinawa-keisei.com, reject
 host-suffix, ebis-tracking.shinyokohama-beauty.com, reject
@@ -1422,7 +1414,6 @@ host-suffix, einrfh.justanswer.com, reject
 host-suffix, email.everyonesocial.inmoment.com, reject
 host-suffix, email.strava.com, reject
 host-suffix, emailsnow.info, reject
-host-suffix, embitterlorrycar.com, reject
 host-suffix, emea-go.experian.com, reject
 host-suffix, engage.3m.co.cr, reject
 host-suffix, engage.3m.co.id, reject
@@ -1484,8 +1475,6 @@ host-suffix, fgn-plausible.serverable.com, reject
 host-suffix, firebaselogging-pa.googleapis.com, reject
 host-suffix, fls-na.amazon.com, reject
 host-suffix, fr-go.experian.com, reject
-host-suffix, g28ri3nji.8kwmh8h5myqkf951t5.cfd, reject
-host-suffix, gangwaynumberprivacy.com, reject
 host-suffix, geo.ngtv.io, reject
 host-suffix, gjfzpt.cn, reject
 host-suffix, global-go.experian.com, reject
@@ -1493,7 +1482,6 @@ host-suffix, goat.hepicgamerz.com, reject
 host-suffix, goat.skeetstats.xyz, reject
 host-suffix, gr-business.vodafone.com, reject
 host-suffix, gr-go.experian.com, reject
-host-suffix, hguv.hn3h5lwzrbwi82kwegwjnc2iw6.cfd, reject
 host-suffix, hk-go.experian.com, reject
 host-suffix, horizoneurope.ukri.org, reject
 host-suffix, hu-business.vodafone.com, reject
@@ -1648,8 +1636,6 @@ host-suffix, nsmetrics.theaustralian.com.au, reject
 host-suffix, nsmetrics.themercury.com.au, reject
 host-suffix, nsmetrics.vogue.com.au, reject
 host-suffix, nz-go.experian.com, reject
-host-suffix, o4bk.yl5t41964nw9v2gmc9i82w9xihweozouvi4.cfd, reject
-host-suffix, obstinacysexist.com, reject
 host-suffix, om-ssl.consorsbank.de, reject
 host-suffix, omniture.walmart.com, reject
 host-suffix, omsc.kpn.com, reject
@@ -1762,7 +1748,6 @@ host-suffix, plausible.x.baychi.org, reject
 host-suffix, plausible.yalepaprika.com, reject
 host-suffix, plausible.zest.dev, reject
 host-suffix, plausible.zorin.com, reject
-host-suffix, pml.ewqv6zcjlnw3hw.cfd, reject
 host-suffix, ppio.cloud, reject
 host-suffix, pr.cision.com, reject
 host-suffix, proftrafficcounter.com, reject
@@ -2221,11 +2206,9 @@ host-suffix, seniorliving.westminsteraustintx.org, reject
 host-suffix, seniorliving.whitneycenter.com, reject
 host-suffix, seniorliving.winchestergardens.com, reject
 host-suffix, seniorliving.wyndemerelcs.com, reject
-host-suffix, ser678uikl.xyz, reject
 host-suffix, service.trustpid.com, reject
 host-suffix, service.utiq.com, reject
 host-suffix, sg-go.experian.com, reject
-host-suffix, sgimage.netmarble.com, reject
 host-suffix, shop.anu-cosme.com, reject
 host-suffix, shopify-webhooks.sailthru.com, reject
 host-suffix, sit-smetrics.nab.com.au, reject
@@ -5340,7 +5323,6 @@ host-suffix, success.act-on.com, reject
 host-suffix, swasc.homedepot.com, reject
 host-suffix, syfwnf.society6.com, reject
 host-suffix, szbdyd.com, reject
-host-suffix, t.92b94jt6icqlrxmoipg.cfd, reject
 host-suffix, t.vrbo.io, reject
 host-suffix, target.footlocker.at, reject
 host-suffix, target.footlocker.be, reject
@@ -5394,7 +5376,6 @@ host-suffix, trcka8net.irobot-jp.com, reject
 host-suffix, trcka8net.lenszero.com, reject
 host-suffix, trcka8net.qieto.net, reject
 host-suffix, try.abtasty.com, reject
-host-suffix, ttt.cqzrlquec45klq.cfd, reject
 host-suffix, tw-go.experian.com, reject
 host-suffix, tw.cx, reject
 host-suffix, uhabo.com, reject
@@ -5408,7 +5389,6 @@ host-suffix, url1445.affirm.com, reject
 host-suffix, url2987.affirm.com, reject
 host-suffix, url4324.affirm.com, reject
 host-suffix, url6514.affirm.com, reject
-host-suffix, uryiu.jjxhwow75cehgr7yhe4.cfd, reject
 host-suffix, us-go.experian.com, reject
 host-suffix, usmetric.rediff.com, reject
 host-suffix, utiq.11freunde.de, reject
@@ -5794,7 +5774,6 @@ host-suffix, vercel-vitals.axiom.co, reject
 host-suffix, vge-business.vodafone.com, reject
 host-suffix, vge-mktg.vodafone.com, reject
 host-suffix, visitorlando.actonsoftware.com, reject
-host-suffix, w.1ecjbovmygj6ph8.cfd, reject
 host-suffix, wds.weqs.me, reject
 host-suffix, web.collaboration-access.com, reject
 host-suffix, web.hikari-ocn.com, reject
@@ -5803,8 +5782,6 @@ host-suffix, web.life-cw.com, reject
 host-suffix, website-security.geotrust.com, reject
 host-suffix, www.brillen.demarketing.net.brillen.pl, reject
 host-suffix, www.smetrics.imedeen.us, reject
-host-suffix, xml.proxywood-box.online, reject
-host-suffix, xxezsifdsivsa.site, reject
 host-suffix, xycdn.com, reject
 host-suffix, yfcdn.net, reject
 host-suffix, yfcloud.com, reject

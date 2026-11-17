@@ -142,9 +142,7 @@ host-suffix, zte.home, direct
 ip-cidr, 0.0.0.0/8, direct
 ip-cidr, 10.0.0.0/8, direct
 ip-cidr, 100.64.0.0/10, direct
-ip-cidr, 104.251.176.0/22, direct
 ip-cidr, 127.0.0.0/8, direct
-ip-cidr, 165.173.176.0/24, direct
 ip-cidr, 169.254.0.0/16, direct
 ip-cidr, 172.16.0.0/12, direct
 ip-cidr, 192.0.0.0/24, direct
@@ -159,7 +157,6 @@ ip-cidr, 198.51.100.0/24, direct
 ip-cidr, 203.0.113.0/24, direct
 ip-cidr, 224.0.0.0/3, direct
 ip-cidr, 224.0.0.0/4, direct
-ip-cidr, 43.240.60.0/22, direct
 ip6-cidr, 100::/64, direct
 ip6-cidr, 2001::/23, direct
 ip6-cidr, 2001:db8::/32, direct

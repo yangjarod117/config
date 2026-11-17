@@ -75,6 +75,7 @@ host, communities.apple.com, direct
 host, configuration-lb.ls-apple.com.akadns.net, direct
 host, configuration.apple.com, direct
 host, configuration.apple.com.akadns.net, direct
+host, configuration.ls.apple.com, direct
 host, crl-lb.apple.com.akadns.net, direct
 host, crl.apple.com, direct
 host, cstat.apple.com, direct
@@ -168,9 +169,11 @@ host, mesu.apple.com, direct
 host, misc-assets.itunes.apple.com, direct
 host, ml.cdn-apple.com, direct
 host, music.apple.com, direct
+host, musicstatus.itunes.apple.com, direct
 host, musicstatus.music.apple.com, direct
 host, mvod.itunes.apple.com, direct
 host, myapp.itunes.apple.com, direct
+host, mzstorekit.itunes.apple.com, direct
 host, news-assets.apple.com, direct
 host, news-client.apple.com, direct
 host, news-edge.apple.com, direct
@@ -1024,6 +1027,7 @@ host-suffix, calendarserver.org, direct
 host-suffix, camelphat.com, direct
 host-suffix, camelspaceeffect.com, direct
 host-suffix, canada-beatsbydre.com, direct
+host-suffix, captive.apple.com, direct
 host-suffix, carbon.com, direct
 host-suffix, carekit.org, direct
 host-suffix, casque-fr.com, direct
@@ -1591,6 +1595,7 @@ host-suffix, livephotos.tv, direct
 host-suffix, lojaiphone.com.br, direct
 host-suffix, lovebeatsdr.com, direct
 host-suffix, lovemarca.com, direct
+host-suffix, ls-apple.com.akadns.net, direct
 host-suffix, ls.apple.com, direct
 host-suffix, luckyissue.com, direct
 host-suffix, lyzsxx.com, direct
@@ -1648,6 +1653,7 @@ host-suffix, makeeu.com, direct
 host-suffix, mallheadphone.com, direct
 host-suffix, mbeats-tech.com, direct
 host-suffix, mbheadphone.com, direct
+host-suffix, me.com.akadns.net, direct
 host-suffix, mensura.cdn-apple.com, direct
 host-suffix, mesu-cdn.apple.com.akadns.net, direct
 host-suffix, mesu-china.apple.com.akadns.net, direct
@@ -1965,7 +1971,6 @@ host-suffix, wwwipodlounge.com, direct
 host-suffix, wwwitunes.com, direct
 host-suffix, wwwlapple.com, direct
 host-suffix, wwwmacbookair.com, direct
-host-suffix, xmrmngqivbgpx.site, direct
 host-suffix, xn--czrs0t4phtr3a.cn, direct
 host-suffix, xn--fiqs8sxootzz.cn, direct
 host-suffix, xn--fiqs8sxootzz.xn--hxt814e, direct
@@ -2005,9 +2010,7 @@ ip-cidr, 144.178.48.0/20, direct
 ip-cidr, 17.0.0.0/8, direct
 ip-cidr, 192.35.50.0/24, direct
 ip-cidr, 198.183.17.0/24, direct
-ip-cidr, 203.205.64.0/19, direct
 ip-cidr, 205.180.175.0/24, direct
-ip-cidr, 218.98.111.0/24, direct
 ip-cidr, 63.92.224.0/19, direct
 ip-cidr, 65.199.22.0/23, direct
 ip6-cidr, 2403:300::/32, direct
