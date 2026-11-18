@@ -119,6 +119,8 @@ host-suffix, 1kkk.com, direct
 host-suffix, 1nongjing.com, direct
 host-suffix, 1ppt.com, direct
 host-suffix, 1ting.com, direct
+host-suffix, 1y.com, direct
+host-suffix, 1ycdn.com, direct
 host-suffix, 1zhe.com, direct
 host-suffix, 20130123.com, direct
 host-suffix, 21cn.com, direct
@@ -6405,7 +6407,6 @@ ip-cidr, 103.102.200.0/22, direct
 ip-cidr, 103.102.213.0/24, direct
 ip-cidr, 103.102.214.0/24, direct
 ip-cidr, 103.103.12.0/24, direct
-ip-cidr, 103.103.36.0/24, direct
 ip-cidr, 103.104.252.0/22, direct
 ip-cidr, 103.105.0.0/22, direct
 ip-cidr, 103.105.12.0/22, direct
@@ -8903,10 +8904,6 @@ ip-cidr, 203.99.26.0/23, direct
 ip-cidr, 203.99.30.0/23, direct
 ip-cidr, 204.77.130.0/24, direct
 ip-cidr, 205.198.19.0/24, direct
-ip-cidr, 207.57.167.0/24, direct
-ip-cidr, 207.57.168.0/24, direct
-ip-cidr, 207.57.174.0/24, direct
-ip-cidr, 207.57.182.0/24, direct
 ip-cidr, 210.12.0.0/16, direct
 ip-cidr, 210.13.0.0/17, direct
 ip-cidr, 210.13.192.0/19, direct
@@ -9918,7 +9915,6 @@ ip-cidr, 52.82.131.0/24, direct
 ip-cidr, 52.82.132.0/24, direct
 ip-cidr, 52.82.134.0/23, direct
 ip-cidr, 52.82.136.0/24, direct
-ip-cidr, 52.82.148.0/22, direct
 ip-cidr, 52.82.160.0/21, direct
 ip-cidr, 52.82.170.0/23, direct
 ip-cidr, 52.82.172.0/22, direct
