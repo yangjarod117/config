@@ -93,6 +93,7 @@ host-suffix, 169ol.com, direct
 host-suffix, 16rd.com, direct
 host-suffix, 17173.com, direct
 host-suffix, 17173cdn.com, direct
+host-suffix, 172.com, direct
 host-suffix, 172mix.com, direct
 host-suffix, 178.com, direct
 host-suffix, 178linux.com, direct
@@ -118,6 +119,7 @@ host-suffix, 1huizhan.com, direct
 host-suffix, 1kkk.com, direct
 host-suffix, 1nongjing.com, direct
 host-suffix, 1ppt.com, direct
+host-suffix, 1qianbao.com, direct
 host-suffix, 1ting.com, direct
 host-suffix, 1y.com, direct
 host-suffix, 1ycdn.com, direct
@@ -222,6 +224,7 @@ host-suffix, 3elife.net, direct
 host-suffix, 3h3.com, direct
 host-suffix, 3songshu.com, direct
 host-suffix, 3yx.com, direct
+host-suffix, 4008000000.com, direct
 host-suffix, 4008117117.com, direct
 host-suffix, 4008823823.com, direct
 host-suffix, 40407.com, direct
@@ -506,6 +509,7 @@ host-suffix, aixcoder.com, direct
 host-suffix, aixifan.com, direct
 host-suffix, aiyunxiao.com, direct
 host-suffix, aizgtc.com, direct
+host-suffix, ajkimg.com, direct
 host-suffix, ajzq.com, direct
 host-suffix, aka815.net, direct
 host-suffix, aki-game.com, direct
@@ -712,6 +716,8 @@ host-suffix, baikemy.com, direct
 host-suffix, baikevod.com, direct
 host-suffix, baimiao.tech, direct
 host-suffix, baimiaoapp.com, direct
+host-suffix, baishan.com, direct
+host-suffix, baishancloud.com, direct
 host-suffix, baishinetwork.com, direct
 host-suffix, baitiao.com, direct
 host-suffix, baixing.com, direct
@@ -3487,6 +3493,7 @@ host-suffix, lenovo.net, direct
 host-suffix, lenovocloudos.com, direct
 host-suffix, lenovoeservice.com, direct
 host-suffix, lenovofile.com, direct
+host-suffix, lenovofuturecenter.com, direct
 host-suffix, lenovoimage.com, direct
 host-suffix, lenovomm.com, direct
 host-suffix, lenovomobile.com, direct
@@ -3602,6 +3609,7 @@ host-suffix, luckysf.net, direct
 host-suffix, ludoworld.net, direct
 host-suffix, lufaxcdn.com, direct
 host-suffix, lufunds.com, direct
+host-suffix, lujincaifu.com, direct
 host-suffix, lumiai.com, direct
 host-suffix, lunwengo.net, direct
 host-suffix, luojilab.com, direct
@@ -3777,6 +3785,7 @@ host-suffix, mikecrm.com, direct
 host-suffix, minapp.com, direct
 host-suffix, mincdn.com, direct
 host-suffix, mingxuan.store, direct
+host-suffix, mingyuanfund.com, direct
 host-suffix, mingyuanyun.com, direct
 host-suffix, minhangshi.com, direct
 host-suffix, minimaxi.com, direct
@@ -4100,6 +4109,7 @@ host-suffix, ozonbigsell.com, direct
 host-suffix, p2peye.com, direct
 host-suffix, p4pfile.com, direct
 host-suffix, p5w.net, direct
+host-suffix, pacfc.com, direct
 host-suffix, pacmantwo.com, direct
 host-suffix, pagescube.com, direct
 host-suffix, paidui.com, direct
@@ -4339,6 +4349,7 @@ host-suffix, qmai.com, direct
 host-suffix, qmniu.com, direct
 host-suffix, qnsdk.com, direct
 host-suffix, qnssl.com, direct
+host-suffix, qpmcn.com, direct
 host-suffix, qq.cn.com, direct
 host-suffix, qq.com, direct
 host-suffix, qq.design, direct
@@ -4903,6 +4914,7 @@ host-suffix, tencent-gcloud.com, direct
 host-suffix, tencent.com, direct
 host-suffix, tencent.design, direct
 host-suffix, tencent.net, direct
+host-suffix, tencentads.com, direct
 host-suffix, tencentapps.com, direct
 host-suffix, tencentbyod.com, direct
 host-suffix, tencentcdb.com, direct
@@ -5101,6 +5113,7 @@ host-suffix, trellocdn.com, direct
 host-suffix, tripcdn.com, direct
 host-suffix, tritoninfo.net, direct
 host-suffix, trjcn.com, direct
+host-suffix, trpcdn.com, direct
 host-suffix, trpcdn.net, direct
 host-suffix, trunktech.com, direct
 host-suffix, trustasia.com, direct
@@ -5899,6 +5912,7 @@ host-suffix, yinhang123.net, direct
 host-suffix, yinxiang.com, direct
 host-suffix, yinyuetai.com, direct
 host-suffix, yinzhaowang.com, direct
+host-suffix, yiqianbao.com, direct
 host-suffix, yiqifa.org, direct
 host-suffix, yisou.com, direct
 host-suffix, yisu.com, direct
@@ -5963,6 +5977,8 @@ host-suffix, yoyojie.com, direct
 host-suffix, yoyou.com, direct
 host-suffix, ypppt.com, direct
 host-suffix, yqb.com, direct
+host-suffix, yqbimg.net, direct
+host-suffix, yqbmall.com, direct
 host-suffix, yqkk.link, direct
 host-suffix, yrz.name, direct
 host-suffix, ys7.com, direct
@@ -6108,6 +6124,8 @@ host-suffix, zhangzs.com, direct
 host-suffix, zhanqi.tv, direct
 host-suffix, zhaodanji.com, direct
 host-suffix, zhaokao.net, direct
+host-suffix, zhaoliangji.com, direct
+host-suffix, zhaoliangjipc.com, direct
 host-suffix, zhaomishijie.com, direct
 host-suffix, zhaopin.com, direct
 host-suffix, zhcw.com, direct
@@ -6822,7 +6840,6 @@ ip-cidr, 103.39.232.0/22, direct
 ip-cidr, 103.39.64.0/22, direct
 ip-cidr, 103.40.12.0/22, direct
 ip-cidr, 103.40.192.0/22, direct
-ip-cidr, 103.40.232.0/22, direct
 ip-cidr, 103.40.240.0/20, direct
 ip-cidr, 103.41.0.0/22, direct
 ip-cidr, 103.41.116.0/22, direct
@@ -7054,7 +7071,10 @@ ip-cidr, 107.190.229.0/24, direct
 ip-cidr, 109.244.0.0/16, direct
 ip-cidr, 110.100.0.0/16, direct
 ip-cidr, 110.116.0.0/16, direct
-ip-cidr, 110.120.0.0/16, direct
+ip-cidr, 110.120.0.0/23, direct
+ip-cidr, 110.120.10.0/24, direct
+ip-cidr, 110.120.12.0/24, direct
+ip-cidr, 110.120.8.0/23, direct
 ip-cidr, 110.152.0.0/14, direct
 ip-cidr, 110.156.0.0/15, direct
 ip-cidr, 110.16.0.0/14, direct
@@ -7066,7 +7086,7 @@ ip-cidr, 110.173.8.0/21, direct
 ip-cidr, 110.176.0.0/12, direct
 ip-cidr, 110.199.0.0/16, direct
 ip-cidr, 110.203.0.0/23, direct
-ip-cidr, 110.211.0.0/16, direct
+ip-cidr, 110.211.0.0/23, direct
 ip-cidr, 110.218.0.0/15, direct
 ip-cidr, 110.228.0.0/14, direct
 ip-cidr, 110.236.0.0/15, direct
@@ -7366,6 +7386,7 @@ ip-cidr, 116.144.0.0/14, direct
 ip-cidr, 116.148.0.0/15, direct
 ip-cidr, 116.153.0.0/16, direct
 ip-cidr, 116.154.0.0/15, direct
+ip-cidr, 116.157.0.0/16, direct
 ip-cidr, 116.16.0.0/12, direct
 ip-cidr, 116.162.0.0/16, direct
 ip-cidr, 116.163.0.0/18, direct
@@ -7454,11 +7475,10 @@ ip-cidr, 116.90.80.0/20, direct
 ip-cidr, 116.95.0.0/16, direct
 ip-cidr, 117.106.0.0/15, direct
 ip-cidr, 117.112.0.0/13, direct
-ip-cidr, 117.121.132.0/22, direct
 ip-cidr, 117.122.192.0/18, direct
 ip-cidr, 117.124.231.0/24, direct
 ip-cidr, 117.124.232.0/22, direct
-ip-cidr, 117.124.236.0/23, direct
+ip-cidr, 117.124.237.0/24, direct
 ip-cidr, 117.124.240.0/22, direct
 ip-cidr, 117.124.244.0/24, direct
 ip-cidr, 117.124.246.0/24, direct
@@ -7854,7 +7874,6 @@ ip-cidr, 121.89.0.0/16, direct
 ip-cidr, 121.91.104.0/21, direct
 ip-cidr, 122.10.133.0/24, direct
 ip-cidr, 122.10.136.0/23, direct
-ip-cidr, 122.102.64.0/20, direct
 ip-cidr, 122.11.32.0/19, direct
 ip-cidr, 122.112.0.0/22, direct
 ip-cidr, 122.112.132.0/22, direct
@@ -7997,7 +8016,7 @@ ip-cidr, 123.58.96.0/19, direct
 ip-cidr, 123.59.0.0/16, direct
 ip-cidr, 123.60.0.0/16, direct
 ip-cidr, 123.64.0.0/15, direct
-ip-cidr, 123.66.0.0/16, direct
+ip-cidr, 123.66.128.0/17, direct
 ip-cidr, 123.77.0.0/16, direct
 ip-cidr, 123.8.0.0/13, direct
 ip-cidr, 123.88.0.0/15, direct
@@ -8313,7 +8332,6 @@ ip-cidr, 163.142.0.0/16, direct
 ip-cidr, 163.177.0.0/16, direct
 ip-cidr, 163.179.0.0/16, direct
 ip-cidr, 163.204.0.0/16, direct
-ip-cidr, 163.227.40.0/23, direct
 ip-cidr, 163.228.0.0/16, direct
 ip-cidr, 163.244.246.0/24, direct
 ip-cidr, 163.47.4.0/22, direct
@@ -8328,7 +8346,6 @@ ip-cidr, 163.61.214.0/23, direct
 ip-cidr, 165.101.70.0/24, direct
 ip-cidr, 165.173.128.0/23, direct
 ip-cidr, 165.173.174.0/23, direct
-ip-cidr, 165.173.176.0/24, direct
 ip-cidr, 165.173.180.0/22, direct
 ip-cidr, 166.111.0.0/16, direct
 ip-cidr, 167.139.0.0/16, direct
@@ -9406,7 +9423,8 @@ ip-cidr, 221.133.235.0/24, direct
 ip-cidr, 221.133.244.0/23, direct
 ip-cidr, 221.137.0.0/16, direct
 ip-cidr, 221.14.0.0/15, direct
-ip-cidr, 221.174.0.0/17, direct
+ip-cidr, 221.174.16.0/21, direct
+ip-cidr, 221.174.24.0/23, direct
 ip-cidr, 221.176.0.0/13, direct
 ip-cidr, 221.192.0.0/14, direct
 ip-cidr, 221.196.0.0/15, direct
@@ -9434,7 +9452,10 @@ ip-cidr, 222.35.0.0/16, direct
 ip-cidr, 222.42.115.0/24, direct
 ip-cidr, 222.44.0.0/15, direct
 ip-cidr, 222.49.128.0/17, direct
-ip-cidr, 222.50.0.0/16, direct
+ip-cidr, 222.50.120.0/23, direct
+ip-cidr, 222.50.123.0/24, direct
+ip-cidr, 222.50.125.0/24, direct
+ip-cidr, 222.50.126.0/23, direct
 ip-cidr, 222.59.128.0/17, direct
 ip-cidr, 222.64.0.0/11, direct
 ip-cidr, 223.0.1.0/24, direct
@@ -9610,6 +9631,8 @@ ip-cidr, 42.240.14.0/24, direct
 ip-cidr, 42.240.16.0/23, direct
 ip-cidr, 42.240.20.0/22, direct
 ip-cidr, 42.240.24.0/24, direct
+ip-cidr, 42.240.48.0/23, direct
+ip-cidr, 42.240.50.0/24, direct
 ip-cidr, 42.240.8.0/22, direct
 ip-cidr, 42.242.0.0/15, direct
 ip-cidr, 42.244.0.0/16, direct
@@ -9642,6 +9665,7 @@ ip-cidr, 43.180.0.0/16, direct
 ip-cidr, 43.192.0.0/16, direct
 ip-cidr, 43.193.0.0/18, direct
 ip-cidr, 43.193.64.0/23, direct
+ip-cidr, 43.193.80.0/20, direct
 ip-cidr, 43.196.0.0/16, direct
 ip-cidr, 43.224.12.0/22, direct
 ip-cidr, 43.224.24.0/22, direct
@@ -10050,7 +10074,11 @@ ip-cidr, 60.255.0.0/16, direct
 ip-cidr, 60.63.0.0/16, direct
 ip-cidr, 61.114.80.0/20, direct
 ip-cidr, 61.128.0.0/10, direct
-ip-cidr, 61.232.0.0/14, direct
+ip-cidr, 61.232.0.0/15, direct
+ip-cidr, 61.234.0.0/16, direct
+ip-cidr, 61.235.64.0/24, direct
+ip-cidr, 61.235.76.0/24, direct
+ip-cidr, 61.235.78.0/24, direct
 ip-cidr, 61.237.0.0/16, direct
 ip-cidr, 61.240.0.0/14, direct
 ip-cidr, 61.28.108.0/24, direct

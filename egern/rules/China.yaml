@@ -1,7 +1,7 @@
 # NAME: China
 # AUTHOR: MagicRule
 # REPO: https://magicrule.pages.dev
-# UPDATED: 2026-11-19 00:34:36
+# UPDATED: 2026-11-21 00:02:01
 no_resolve: true
 domain_set:
   - api.blipsandchitz.me
@@ -100,6 +100,7 @@ domain_suffix_set:
   - 16rd.com
   - 17173.com
   - 17173cdn.com
+  - 172.com
   - 172mix.com
   - 178.com
   - 178linux.com
@@ -125,6 +126,7 @@ domain_suffix_set:
   - 1kkk.com
   - 1nongjing.com
   - 1ppt.com
+  - 1qianbao.com
   - 1ting.com
   - 1y.com
   - 1ycdn.com
@@ -229,6 +231,7 @@ domain_suffix_set:
   - 3h3.com
   - 3songshu.com
   - 3yx.com
+  - 4008000000.com
   - 4008117117.com
   - 4008823823.com
   - 40407.com
@@ -513,6 +516,7 @@ domain_suffix_set:
   - aixifan.com
   - aiyunxiao.com
   - aizgtc.com
+  - ajkimg.com
   - ajzq.com
   - aka815.net
   - aki-game.com
@@ -719,6 +723,8 @@ domain_suffix_set:
   - baikevod.com
   - baimiao.tech
   - baimiaoapp.com
+  - baishan.com
+  - baishancloud.com
   - baishinetwork.com
   - baitiao.com
   - baixing.com
@@ -3494,6 +3500,7 @@ domain_suffix_set:
   - lenovocloudos.com
   - lenovoeservice.com
   - lenovofile.com
+  - lenovofuturecenter.com
   - lenovoimage.com
   - lenovomm.com
   - lenovomobile.com
@@ -3609,6 +3616,7 @@ domain_suffix_set:
   - ludoworld.net
   - lufaxcdn.com
   - lufunds.com
+  - lujincaifu.com
   - lumiai.com
   - lunwengo.net
   - luojilab.com
@@ -3784,6 +3792,7 @@ domain_suffix_set:
   - minapp.com
   - mincdn.com
   - mingxuan.store
+  - mingyuanfund.com
   - mingyuanyun.com
   - minhangshi.com
   - minimaxi.com
@@ -4107,6 +4116,7 @@ domain_suffix_set:
   - p2peye.com
   - p4pfile.com
   - p5w.net
+  - pacfc.com
   - pacmantwo.com
   - pagescube.com
   - paidui.com
@@ -4346,6 +4356,7 @@ domain_suffix_set:
   - qmniu.com
   - qnsdk.com
   - qnssl.com
+  - qpmcn.com
   - qq.cn.com
   - qq.com
   - qq.design
@@ -4910,6 +4921,7 @@ domain_suffix_set:
   - tencent.com
   - tencent.design
   - tencent.net
+  - tencentads.com
   - tencentapps.com
   - tencentbyod.com
   - tencentcdb.com
@@ -5108,6 +5120,7 @@ domain_suffix_set:
   - tripcdn.com
   - tritoninfo.net
   - trjcn.com
+  - trpcdn.com
   - trpcdn.net
   - trunktech.com
   - trustasia.com
@@ -5906,6 +5919,7 @@ domain_suffix_set:
   - yinxiang.com
   - yinyuetai.com
   - yinzhaowang.com
+  - yiqianbao.com
   - yiqifa.org
   - yisou.com
   - yisu.com
@@ -5970,6 +5984,8 @@ domain_suffix_set:
   - yoyou.com
   - ypppt.com
   - yqb.com
+  - yqbimg.net
+  - yqbmall.com
   - yqkk.link
   - yrz.name
   - ys7.com
@@ -6115,6 +6131,8 @@ domain_suffix_set:
   - zhanqi.tv
   - zhaodanji.com
   - zhaokao.net
+  - zhaoliangji.com
+  - zhaoliangjipc.com
   - zhaomishijie.com
   - zhaopin.com
   - zhcw.com
@@ -6837,7 +6855,6 @@ ip_cidr_set:
   - 103.39.64.0/22
   - 103.40.12.0/22
   - 103.40.192.0/22
-  - 103.40.232.0/22
   - 103.40.240.0/20
   - 103.41.0.0/22
   - 103.41.116.0/22
@@ -7069,7 +7086,10 @@ ip_cidr_set:
   - 109.244.0.0/16
   - 110.100.0.0/16
   - 110.116.0.0/16
-  - 110.120.0.0/16
+  - 110.120.0.0/23
+  - 110.120.10.0/24
+  - 110.120.12.0/24
+  - 110.120.8.0/23
   - 110.152.0.0/14
   - 110.156.0.0/15
   - 110.16.0.0/14
@@ -7081,7 +7101,7 @@ ip_cidr_set:
   - 110.176.0.0/12
   - 110.199.0.0/16
   - 110.203.0.0/23
-  - 110.211.0.0/16
+  - 110.211.0.0/23
   - 110.218.0.0/15
   - 110.228.0.0/14
   - 110.236.0.0/15
@@ -7381,6 +7401,7 @@ ip_cidr_set:
   - 116.148.0.0/15
   - 116.153.0.0/16
   - 116.154.0.0/15
+  - 116.157.0.0/16
   - 116.16.0.0/12
   - 116.162.0.0/16
   - 116.163.0.0/18
@@ -7469,11 +7490,10 @@ ip_cidr_set:
   - 116.95.0.0/16
   - 117.106.0.0/15
   - 117.112.0.0/13
-  - 117.121.132.0/22
   - 117.122.192.0/18
   - 117.124.231.0/24
   - 117.124.232.0/22
-  - 117.124.236.0/23
+  - 117.124.237.0/24
   - 117.124.240.0/22
   - 117.124.244.0/24
   - 117.124.246.0/24
@@ -7869,7 +7889,6 @@ ip_cidr_set:
   - 121.91.104.0/21
   - 122.10.133.0/24
   - 122.10.136.0/23
-  - 122.102.64.0/20
   - 122.11.32.0/19
   - 122.112.0.0/22
   - 122.112.132.0/22
@@ -8012,7 +8031,7 @@ ip_cidr_set:
   - 123.59.0.0/16
   - 123.60.0.0/16
   - 123.64.0.0/15
-  - 123.66.0.0/16
+  - 123.66.128.0/17
   - 123.77.0.0/16
   - 123.8.0.0/13
   - 123.88.0.0/15
@@ -8328,7 +8347,6 @@ ip_cidr_set:
   - 163.177.0.0/16
   - 163.179.0.0/16
   - 163.204.0.0/16
-  - 163.227.40.0/23
   - 163.228.0.0/16
   - 163.244.246.0/24
   - 163.47.4.0/22
@@ -8343,7 +8361,6 @@ ip_cidr_set:
   - 165.101.70.0/24
   - 165.173.128.0/23
   - 165.173.174.0/23
-  - 165.173.176.0/24
   - 165.173.180.0/22
   - 166.111.0.0/16
   - 167.139.0.0/16
@@ -9421,7 +9438,8 @@ ip_cidr_set:
   - 221.133.244.0/23
   - 221.137.0.0/16
   - 221.14.0.0/15
-  - 221.174.0.0/17
+  - 221.174.16.0/21
+  - 221.174.24.0/23
   - 221.176.0.0/13
   - 221.192.0.0/14
   - 221.196.0.0/15
@@ -9449,7 +9467,10 @@ ip_cidr_set:
   - 222.42.115.0/24
   - 222.44.0.0/15
   - 222.49.128.0/17
-  - 222.50.0.0/16
+  - 222.50.120.0/23
+  - 222.50.123.0/24
+  - 222.50.125.0/24
+  - 222.50.126.0/23
   - 222.59.128.0/17
   - 222.64.0.0/11
   - 223.0.1.0/24
@@ -9625,6 +9646,8 @@ ip_cidr_set:
   - 42.240.16.0/23
   - 42.240.20.0/22
   - 42.240.24.0/24
+  - 42.240.48.0/23
+  - 42.240.50.0/24
   - 42.240.8.0/22
   - 42.242.0.0/15
   - 42.244.0.0/16
@@ -9657,6 +9680,7 @@ ip_cidr_set:
   - 43.192.0.0/16
   - 43.193.0.0/18
   - 43.193.64.0/23
+  - 43.193.80.0/20
   - 43.196.0.0/16
   - 43.224.12.0/22
   - 43.224.24.0/22
@@ -10065,7 +10089,11 @@ ip_cidr_set:
   - 60.63.0.0/16
   - 61.114.80.0/20
   - 61.128.0.0/10
-  - 61.232.0.0/14
+  - 61.232.0.0/15
+  - 61.234.0.0/16
+  - 61.235.64.0/24
+  - 61.235.76.0/24
+  - 61.235.78.0/24
   - 61.237.0.0/16
   - 61.240.0.0/14
   - 61.28.108.0/24

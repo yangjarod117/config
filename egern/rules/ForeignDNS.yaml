@@ -331,6 +331,7 @@ domain_set:
   - assets.mcp.corespeed.io
   - assets.media-platform.com
   - assets.monei.com
+  - assets.monetizationos.com
   - assets.msn.com
   - assets.nationbuilder.com
   - assets.northflank.com
@@ -6380,6 +6381,7 @@ domain_suffix_set:
   - busu.org
   - busybox.net
   - busytrade.com
+  - butterfly-effect-cdn.dev
   - buugaa.com
   - buyaltera.com
   - buyfast-paysmart.net
@@ -8847,6 +8849,7 @@ domain_suffix_set:
   - elephantsdream.org
   - elephanttube.com
   - elephanttubenew.com
+  - elevenlabsusercontent.com
   - elgaronline.com
   - elgoog.im
   - elifesciences.org
@@ -23331,7 +23334,6 @@ domain_suffix_set:
   - yandexdataschool.com
   - yandexgo.com
   - yandexwebcache.net
-  - yandexwebcache.org
   - yanghengjun.com
   - yangjianli.com
   - yango-b2b.com

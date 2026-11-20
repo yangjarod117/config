@@ -5321,6 +5321,7 @@ host-suffix, sub.turningpoint.work, reject
 host-suffix, subscriptions.costco.com, reject
 host-suffix, success.act-on.com, reject
 host-suffix, swasc.homedepot.com, reject
+host-suffix, sy.ameba.jp, reject
 host-suffix, syfwnf.society6.com, reject
 host-suffix, szbdyd.com, reject
 host-suffix, t.vrbo.io, reject

@@ -110,6 +110,7 @@ host, assets.maxon.net, proxy
 host, assets.mcp.corespeed.io, proxy
 host, assets.media-platform.com, proxy
 host, assets.monei.com, proxy
+host, assets.monetizationos.com, proxy
 host, assets.msn.com, proxy
 host, assets.nationbuilder.com, proxy
 host, assets.northflank.com, proxy
@@ -5041,6 +5042,7 @@ host-suffix, bustysammieblack.com, proxy
 host-suffix, busu.org, proxy
 host-suffix, busybox.net, proxy
 host-suffix, busytrade.com, proxy
+host-suffix, butterfly-effect-cdn.dev, proxy
 host-suffix, buugaa.com, proxy
 host-suffix, buyaltera.com, proxy
 host-suffix, buyfast-paysmart.net, proxy
@@ -7512,6 +7514,7 @@ host-suffix, elephantlist.com, proxy
 host-suffix, elephantsdream.org, proxy
 host-suffix, elephanttube.com, proxy
 host-suffix, elephanttubenew.com, proxy
+host-suffix, elevenlabsusercontent.com, proxy
 host-suffix, elgaronline.com, proxy
 host-suffix, elgoog.im, proxy
 host-suffix, elifesciences.org, proxy
@@ -22083,7 +22086,6 @@ host-suffix, yandexcom.net, proxy
 host-suffix, yandexdataschool.com, proxy
 host-suffix, yandexgo.com, proxy
 host-suffix, yandexwebcache.net, proxy
-host-suffix, yandexwebcache.org, proxy
 host-suffix, yanghengjun.com, proxy
 host-suffix, yangjianli.com, proxy
 host-suffix, yango-b2b.com, proxy
